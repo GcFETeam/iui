@@ -44,3 +44,5 @@ plugins:
 
 
 source: docs
+
+baseurl: /my-project/docs
