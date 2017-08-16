@@ -1,17 +1,17 @@
 - title: Base
   pages:
     - title: typography
-      url: /doc/typography/
+      url: /docs/typography/
     - title: icon
-      url: /doc/icon/
+      url: /docs/icon/
     - title: grids
-      url: /doc/grids/
+      url: /docs/grids/
 
 - title: Components
   pages:
     - title: button
-      url: /doc/button/
+      url: /docs/button/
     - title: input
-      url: /doc/input/
+      url: /docs/input/
 
 

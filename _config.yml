@@ -42,7 +42,6 @@ exclude:          [.git, .github, src/, build, js, node_modules, nuget, scss, ve
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-destination: docs
 
 
 
