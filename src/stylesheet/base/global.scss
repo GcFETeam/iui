@@ -1,0 +1,86 @@
+/* ==========
+    padding margin
+   ========== */
+
+$padding-set: (t, top), (b, bottom), (l, left), (r, right);
+
+@each $name, $type in $padding-set {
+    @for $i from 1 through 4 {
+
+        $t: $i * 5;
+        $total: #{$t}px;
+
+        .p#{$name}-#{$t} {
+            padding-#{$type}: $total;
+        }
+
+        .m#{$name}-#{$t} {
+            margin-#{$type}: $total;
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+
+    $t: $i * 5;
+    $total: #{$t}px;
+
+    .ptb-#{$t} {
+        padding-top: $total;
+        padding-bottom: $total;
+    }
+
+    .plr-#{$t} {
+        padding-left: $total;
+        padding-right: $total;
+    }
+
+    .mtb-#{$t} {
+        margin-top: $total;
+        margin-bottom: $total;
+    }
+
+    .mlr-#{$t} {
+        margin-left: $total;
+        margin-right: $total;
+    }
+}
+
+/* ==========
+    font
+   ========== */
+.ft-primary {
+    color: $color-primary;
+}
+
+.ft-center {
+    text-align: center;
+}
+
+.ft-red {
+    color: $color-red;
+}
+
+.ft-red-light {
+    color: $color-red-light;
+}
+
+.b1 {
+    color:  map-get($color-blue-system, dark);
+}
+
+.b2 {
+    color:  darken(map-get($color-blue-system, dark), 5%);
+}
+
+.b3 {
+    color:  darken(map-get($color-blue-system, dark), 10%);
+}
+
+.b4 {
+    color:  darken(map-get($color-blue-system, dark), 15%);
+}
+
+.b5 {
+    color:  lighten(map-get($color-blue-system, dark), 5%);
+}

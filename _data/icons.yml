@@ -1,0 +1,20 @@
+- group: Hand Icons
+  name:
+    - hand-o-up
+    - hand-o-down
+    - hand-o-left
+
+- group: Spinner Icons
+  name:
+    - cog
+    - gear
+    - refresh
+    - spinner
+
+- group: Chart Icons
+  name:
+    - area-chart
+    - bar-chart
+    - line-chart
+    - pie-chart
+

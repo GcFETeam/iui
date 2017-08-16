@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{{ "./assets/main.css " | relative_url }}">
-    <link rel="stylesheet" href="./assets/main.css">
-</head>
+{% include head.html %}
 <body>
-<h2>hello world</h2>
-{{content}}
+
+{% include header.html %}
+
+<div class="page-wrap page-layout">
+
+    <div class="pure-g">
+        <div class="pure-u-1-6">
+            {% include nav.html %}
+        </div>
+
+        <div class="pure-u-5-6">
+            <div class="page-main">
+                <main class="main" aria-label="content">
+                    {{content}}
+                </main>
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+
+</div>
+
+
 </body>
 </html>

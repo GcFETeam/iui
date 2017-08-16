@@ -2,4 +2,5 @@
 layout: default
 ---
 
-# index
+# color
+

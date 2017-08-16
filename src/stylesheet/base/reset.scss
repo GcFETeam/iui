@@ -1,0 +1,75 @@
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body,
+div,
+dl, dt, dd, ul, ol, li,
+    //h1,h2,h3,h4,h5,h6,
+pre, code,
+form, fieldset, legend,
+    //input,textarea,
+    //p,blockquote,th,td,
+    //hr,button,
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+%app {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+@each $type in text, email, search, password {
+    input {
+        &[type="#{$type}"] {
+            @extend %app;
+        }
+    }
+}
+

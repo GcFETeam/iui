@@ -1,0 +1,113 @@
+body {
+    background: #f3f6f9;
+    font: 14px/1.8 "Helvetica Neue", Arial, sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: inherit;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+.page-header {
+    padding: 5px 0;
+    background: #fff;
+}
+
+.page-layout {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.page-nav,
+.page-main {
+    background: #fff;
+}
+
+.page-nav li {
+    line-height: 2.2;
+    font-size: 14px;
+}
+
+.page-nav li.active {
+    border-right: 3px solid #0d47a1;
+}
+
+.page-nav a {
+    display: block;
+    text-decoration: none;
+}
+
+.page-nav {
+    padding: 20px 0 20px 20px;
+}
+
+.page-main {
+    padding: 20px 100px 100px;
+    margin-left: 20px;
+    min-height: 50vh;
+}
+
+.page-main .main > h3 {
+    margin-top: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f2f4;
+}
+
+.page-main .main > h3:first-of-type {
+    margin-top: 0;
+}
+
+.page-footer {
+    padding: 40px 0 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.ft-title {
+    font-family: Muli, sans-serif;
+}
+
+.ft-content {
+    font-family: Lato, sans-serif;
+}
+
+a {
+    color: #333;
+}
+
+/* code */
+
+pre {
+    font-size: 14px;
+}
+
+code[class*=language-], pre[class*=language-] {
+    text-shadow: none;
+}
+
+:not(pre)>code[class*=language-], pre[class*=language-] {
+    background: #f0f2f5;
+}
+
+/* block */
+blockquote {
+    padding: 1px 10px;
+    border-left: 2px solid #f1f2f3;
+    background: #fafbfc;
+    margin: 0;
+    color: #aaa;
+    font-size: 12px;
+}
+
+blockquote p {
+    margin: 5px 0;
+}
+
+blockquote a {
+    color: #0d47a1;
+}
+

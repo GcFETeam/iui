@@ -1,1 +1,34 @@
-title: blo
+- title: Base
+  pages:
+    - title: typography
+      url: /docs/typography/
+    - title: line
+      url: /docs/space/
+    - title: scrollbar
+      url: /docs/scrollbar/
+    - title: icon
+      url: /docs/icon/
+
+- title: Form
+  pages:
+    - title: button
+      url: /docs/button/
+    - title: input
+      url: /docs/input/
+    - title: select
+      url: /docs/select/
+    - title: radio
+      url: /docs/radio/
+    - title: checkbox
+      url: /docs/checkbox/
+    - title: rate
+      url: /docs/rate/
+    - title: switch
+      url: /docs/switch/
+
+- title: Components
+  pages:
+    - title: menu
+      url: /docs/menu/
+
+
