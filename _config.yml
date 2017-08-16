@@ -21,6 +21,8 @@ description: tiny ui
 # Build settings
 
 markdown: kramdown
+highlighter: rouge
+
 #theme: minima
 plugins:
   - jekyll-feed
