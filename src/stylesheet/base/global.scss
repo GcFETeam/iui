@@ -46,6 +46,16 @@ $padding-set: (t, top), (b, bottom), (l, left), (r, right);
     }
 }
 
+@for $i from 10 through 30 {
+    $t: $i * 10;
+    $total: $i * 10px;
+    .w-#{$t} {
+        width: $total;
+    }
+}
+
+
+
 /* ==========
     font
    ========== */

@@ -37,3 +37,29 @@
     }
 }
 
+.u-input-wrap {
+    position: relative;
+    .u-input {
+        padding-left: 30px;
+        width: 100%;
+        &:focus + .fa {
+            color: $color-text;
+        }
+    }
+    .fa {
+        position: absolute;
+        top: 0;
+        width: 30px;
+        text-align: center;
+        line-height: $element-height - 2px;
+        color: $color-content;
+    }
+    .icon-left {
+        left: 0;
+    }
+    .icon-right {
+        right: 0;
+    }
+}
+
+

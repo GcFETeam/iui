@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# icon
+# Icon
 
 > 使用fontawesome
 
