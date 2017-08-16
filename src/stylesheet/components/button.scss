@@ -2,7 +2,7 @@
     button
    ========== */
 $type-map: (primary, $color-primary),
-           (warn, $color-warn);
+        (warn, $color-warn);
 
 $size-map: (small, $element-height-lit),
         (big, $element-height-big);
@@ -21,6 +21,9 @@ $size-map: (small, $element-height-lit),
     }
     i {
         margin-right: 5px;
+    }
+    &.btn-line {
+        line-height: $element-height - 2px;
     }
 }
 
@@ -61,6 +64,13 @@ $size-map: (small, $element-height-lit),
     }
 }
 
+.btn-white {
+    background: $color-white;
+    &:hover {
+        background: lighten($color-light, 5%);
+    }
+}
+
 // size
 
 @each $btn, $size in $size-map {
@@ -70,7 +80,14 @@ $size-map: (small, $element-height-lit),
         &.btn-circle {
             width: $size;
         }
+        &.btn-line {
+            line-height: $size - 2px;
+        }
     }
+}
+
+.btn-small {
+    font-size: 12px;
 }
 
 

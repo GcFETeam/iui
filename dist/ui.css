@@ -46,6 +46,12 @@ strong {
 .fr {
   float: right; }
 
+input, select, textarea, button {
+  font-size: 100%; }
+
+* {
+  box-sizing: border-box; }
+
 /* ==========
     padding margin
    ========== */
@@ -244,6 +250,8 @@ strong {
     background: #d5d5d5; }
   .u-button i {
     margin-right: 5px; }
+  .u-button.btn-line {
+    line-height: 28px; }
 
 .btn-line {
   border: 1px solid #eee;
@@ -273,17 +281,29 @@ strong {
   .btn-warn:hover {
     background: #ff5b4d; }
 
+.btn-white {
+  background: #fff; }
+  .btn-white:hover {
+    background: #fbfbfb; }
+
 .btn-small {
   height: 20px;
   line-height: 20px; }
   .btn-small.btn-circle {
     width: 20px; }
+  .btn-small.btn-line {
+    line-height: 18px; }
 
 .btn-big {
   height: 40px;
   line-height: 40px; }
   .btn-big.btn-circle {
     width: 40px; }
+  .btn-big.btn-line {
+    line-height: 38px; }
+
+.btn-small {
+  font-size: 12px; }
 
 input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
   -webkit-appearance: none;

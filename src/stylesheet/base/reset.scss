@@ -60,5 +60,11 @@ strong {
     float: right;
 }
 
+input,select,textarea,button {
+    font-size: 100%
+}
 
+* {
+    box-sizing: border-box;
+}
 
