@@ -97,6 +97,17 @@ ul, li {
 
 pre {
     /*display: none;*/
+    opacity: .2;
+    padding: 5px 8px;
+    background: #f0f2f5;
+    transition: opacity .2s;
+}
+
+pre:hover {
+    opacity: 1;
+}
+
+code {
     padding: 5px 8px;
     background: #f0f2f5;
 }

@@ -341,10 +341,15 @@ h6 {
   font-size: 14px; }
 
 h1, h2, h3, h4, h5, h6 {
+  margin: .5em 0;
   font-weight: inherit; }
 
 p {
+  margin: .8em 0;
   color: #6f6f6f; }
+
+em {
+  color: #42a5f5; }
 
 a {
   color: #333; }
