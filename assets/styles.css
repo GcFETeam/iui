@@ -2,9 +2,6 @@ body {
     background: #f3f6f9;
     font: 14px/1.8 "Helvetica Neue", Arial, sans-serif;
 }
-h1,h2,h3,h4,h5,h6 {
-    font-weight: inherit;
-}
 
 ul, li {
     list-style-type: none;
@@ -13,6 +10,10 @@ ul, li {
 .page-header {
     padding: 5px 0;
     background: #fff;
+}
+
+.page-title {
+    margin: 0;
 }
 
 .page-layout {
@@ -66,7 +67,6 @@ ul, li {
     font-size: 12px;
 }
 
-
 .ft-title {
     font-family: Muli, sans-serif;
 }
@@ -75,13 +75,9 @@ ul, li {
     font-family: Lato, sans-serif;
 }
 
-a {
-    color: #333;
-}
-
 /* code */
 
-pre {
+.language-markup {
     font-size: 14px;
 }
 
@@ -93,21 +89,47 @@ code[class*=language-], pre[class*=language-] {
     background: #f0f2f5;
 }
 
-/* block */
-blockquote {
-    padding: 1px 10px;
-    border-left: 2px solid #f1f2f3;
-    background: #fafbfc;
-    margin: 0;
+/* code */
+
+
+.item-title {
+    text-transform: capitalize;
+}
+
+.code-box {
+    position: relative;
+    padding-top: 30px;
+}
+
+.code-box .fa {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 18px;
+    font-weight: 700;
     color: #aaa;
-    font-size: 12px;
 }
 
-blockquote p {
-    margin: 5px 0;
+pre {
+    display: none;
 }
 
-blockquote a {
-    color: #0d47a1;
+.show-code {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    z-index: 10;
 }
 
+.show-code:focus {
+    outline: none;
+}
+
+.show-code:checked + pre {
+    display: block;
+}

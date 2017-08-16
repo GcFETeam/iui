@@ -49,38 +49,23 @@ $padding-set: (t, top), (b, bottom), (l, left), (r, right);
 /* ==========
     font
    ========== */
+.pure-g [class*=pure-u] {
+    font-family: "Helvetica Neue", Arial, sans-serif;;
+}
+
+
 .ft-primary {
     color: $color-primary;
 }
 
+.ft-warn {
+    color: $color-warn;
+}
+
+.ft-content {
+    color: $color-content;
+}
+
 .ft-center {
     text-align: center;
-}
-
-.ft-red {
-    color: $color-red;
-}
-
-.ft-red-light {
-    color: $color-red-light;
-}
-
-.b1 {
-    color:  map-get($color-blue-system, dark);
-}
-
-.b2 {
-    color:  darken(map-get($color-blue-system, dark), 5%);
-}
-
-.b3 {
-    color:  darken(map-get($color-blue-system, dark), 10%);
-}
-
-.b4 {
-    color:  darken(map-get($color-blue-system, dark), 15%);
-}
-
-.b5 {
-    color:  lighten(map-get($color-blue-system, dark), 5%);
 }

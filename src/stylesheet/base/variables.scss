@@ -1,52 +1,26 @@
 @import "./theme";
 
-// color
-$color-red-system: (
-        50: #ffebee,
-        100: #ffcdd2,
-        200: #ef9a9a,
-        300: #e57373,
-        400: #ef5350,
-        500: #f44336,
-        600: #e53935,
-        700: #d32f2f,
-        800: #c62828,
-        900: #b71c1c,
-        A100: #ff8a80,
-        A200: #ff5252,
-        A400: #ff1744,
-        A700: #d50000
-);
-
-
-$color-blue-system: (
-        normal: #42a5f5,
-        hover: #90caf9,
-        dark: #0d47a1
-);
-
 $color-white: #fff;
 
+$color-primary: #42a5f5;
 
-$color-primary: map-get($color-blue-system, normal);
-
-$color-primary-light: map-get($color-blue-system, hover);
-
-
-$color-red: map-get($color-red-system, 600);
-
-$color-red-light: lighten($color-red, 20%);
-
+$color-warn: #ff8a80;
 
 $color-gray: #999;
 
-$color-border: #eee;
+$color-light: #eee;
 
+$color-content: #6f6f6f;
 
+$color-text: #333;
 
 // height
 
 $element-height: 30px;
+
+$element-height-lit: 20px;
+
+$element-height-big: 40px;
 
 
 

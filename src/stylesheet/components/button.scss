@@ -1,47 +1,51 @@
-
-$h: 40px;
-
-$h-big: 50px;
-
-$h-small: 30px;
-
-$padding: 0 10px;
-
+/* ==========
+    button
+   ========== */
 $type-map: (primary, $color-primary),
-           (gray, $color-gray),
-           (light, $color-primary-light);
+           (warn, $color-warn);
+
+$size-map: (small, $element-height-lit),
+        (big, $element-height-big);
 
 .u-button {
-    height: $h;
+    height: $element-height;
     display: inline-block;
-    padding: $padding;
+    padding: 0 10px;
     text-align: center;
     border: 0;
     border-radius: 2px;
     cursor: pointer;
+    background: $color-light;
+    &:hover {
+        background: darken($color-light, 10%);
+    }
+    i {
+        margin-right: 5px;
+    }
+}
+
+// type
+
+.btn-line {
+    border: 1px solid $color-light;
+    background: transparent;
+    &:hover {
+        background: transparent;
+        border-color: darken($color-light, 10%);
+    }
 }
 
 .btn-circle {
-    width: $h;
+    width: $element-height;
+    padding: 0;
     border-radius: 50%;
-}
-
-.btn-big {
-    height: $h-big;
-    line-height: $h-big;
-    font-size: 16px;
-    &.btn-circle {
-        width: $h-big;
+    text-align: center;
+    i {
+        margin: 0;
     }
 }
 
-.btn-small {
-    height: $h-small;
-    line-height: $h-small;
-    &.btn-circle {
-        width: $h-small;
-    }
-}
+// color
 
 %front-color {
     color: #fff;
@@ -51,9 +55,22 @@ $type-map: (primary, $color-primary),
     .btn-#{$btn} {
         background: $color;
         &:hover {
-            background: lighten($color, 10%);
+            background: darken($color, 10%);
         }
         @extend %front-color;
     }
 }
+
+// size
+
+@each $btn, $size in $size-map {
+    .btn-#{$btn} {
+        height: $size;
+        line-height: $size;
+        &.btn-circle {
+            width: $size;
+        }
+    }
+}
+
 
