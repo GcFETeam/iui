@@ -49,6 +49,10 @@ strong {
 input, select, textarea, button {
   font-size: 100%; }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 * {
   box-sizing: border-box; }
 
@@ -296,6 +300,21 @@ input, select, textarea, button {
 .ft-center {
   text-align: center; }
 
+/* ==========
+    border
+   ========== */
+.bl-2 {
+  border-left: 2px solid #eee; }
+
+.bb-1 {
+  border-bottom: 1px solid #eee; }
+
+.bc-primary {
+  border-color: #42a5f5; }
+
+.bc-warn {
+  border-color: #ff8a80; }
+
 /* ===== components ===== */
 /* ==========
     button
@@ -404,6 +423,9 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
   .u-input-wrap .icon-right {
     right: 0; }
 
+.u-title {
+  font-size: 16px; }
+
 h1 {
   font-size: 30px; }
 
@@ -440,7 +462,7 @@ a {
 
 blockquote {
   padding: 1px 10px;
-  margin: 0;
+  margin: 0 0 10px;
   color: #333;
   font-size: 12px;
   letter-spacing: .7px;

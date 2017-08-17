@@ -1,3 +1,6 @@
+// b: bottom l: left r: right t: top
+// p: padding m: margin
+
 /* ==========
     padding margin
    ========== */
@@ -79,3 +82,27 @@ $padding-set: (t, top), (b, bottom), (l, left), (r, right);
 .ft-center {
     text-align: center;
 }
+
+/* ==========
+    border
+   ========== */
+
+
+.bl-2 {
+    border-left: 2px solid $color-light;
+}
+
+.bb-1 {
+    border-bottom: 1px solid $color-light;
+}
+
+.bc-primary {
+    border-color: $color-primary;
+}
+
+.bc-warn {
+    border-color: $color-warn;
+}
+
+
+
