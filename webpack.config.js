@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-
 module.exports = {
     entry: {
         ui: "./src/javascript/ui.js"
@@ -26,12 +25,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-            },
-            {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract("css-loader!sass-loader")
+                loader: ExtractTextPlugin.extract('css-loader!postcss-loader!sass-loader')
             }
         ]
     }

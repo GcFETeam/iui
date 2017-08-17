@@ -49,10 +49,10 @@ $padding-set: (t, top), (b, bottom), (l, left), (r, right);
     }
 }
 
-@for $i from 10 through 30 {
+@for $i from 10 through 50 {
     $t: $i * 10;
     $total: $i * 10px;
-    .w-#{$t} {
+    .w#{$t} {
         width: $total;
     }
 }
@@ -86,23 +86,16 @@ $padding-set: (t, top), (b, bottom), (l, left), (r, right);
 /* ==========
     border
    ========== */
-
+$border: 1px solid $color-light;
 
 .bl-2 {
     border-left: 2px solid $color-light;
 }
 
 .bb-1 {
-    border-bottom: 1px solid $color-light;
+    border-bottom: $border;
 }
 
-.bc-primary {
-    border-color: $color-primary;
+.bt-1 {
+    border-top: $border;
 }
-
-.bc-warn {
-    border-color: $color-warn;
-}
-
-
-

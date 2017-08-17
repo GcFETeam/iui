@@ -37,6 +37,10 @@ e.g
 .u-message {}
 ```
 
+**特殊**
+
+这里的组件全部使用`ui-`开头作为区分
+
 
 
 #### 两个字母 - 
@@ -62,19 +66,35 @@ e.g
 }
 ```
 
-#### 三个字母
+#### 缩写
 
-button | btn
-content | con
-bottom | btm
-article | atl
 advertise | adv
+article | atl
+button | btn
+bottom | btm
+background | bg
+content | con
+current | cur
+disabled | dis
+error | err
+image | img
+title | tit
 
 e.g 
 ```css
-.m-nav .btn-xxx {
+.m-nav .btn {
     height: 45px;
 }
+```
+
+#### 修饰
+
+--
+
+e.g
+```html
+<button class="u-button btn--line"></button>
+<button class="u-button btn--disabled"></button>
 ```
 
 

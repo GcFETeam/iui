@@ -25,7 +25,7 @@
 }
 
 
-.u-input {
+.ui-input {
     height: $element-height;
     padding: 0 10px;
     box-sizing: border-box;
@@ -37,9 +37,9 @@
     }
 }
 
-.u-input-wrap {
+.ui-input-wrap {
     position: relative;
-    .u-input {
+    .ui-input {
         padding-left: 30px;
         width: 100%;
         &:focus + .fa {

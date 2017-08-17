@@ -7,19 +7,14 @@
     - title: grids
       url: /docs/grids/
 
-- title: Unit
+- title: Components
   pages:
     - title: title
       url: /docs/title/
     - title: button
       url: /docs/button/
-    - title: input
-      url: /docs/input/
-
-- title: Module
-  pages:
-    - title: form
-      url: /docs/form/
+    - title: card
+      url: /docs/card/
     - title: menu
       url: /docs/menu
 
