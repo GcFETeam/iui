@@ -83,6 +83,14 @@ $padding-set: (t, top), (b, bottom), (l, left), (r, right);
     text-align: center;
 }
 
+.ft-right {
+    text-align: right;
+}
+
+.ft-uppercase {
+    text-transform: uppercase;
+}
+
 /* ==========
     border
    ========== */

@@ -2,10 +2,8 @@
   pages:
     - title: typography
       url: /docs/typography/
-    - title: icon
-      url: /docs/icon/
-    - title: grids
-      url: /docs/grids/
+    - title: third party
+      url: /docs/third party/
 
 - title: Components
   pages:
@@ -17,5 +15,7 @@
       url: /docs/card/
     - title: menu
       url: /docs/menu
+    - title: image
+      url: /docs/image
 
 

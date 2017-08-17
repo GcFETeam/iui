@@ -1,0 +1,77 @@
+.ui-image {
+    img {
+        vertical-align: bottom;
+    }
+    .tit {
+        padding: 10px;
+        font-size: 20px;
+    }
+    .desc {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+.img--cover {
+    position: relative;
+    overflow: hidden;
+    .layer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(#000, .2);
+    }
+    .tit {
+        bottom: 50px;
+        transition: transform .4s;
+    }
+    .desc {
+        bottom: 0;
+        opacity: 0;
+        transition: transform .4s, opacity .4s;
+    }
+    .tit,
+    .desc {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        color: $color-white;
+        transform: translate3d(0,0,0);
+    }
+    &:hover {
+        .tit {
+            transform: translate3d(0,-10px,0);
+        }
+        .desc {
+            transform: translate3d(0,-40px,0);
+            opacity: 1;
+        }
+        .layer {
+            background: rgba(#000, .1);
+        }
+    }
+}
+
+.img--cover-center {
+    .tit {
+        margin-top: -20px;
+    }
+    .tit,
+    .desc {
+        top: 50%;
+        margin-top: -15px;
+        text-align: center;
+        bottom: auto;
+        transform: translate3d(0,0,0);
+    }
+    &:hover {
+        .tit {
+            transform: translate3d(0,-10px,0);
+        }
+        .desc {
+            transform: translate3d(0,25px,0);
+        }
+    }
+}
