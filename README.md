@@ -1,3 +1,3 @@
 # iui
 
-[DOCS](https://sollrei.github.io/my-project/docs/)
+哎呦喂 \_(:зゝ∠)\_
