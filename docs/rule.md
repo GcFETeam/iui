@@ -87,16 +87,6 @@ e.g
 }
 ```
 
-#### 修饰
-
---
-
-e.g
-```html
-<button class="u-button btn--line"></button>
-<button class="u-button btn--disabled"></button>
-```
-
 
 ### 顺序
 
