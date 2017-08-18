@@ -5,17 +5,17 @@
     - title: third party
       url: /docs/third party/
 
-- title: Components
+- title: UI
   pages:
-    - title: title
-      url: /docs/title/
     - title: button
       url: /docs/button/
     - title: card
       url: /docs/card/
-    - title: menu
-      url: /docs/menu
     - title: image
       url: /docs/image
+    - title: menu
+      url: /docs/menu
+    - title: title
+      url: /docs/title/
 
 

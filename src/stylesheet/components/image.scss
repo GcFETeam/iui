@@ -1,4 +1,6 @@
 .ui-image {
+    position: relative;
+    overflow: hidden;
     img {
         vertical-align: bottom;
     }
@@ -13,8 +15,6 @@
 }
 
 .img--cover {
-    position: relative;
-    overflow: hidden;
     .layer {
         position: absolute;
         left: 0;
@@ -72,6 +72,46 @@
         }
         .desc {
             transform: translate3d(0,25px,0);
+        }
+    }
+}
+
+.img--frame {
+    text-align: center;
+    .frame {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        &:before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 1px solid $color-white;
+            transform: scale(.9);
+            transition: transform .2s;
+        }
+    }
+    .tit {
+        display: inline-block;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: 16px;
+        line-height: 1;
+        background: $color-white;
+    }
+    &:hover {
+        .frame {
+            &:before {
+                transform: scale(1);
+            }
+        }
+        .tit {
         }
     }
 }

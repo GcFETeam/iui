@@ -8,19 +8,22 @@ $size-map: (small, $element-height-lit),
         (big, $element-height-big);
 
 .ui-button {
-    height: $element-height;
     display: inline-block;
     padding: 0 10px;
-    text-align: center;
+    height: $element-height;
     border: 0;
     border-radius: 2px;
+    text-align: center;
+    line-height: $element-height;
     cursor: pointer;
     background: $color-light;
+    transition: background .2s, color, .2s;
     &:hover {
-        background: darken($color-light, 10%);
+        background: $color-primary;
+        color: $color-white;
     }
-    i {
-        margin-right: 5px;
+    i + span {
+        margin-left: 5px;
     }
     &.btn-line {
         line-height: $element-height - 2px;
@@ -43,9 +46,6 @@ $size-map: (small, $element-height-lit),
     padding: 0;
     border-radius: 50%;
     text-align: center;
-    i {
-        margin: 0;
-    }
 }
 
 // color
