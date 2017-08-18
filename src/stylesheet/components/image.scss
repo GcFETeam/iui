@@ -1,8 +1,12 @@
-.ui-image {
+%pos {
     position: relative;
     overflow: hidden;
+}
+
+.ui-image {
     img {
         vertical-align: bottom;
+        max-width: 100%;
     }
     .tit {
         padding: 10px;
@@ -15,13 +19,15 @@
 }
 
 .ui-image-cover {
-    .layer {
+    @extend %pos;
+    .cover {
         position: absolute;
         left: 0;
         top: 0;
         height: 100%;
         width: 100%;
         background: rgba(#000, .2);
+        transition: background .3s;
     }
     .tit {
         bottom: 50px;
@@ -48,13 +54,14 @@
             transform: translate3d(0,-40px,0);
             opacity: 1;
         }
-        .layer {
+        .cover {
             background: rgba(#000, .1);
         }
     }
 }
 
 .ui-image-cover-center {
+    @extend %pos;
     .tit {
         margin-top: -20px;
     }
@@ -76,7 +83,17 @@
     }
 }
 
+.ui-image-tag {
+    @extend %pos;
+    .tag {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
 .ui-image-frame {
+    @extend %pos;
     text-align: center;
     .frame {
         position: absolute;
@@ -112,6 +129,7 @@
             }
         }
         .tit {
+
         }
     }
 }

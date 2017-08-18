@@ -8,7 +8,7 @@
 $padding-set: (t, top), (b, bottom), (l, left), (r, right);
 
 @each $name, $type in $padding-set {
-    @for $i from 1 through 4 {
+    @for $i from 1 through 6 {
 
         $t: $i * 5;
         $total: #{$t}px;
@@ -23,7 +23,7 @@ $padding-set: (t, top), (b, bottom), (l, left), (r, right);
     }
 }
 
-@for $i from 1 through 4 {
+@for $i from 1 through 6 {
 
     $t: $i * 5;
     $total: #{$t}px;

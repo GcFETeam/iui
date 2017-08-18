@@ -10,25 +10,6 @@
     .hd {
         color: $color-content;
     }
-    img {
-        max-width: 100%;
-        vertical-align: bottom;
-    }
-    .img {
-        position: relative;
-        display: block;
-        &:before {
-            content: '';
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            background: rgba(#000, .1);
-            opacity: 0;
-            transition: all .2s;
-        }
-    }
     .tit {
         padding: 15px 0;
         margin: 0;
@@ -40,12 +21,11 @@
         max-height: 50px;
         overflow: hidden;
     }
-    .content {
-        padding: 5px 15px;
-    }
     .info {
         font-size: 12px;
         color: $color-content;
     }
-
+    .content {
+        font-size: 14px;
+    }
 }

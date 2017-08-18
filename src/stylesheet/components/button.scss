@@ -2,6 +2,7 @@
     button
    ========== */
 $type-map: (primary, $color-primary),
+        (dark, $color-text),
         (warn, $color-warn);
 
 $size-map: (small, $element-height-lit),
@@ -25,8 +26,14 @@ $size-map: (small, $element-height-lit),
     i + span {
         margin-left: 5px;
     }
+    span + i {
+        margin-left: 5px;
+    }
     &.ui-button-line {
         line-height: $element-height - 2px;
+        &:hover {
+            color: $color-content;
+        }
     }
 }
 
@@ -41,11 +48,15 @@ $size-map: (small, $element-height-lit),
     }
 }
 
+.ui-button-square,
 .ui-button-circle {
     width: $element-height;
     padding: 0;
-    border-radius: 50%;
     text-align: center;
+}
+
+.ui-button-circle {
+    border-radius: 50%;
 }
 
 // color
@@ -67,7 +78,7 @@ $size-map: (small, $element-height-lit),
 .ui-button-white {
     background: $color-white;
     &:hover {
-        background: lighten($color-light, 5%);
+        background: $color-primary;
     }
 }
 
@@ -78,6 +89,9 @@ $size-map: (small, $element-height-lit),
         height: $size;
         line-height: $size;
         &.ui-button-circle {
+            width: $size;
+        }
+        &.ui-button-square {
             width: $size;
         }
         &.ui-button-line {
