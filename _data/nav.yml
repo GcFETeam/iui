@@ -15,7 +15,14 @@
       url: /docs/image/
     - title: menu
       url: /docs/menu/
+    - title: search
+      url: /docs/search/
     - title: title
       url: /docs/title/
+
+- title: Example
+  pages:
+    - title: page
+      url: /docs/example
 
 

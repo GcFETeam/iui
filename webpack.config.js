@@ -18,7 +18,7 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: path.join(__dirname, 'es6'),
+                test: __dirname + '/src/javascript',
                 loader: 'babel-loader',
                 query: {
                     presets: ['es2015']

@@ -1,5 +1,6 @@
 require('../stylesheet/ui.scss');
 
-import arr from './menu';
-import n from './button';
 
+import searchObject from './search';
+
+import Modal from './modal';
