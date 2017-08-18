@@ -4,7 +4,6 @@
 
 import common from './common';
 
-
 const modalHtml =
     `<div class="modal-inner">
             <span class="modal-close" data-modal-close>&times;</span>
@@ -216,8 +215,6 @@ class Modal {
 
         if (!_.isListening) {
 
-            // modal.addEventListener('click', )
-
             if (open) {
                 doc.addEventListener('click', this.delegateOpen, false);
             }
@@ -226,15 +223,12 @@ class Modal {
                 doc.addEventListener('click', this.delegateClose, false);
             }
 
-
         }
-
 
     }
 
 }
 
-
-new Modal();
+window.Modal = Modal;
 
 export default Modal;

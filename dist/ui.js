@@ -472,8 +472,6 @@ var Modal = function () {
 
             if (!_.isListening) {
 
-                // modal.addEventListener('click', )
-
                 if (open) {
                     doc.addEventListener('click', this.delegateOpen, false);
                 }
@@ -488,7 +486,7 @@ var Modal = function () {
     return Modal;
 }();
 
-new Modal();
+window.Modal = Modal;
 
 exports.default = Modal;
 

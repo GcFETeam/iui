@@ -53,7 +53,7 @@
         <span>|</span>
         <a href="#">CONTACT</a>
         <span>|</span>
-        <a href="#modal" data-modal-open class="ui-search"><i class="fa fa-search"></i></a>
+        <a href="#modal" data-modal-title="Search" data-modal-open class="ui-search"><i class="fa fa-search"></i></a>
     </div>
 </div>
 
@@ -142,13 +142,17 @@
 </footer>
 
 <script type="text/html" id="modal">
-    <div style="padding: 60px 20px 30px;">
-        <form action="#">
-            <input type="text" class="ui-input">
+    <div class="pb-30 plr-30">
+        <form action="#" class="ui-search clf">
+            <input type="text" class="ui-input w500 fl" placeholder="Search...">
+            <button class="ui-button ui-button-dark ui-button-big">Search</button>
         </form>
     </div>
 </script>
 
 <script src="../../dist/ui.js"></script>
+<script>
+    new Modal();
+</script>
 </body>
 </html>

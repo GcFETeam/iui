@@ -1,0 +1,10 @@
+.ui-search {
+    .ui-input {
+        height: $element-height-big;
+        border: 1px solid $color-text;
+        border-radius: 0;
+    }
+    .ui-button {
+        border-radius: 0;
+    }
+}

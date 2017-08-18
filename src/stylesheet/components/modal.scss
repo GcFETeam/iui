@@ -55,6 +55,11 @@
 
 }
 
+.modal-title div {
+    padding: 20px 30px;
+    font-size: 20px;
+}
+
 .modal-visible .modal-inner {
     z-index: 100;
     opacity: 1;
