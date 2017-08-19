@@ -24,8 +24,6 @@
     }
 }
 
-
-
 .ui-input {
     height: $element-height;
     padding: 0 10px;
@@ -38,29 +36,7 @@
     }
 }
 
-.ui-input-wrap {
-    position: relative;
-    .ui-input {
-        padding-left: 30px;
-        width: 100%;
-        &:focus + .fa {
-            color: $color-text;
-        }
-    }
-    .fa {
-        position: absolute;
-        top: 0;
-        width: 30px;
-        text-align: center;
-        line-height: $element-height - 2px;
-        color: $color-content;
-    }
-    .icon-left {
-        left: 0;
-    }
-    .icon-right {
-        right: 0;
-    }
+.ui-input-big {
+    height: $element-height-big;
 }
-
 

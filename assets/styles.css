@@ -51,16 +51,6 @@ ul, li {
     min-height: 50vh;
 }
 
-.page-main .main > h3 {
-    margin-top: 40px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #f0f2f4;
-}
-
-.page-main .main > h3:first-of-type {
-    margin-top: 0;
-}
-
 .page-footer {
     padding: 40px 0 20px;
     text-align: center;
