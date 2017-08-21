@@ -465,36 +465,6 @@ table {
 .bt-1 {
   border-top: 1px solid #eee; }
 
-.animate {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
-  .animate.infinite {
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite; }
-  .animate.rotate {
-    -webkit-animation-name: rotate;
-            animation-name: rotate;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear; }
-
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0); }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0); }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-
 /* ===== components ===== */
 .ui-avatar img {
   max-width: 100%;
