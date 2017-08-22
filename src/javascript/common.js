@@ -110,4 +110,32 @@ export function delegate(element, targetSelector, type, handler) {
     }, false);
 }
 
+export function getOffset (node, offset, noInit) {
 
+    if (!offset) {
+        offset = {
+            left: 0,
+            top: 0
+        }
+    }
+
+    if (node.nodeType !== 1) {
+        return offset;
+    }
+
+    let _pos = window.getComputedStyle(node)['position'];
+
+    if (noInit && _pos === 'static') {
+        return getOffset(node, offset, true);
+    }
+
+    offset.left += node.offsetLeft - node.scrollLeft;
+    offset.top += node.offsetTop - node.scrollTop;
+
+    if (_pos === 'fixed') {
+        return offset;
+    }
+
+    return getOffset(node, offset, true);
+    
+}

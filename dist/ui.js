@@ -70,17 +70,16 @@
 "use strict";
 
 
-var _modal = __webpack_require__(2);
+var _modal = __webpack_require__(1);
 
 var _modal2 = _interopRequireDefault(_modal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(4);
+__webpack_require__(3);
 
 /***/ }),
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -93,7 +92,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _common = __webpack_require__(3);
+var _common = __webpack_require__(2);
 
 var common = _interopRequireWildcard(_common);
 
@@ -332,7 +331,7 @@ window.Modal = Modal;
 exports.default = Modal;
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -352,6 +351,7 @@ exports.getElementContext = getElementContext;
 exports.applyUserSettings = applyUserSettings;
 exports.matches = matches;
 exports.delegate = delegate;
+exports.getOffset = getOffset;
 var _extends = exports._extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
         var source = arguments[i];
@@ -463,8 +463,37 @@ function delegate(element, targetSelector, type, handler) {
     }, false);
 }
 
+function getOffset(node, offset, noInit) {
+
+    if (!offset) {
+        offset = {
+            left: 0,
+            top: 0
+        };
+    }
+
+    if (node.nodeType !== 1) {
+        return offset;
+    }
+
+    var _pos = window.getComputedStyle(node)['position'];
+
+    if (noInit && _pos === 'static') {
+        return getOffset(node, offset, true);
+    }
+
+    offset.left += node.offsetLeft - node.scrollLeft;
+    offset.top += node.offsetTop - node.scrollTop;
+
+    if (_pos === 'fixed') {
+        return offset;
+    }
+
+    return getOffset(node, offset, true);
+}
+
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
