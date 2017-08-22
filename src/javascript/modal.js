@@ -36,13 +36,6 @@ const defaultSetting = {
 
 const doc = document;
 
-function delegate (element, event, fn) {
-    let parent = doc.querySelector(element);
-    if (parent) {
-
-    }
-}
-
 class Modal {
 
     constructor (setting) {
@@ -229,4 +222,3 @@ class Modal {
 
 window.Modal = Modal;
 
-export default Modal;

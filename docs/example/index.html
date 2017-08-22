@@ -38,10 +38,11 @@
 
 <header class="header pt-10">
     <div class="layout ft-center ptb-30">
-        <h1 class="ft-title ft-primary animated fadeInDown">My Blog</h1>
+        <h1 class="ft-title ft-primary animated fadeInDown">ABCddd</h1>
         <p class="desc mb-30">Simple, Minimal, Responsive Ghost Theme For Passionate Blogger.</p>
     </div>
 </header>
+
 <div class="nav ft-center mb-30">
     <div class="ui-menu">
         <a href="#">HOME</a>
@@ -80,7 +81,9 @@
                 <div class="aside-box ui-card plr-15 ptb-15 mb-30">
                     <h4 class="ui-title">Follow <b>Me</b></h4>
                     <div class="aside-con pt-10">
-                        <a href="#" class="ui-button ui-button-square ui-button-dark mr-10 mb-10"><i class="fa fa-twitter"></i></a>
+                        <a href="javascript:;" data-tooltip-trigger data-title="twitter" class="ui-button ui-button-square ui-button-dark mr-10 mb-10">
+                            <i class="fa fa-twitter"></i>
+                        </a>
                         <a href="#" class="ui-button ui-button-square ui-button-dark mr-10 mb-10"><i class="fa fa-facebook"></i></a>
                         <a href="#" class="ui-button ui-button-square ui-button-dark mr-10 mb-10"><i class="fa fa-qq"></i></a>
                         <a href="#" class="ui-button ui-button-square ui-button-dark mr-10 mb-10"><i class="fa fa-weibo"></i></a>
@@ -138,20 +141,15 @@
     <p class="ft-center">&copy; 2017 iui</p>
 </footer>
 
-<script type="text/html" id="modal">
-    <div class="pb-30 plr-30">
-        <form action="#" class="ui-search clf">
-            <input type="text" class="ui-input ui-input-big w500 fl" placeholder="Search...">
-            <button class="ui-button ui-button-dark ui-button-big">Search</button>
-        </form>
-    </div>
-</script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chibi/3.0.9/chibi.js"></script>
+
 <script src="../../dist/ui.js"></script>
+
 <script>
     new Modal();
+    new Tooltip();
 </script>
+
 </body>
 
 </html>

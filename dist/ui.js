@@ -70,11 +70,9 @@
 "use strict";
 
 
-var _modal = __webpack_require__(1);
+__webpack_require__(1);
 
-var _modal2 = _interopRequireDefault(_modal);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+__webpack_require__(5);
 
 __webpack_require__(3);
 
@@ -85,10 +83,6 @@ __webpack_require__(3);
 "use strict";
 
 
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -126,11 +120,6 @@ var defaultSetting = {
 };
 
 var doc = document;
-
-function delegate(element, event, fn) {
-    var parent = doc.querySelector(element);
-    if (parent) {}
-}
 
 var Modal = function () {
     function Modal(setting) {
@@ -328,8 +317,6 @@ var Modal = function () {
 
 window.Modal = Modal;
 
-exports.default = Modal;
-
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -438,16 +425,20 @@ function applyUserSettings(settings) {
 }
 
 function matches(e, selector) {
-    var allMatches = (e.target.document || e.target.ownerDocument).querySelectorAll(selector);
-    for (var i = 0; i < allMatches.length; i += 1) {
-        var node = e.target;
-        while (node && node !== document.body) {
-            if (node === allMatches[i]) {
-                return node;
+    var d = e.target.document || e.target.ownerDocument;
+    if (d) {
+        var allMatches = (e.target.document || e.target.ownerDocument).querySelectorAll(selector);
+        for (var i = 0; i < allMatches.length; i += 1) {
+            var node = e.target;
+            while (node && node !== document.body) {
+                if (node === allMatches[i]) {
+                    return node;
+                }
+                node = node.parentNode;
             }
-            node = node.parentNode;
         }
     }
+
     return null;
 }
 
@@ -479,7 +470,7 @@ function getOffset(node, offset, noInit) {
     var _pos = window.getComputedStyle(node)['position'];
 
     if (noInit && _pos === 'static') {
-        return getOffset(node, offset, true);
+        return getOffset(node.parentNode, offset, true);
     }
 
     offset.left += node.offsetLeft - node.scrollLeft;
@@ -489,7 +480,7 @@ function getOffset(node, offset, noInit) {
         return offset;
     }
 
-    return getOffset(node, offset, true);
+    return getOffset(node.parentNode, offset, true);
 }
 
 /***/ }),
@@ -497,6 +488,112 @@ function getOffset(node, offset, noInit) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 4 */,
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _common = __webpack_require__(2);
+
+var common = _interopRequireWildcard(_common);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var doc = document,
+    defaultSetting = {
+    trigger: '[data-tooltip-trigger]',
+    data: 'data-tip',
+    duration: 0.2
+};
+
+var Tooltip = function () {
+    function Tooltip(option) {
+        _classCallCheck(this, Tooltip);
+
+        var _ = this;
+
+        _.settings = common._extends(defaultSetting, option);
+
+        _.trigger = doc.querySelectorAll(_.settings.trigger);
+
+        _.show = _.show.bind(_);
+        _.hide = _.hide.bind(_);
+
+        _.listen();
+    }
+
+    _createClass(Tooltip, [{
+        key: 'createTip',
+        value: function createTip(node, e) {
+
+            if (!this.isOpening) {
+
+                var div = doc.createElement('div'),
+                    position = common.getOffset(node, {
+                    left: 0,
+                    top: -20
+                });
+
+                div.className = 'ui-tooltip animated fadeIn';
+                div.style.left = position.left + 'px';
+                div.style.top = position.top + 'px';
+                div.innerHTML = 'hello';
+
+                doc.body.appendChild(div);
+
+                this.toolDom = div;
+
+                this.isOpening = true;
+            }
+        }
+    }, {
+        key: 'show',
+        value: function show(e) {
+            console.log('enter', e.target.className);
+
+            this.createTip(e.target, e);
+        }
+    }, {
+        key: 'hide',
+        value: function hide(e) {
+
+            var node = this.toolDom;
+
+            common.removeClass(node, 'fadeIn');
+            common.addClass(node, 'fadeOut');
+
+            setTimeout(function () {
+                node.remove();
+            }, this.settings.duration * 1000);
+
+            this.isOpening = false;
+        }
+    }, {
+        key: 'listen',
+        value: function listen() {
+
+            var _ = this,
+                trigger = _.trigger;
+
+            trigger.forEach(function (item) {
+                item.addEventListener('mouseenter', _.show, false);
+                item.addEventListener('mouseleave', _.hide, false);
+            });
+        }
+    }]);
+
+    return Tooltip;
+}();
+
+window.Tooltip = Tooltip;
 
 /***/ })
 /******/ ]);

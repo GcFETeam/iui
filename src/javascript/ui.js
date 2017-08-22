@@ -1,5 +1,5 @@
 require('../stylesheet/ui.scss');
 
+import './modal';
 
-
-import Modal from './modal';
+import './tooltip';

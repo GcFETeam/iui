@@ -781,6 +781,12 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
   padding-bottom: 10px;
   border-bottom: 1px solid #eee; }
 
+.ui-tooltip {
+  position: absolute;
+  z-index: 100;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s; }
+
 h1 {
   font-size: 30px; }
 
