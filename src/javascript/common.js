@@ -85,16 +85,20 @@ export function applyUserSettings(settings) {
 }
 
 export function matches(e, selector) {
-    let allMatches = (e.target.document || e.target.ownerDocument).querySelectorAll(selector);
-    for (let i = 0; i < allMatches.length; i += 1) {
-        let node = e.target;
-        while (node && node !== document.body) {
-            if (node === allMatches[i]) {
-                return node;
+    let d = e.target.document || e.target.ownerDocument;
+    if (d) {
+        let allMatches = (e.target.document || e.target.ownerDocument).querySelectorAll(selector);
+        for (let i = 0; i < allMatches.length; i += 1) {
+            let node = e.target;
+            while (node && node !== document.body) {
+                if (node === allMatches[i]) {
+                    return node;
+                }
+                node = node.parentNode;
             }
-            node = node.parentNode;
         }
     }
+
     return null;
 }
 
@@ -112,6 +116,7 @@ export function delegate(element, targetSelector, type, handler) {
 
 export function getOffset (node, offset, noInit) {
 
+
     if (!offset) {
         offset = {
             left: 0,
@@ -126,7 +131,7 @@ export function getOffset (node, offset, noInit) {
     let _pos = window.getComputedStyle(node)['position'];
 
     if (noInit && _pos === 'static') {
-        return getOffset(node, offset, true);
+        return getOffset(node.parentNode, offset, true);
     }
 
     offset.left += node.offsetLeft - node.scrollLeft;
@@ -136,6 +141,6 @@ export function getOffset (node, offset, noInit) {
         return offset;
     }
 
-    return getOffset(node, offset, true);
-    
+    return getOffset(node.parentNode, offset, true);
+
 }
