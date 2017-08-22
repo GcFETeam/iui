@@ -70,10 +70,6 @@
 "use strict";
 
 
-var _search = __webpack_require__(1);
-
-var _search2 = _interopRequireDefault(_search);
-
 var _modal = __webpack_require__(2);
 
 var _modal2 = _interopRequireDefault(_modal);
@@ -83,35 +79,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 __webpack_require__(4);
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var searchObject = {
-
-    selector: 'ui-search',
-
-    init: function init() {
-
-        var _ = this;
-
-        _.element = document.querySelectorAll('.ui-search');
-
-        console.log(_.element);
-    },
-    bindEvent: function bindEvent() {}
-};
-
-searchObject.init();
-
-exports.default = searchObject;
-
-/***/ }),
+/* 1 */,
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -127,9 +95,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _common = __webpack_require__(3);
 
-var _common2 = _interopRequireDefault(_common);
+var common = _interopRequireWildcard(_common);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -175,7 +143,7 @@ var Modal = function () {
 
         _.isListening = false;
 
-        _.settings = _common2.default._extends({}, defaultSetting, setting);
+        _.settings = common._extends({}, defaultSetting, setting);
 
         _.dom = _.getDomNodes();
 
@@ -236,7 +204,7 @@ var Modal = function () {
         value: function delegateOpen(e) {
             var open = this.settings.open;
 
-            var match = _common2.default.matches(e, open);
+            var match = common.matches(e, open);
 
             if (match) {
                 e.preventDefault();
@@ -256,9 +224,7 @@ var Modal = function () {
 
             _.releaseNode();
 
-            if (element.hash) {
-                _.current = doc.querySelector(element.hash);
-            }
+            _.current = common.getElementContext(element);
 
             if (typeof onBeforeOpen === 'function') {
                 onBeforeOpen.call(_, e);
@@ -266,7 +232,7 @@ var Modal = function () {
 
             _.captureNode(_.current, element);
 
-            _common2.default.addClass(modal, className);
+            common.addClass(modal, className);
 
             _.isOpen = true;
 
@@ -298,7 +264,7 @@ var Modal = function () {
         value: function delegateClose(e) {
             var close = this.settings.close;
 
-            if (_common2.default.matches(e, close)) {
+            if (common.matches(e, close)) {
                 e.preventDefault();
                 this.close(e);
             }
@@ -319,7 +285,7 @@ var Modal = function () {
                     onBeforeClose.call(_, e);
                 }
 
-                _common2.default.removeClass(_.dom.modal, className);
+                common.removeClass(_.dom.modal, className);
 
                 _.closeModal(e);
             }
@@ -375,7 +341,18 @@ exports.default = Modal;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _extends = Object.assign || function (target) {
+exports.throwError = throwError;
+exports.find = find;
+exports.transitionEndVendorSniff = transitionEndVendorSniff;
+exports.isPopulatedArray = isPopulatedArray;
+exports.getNode = getNode;
+exports.addClass = addClass;
+exports.removeClass = removeClass;
+exports.getElementContext = getElementContext;
+exports.applyUserSettings = applyUserSettings;
+exports.matches = matches;
+exports.delegate = delegate;
+var _extends = exports._extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
         var source = arguments[i];
 
@@ -474,12 +451,17 @@ function matches(e, selector) {
     return null;
 }
 
-exports.default = {
-    _extends: _extends,
-    addClass: addClass,
-    removeClass: removeClass,
-    matches: matches
-};
+function delegate(element, targetSelector, type, handler) {
+
+    element.addEventListener(type, function (event) {
+        var targets = Array.prototype.slice.call(element.querySelectorAll(targetSelector));
+
+        var target = event.target;
+        if (targets.indexOf(target) !== -1) {
+            return handler.apply(target, arguments);
+        }
+    }, false);
+}
 
 /***/ }),
 /* 4 */

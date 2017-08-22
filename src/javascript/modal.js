@@ -2,7 +2,7 @@
 'use strict';
 
 
-import common from './common';
+import * as common from './common';
 
 const modalHtml =
     `<div class="modal-inner">
@@ -129,9 +129,7 @@ class Modal {
 
         _.releaseNode();
 
-        if (element.hash) {
-            _.current = doc.querySelector(element.hash);
-        }
+        _.current = common.getElementContext(element);
 
         if (typeof onBeforeOpen === 'function') {
             onBeforeOpen.call(_, e);
