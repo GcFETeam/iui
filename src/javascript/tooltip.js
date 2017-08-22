@@ -1,3 +1,5 @@
+require('../stylesheet/components/tooltip.css');
+
 "use strict";
 
 import * as common from './common';

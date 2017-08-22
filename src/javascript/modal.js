@@ -1,3 +1,8 @@
+/*
+* 基于 https://github.com/benceg/vanilla-modal
+* */
+
+require('../stylesheet/components/modal.css');
 
 'use strict';
 
@@ -24,7 +29,6 @@ const defaultSetting = {
     close: '[data-modal-close]',
 
     className: 'modal-visible',
-    loadClass: 'vanilla-modal',
 
     entryType: 'drop',
 
