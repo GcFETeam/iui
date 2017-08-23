@@ -1,28 +1,6 @@
-- title: Base
-  pages:
-    - title: typography
-      url: /docs/typography/
-    - title: third party
-      url: /docs/third party/
-
-- title: UI
-  pages:
-    - title: button
-      url: /docs/button/
-    - title: card
-      url: /docs/card/
-    - title: image
-      url: /docs/image/
-    - title: menu
-      url: /docs/menu/
-    - title: search
-      url: /docs/search/
-    - title: title
-      url: /docs/title/
-
 - title: Example
   pages:
     - title: page
-      url: /docs/example
+      url: /docs/example/page
 
 

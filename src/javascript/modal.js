@@ -142,7 +142,6 @@ class Modal {
             onOpen.call(_, e);
         }
 
-
     }
 
     releaseNode () {
@@ -163,8 +162,6 @@ class Modal {
 
     delegateClose (e) {
         const close = this.settings.close;
-
-
 
         if (common.matches(e, close)) {
             e.preventDefault();

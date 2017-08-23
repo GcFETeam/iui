@@ -29,7 +29,7 @@ $size-map: (small, $element-height-lit),
     span + i {
         margin-left: 5px;
     }
-    &.ui-button-line {
+    &.btn-line {
         line-height: $element-height - 2px;
         &:hover {
             color: $color-content;
@@ -39,7 +39,7 @@ $size-map: (small, $element-height-lit),
 
 // type
 
-.ui-button-line {
+.btn-line {
     border: 1px solid $color-light;
     background: transparent;
     &:hover {
@@ -48,14 +48,14 @@ $size-map: (small, $element-height-lit),
     }
 }
 
-.ui-button-square,
-.ui-button-circle {
+.btn-square,
+.btn-circle {
     width: $element-height;
     padding: 0;
     text-align: center;
 }
 
-.ui-button-circle {
+.btn-circle {
     border-radius: 50%;
 }
 
@@ -66,7 +66,7 @@ $size-map: (small, $element-height-lit),
 }
 
 @each $btn, $color in $type-map {
-    .ui-button-#{$btn} {
+    .btn-#{$btn} {
         background: $color;
         &:hover {
             background: darken($color, 10%);
@@ -75,7 +75,7 @@ $size-map: (small, $element-height-lit),
     }
 }
 
-.ui-button-white {
+.btn-white {
     background: $color-white;
     &:hover {
         background: $color-primary;
@@ -85,22 +85,22 @@ $size-map: (small, $element-height-lit),
 // size
 
 @each $btn, $size in $size-map {
-    .ui-button-#{$btn} {
+    .btn-#{$btn} {
         height: $size;
         line-height: $size;
-        &.ui-button-circle {
+        &.btn-circle {
             width: $size;
         }
-        &.ui-button-square {
+        &.btn-square {
             width: $size;
         }
-        &.ui-button-line {
+        &.btn-line {
             line-height: $size - 2px;
         }
     }
 }
 
-.ui-button-small {
+.btn-small {
     font-size: 12px;
 }
 
