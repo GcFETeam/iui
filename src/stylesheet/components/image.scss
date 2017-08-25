@@ -18,7 +18,7 @@
     }
 }
 
-.ui-image-cover {
+.img-cover {
     @extend %pos;
     .cover {
         position: absolute;
@@ -60,7 +60,7 @@
     }
 }
 
-.ui-image-cover-center {
+.img-cover-center {
     @extend %pos;
     .tit {
         margin-top: -20px;
@@ -83,7 +83,7 @@
     }
 }
 
-.ui-image-tag {
+.img-tag {
     @extend %pos;
     .tag {
         position: absolute;
@@ -92,7 +92,7 @@
     }
 }
 
-.ui-image-frame {
+.img-frame {
     @extend %pos;
     text-align: center;
     .frame {

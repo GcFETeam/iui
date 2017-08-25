@@ -101,7 +101,7 @@ class Modal {
 
         let _div = doc.createElement('div');
 
-        _div.className = entryType ? 'ui-modal ui-modal-' + entryType : 'ui-modal';
+        _div.className = entryType ? 'ui-modal modal-' + entryType : 'ui-modal';
         _div.innerHTML = modalHtml;
 
         return _div;

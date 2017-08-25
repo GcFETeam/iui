@@ -7,22 +7,3 @@
         margin-right: .5em;
     }
 }
-
-.ui-title-lit-line {
-    position: relative;
-    line-height: 2;
-    &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 40px;
-        height: 2px;
-        bottom: 0;
-        background: $color-text;
-    }
-}
-
-.ui-title-line {
-    padding-bottom: 10px;
-    border-bottom: 1px solid $color-light;
-}
