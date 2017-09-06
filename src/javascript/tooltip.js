@@ -50,7 +50,7 @@ class Tooltip {
     }
 
     show (e) {
-        console.log('enter', e.target.className)
+        console.log('enter', e.target.className);
 
         this.createTip(e.target, e);
 

@@ -5,8 +5,8 @@ $type-map: (primary, $color-primary),
         (dark, $color-text),
         (warn, $color-warn);
 
-$size-map: (small, $element-height-lit),
-        (big, $element-height-big);
+$size-map: (small, $element-height-small),
+        (large, $element-height-large);
 
 .ui-button {
     display: inline-block;

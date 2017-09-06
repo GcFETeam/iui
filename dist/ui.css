@@ -472,7 +472,7 @@ table {
   height: 80px;
   width: 80px; }
 
-.ui-avatar-small img {
+.avt-small img {
   height: 50px;
   width: 50px; }
 
@@ -498,71 +498,71 @@ table {
     margin-left: 5px; }
   .ui-button span + i {
     margin-left: 5px; }
-  .ui-button.ui-button-line {
+  .ui-button.btn-line {
     line-height: 28px; }
-    .ui-button.ui-button-line:hover {
+    .ui-button.btn-line:hover {
       color: #6f6f6f; }
 
-.ui-button-line {
+.btn-line {
   border: 1px solid #eee;
   background: transparent; }
-  .ui-button-line:hover {
+  .btn-line:hover {
     background: transparent;
     border-color: #d5d5d5; }
 
-.ui-button-square,
-.ui-button-circle {
+.btn-square,
+.btn-circle {
   width: 30px;
   padding: 0;
   text-align: center; }
 
-.ui-button-circle {
+.btn-circle {
   border-radius: 50%; }
 
-.ui-button-primary, .ui-button-dark, .ui-button-warn {
+.btn-primary, .btn-dark, .btn-warn {
   color: #fff; }
 
-.ui-button-primary {
+.btn-primary {
   background: #42a5f5; }
-  .ui-button-primary:hover {
+  .btn-primary:hover {
     background: #128ef2; }
 
-.ui-button-dark {
+.btn-dark {
   background: #333; }
-  .ui-button-dark:hover {
+  .btn-dark:hover {
     background: #1a1a1a; }
 
-.ui-button-warn {
+.btn-warn {
   background: #ff8a80; }
-  .ui-button-warn:hover {
+  .btn-warn:hover {
     background: #ff5b4d; }
 
-.ui-button-white {
+.btn-white {
   background: #fff; }
-  .ui-button-white:hover {
+  .btn-white:hover {
     background: #42a5f5; }
 
-.ui-button-small {
+.btn-small {
   height: 20px;
   line-height: 20px; }
-  .ui-button-small.ui-button-circle {
+  .btn-small.btn-circle {
     width: 20px; }
-  .ui-button-small.ui-button-square {
+  .btn-small.btn-square {
     width: 20px; }
-  .ui-button-small.ui-button-line {
+  .btn-small.btn-line {
     line-height: 18px; }
 
-.ui-button-big {
+.btn-large {
   height: 40px;
   line-height: 40px; }
-  .ui-button-big.ui-button-circle {
+  .btn-large.btn-circle {
     width: 40px; }
-  .ui-button-big.ui-button-square {
+  .btn-large.btn-square {
     width: 40px; }
-  .ui-button-big.ui-button-line {
+  .btn-large.btn-line {
     line-height: 38px; }
 
-.ui-button-small {
+.btn-small {
   font-size: 12px; }
 
 .ui-card {
@@ -589,7 +589,7 @@ table {
   .ui-card .content {
     font-size: 14px; }
 
-.ui-image-cover, .ui-image-cover-center, .ui-image-tag, .ui-image-frame {
+.img-cover, .img-cover-center, .img-tag, .img-frame {
   position: relative;
   overflow: hidden; }
 
@@ -605,7 +605,7 @@ table {
   padding: 5px 10px;
   font-size: 12px; }
 
-.ui-image-cover .cover {
+.img-cover .cover {
   position: absolute;
   left: 0;
   top: 0;
@@ -615,14 +615,14 @@ table {
   -webkit-transition: background .3s;
   transition: background .3s; }
 
-.ui-image-cover .tit {
+.img-cover .tit {
   bottom: 50px;
   -webkit-transition: -webkit-transform .4s;
   transition: -webkit-transform .4s;
   transition: transform .4s;
   transition: transform .4s, -webkit-transform .4s; }
 
-.ui-image-cover .desc {
+.img-cover .desc {
   bottom: 0;
   opacity: 0;
   -webkit-transition: opacity .4s, -webkit-transform .4s;
@@ -630,8 +630,8 @@ table {
   transition: transform .4s, opacity .4s;
   transition: transform .4s, opacity .4s, -webkit-transform .4s; }
 
-.ui-image-cover .tit,
-.ui-image-cover .desc {
+.img-cover .tit,
+.img-cover .desc {
   position: absolute;
   left: 0;
   width: 100%;
@@ -639,23 +639,23 @@ table {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0); }
 
-.ui-image-cover:hover .tit {
+.img-cover:hover .tit {
   -webkit-transform: translate3d(0, -10px, 0);
           transform: translate3d(0, -10px, 0); }
 
-.ui-image-cover:hover .desc {
+.img-cover:hover .desc {
   -webkit-transform: translate3d(0, -40px, 0);
           transform: translate3d(0, -40px, 0);
   opacity: 1; }
 
-.ui-image-cover:hover .cover {
+.img-cover:hover .cover {
   background: rgba(0, 0, 0, 0.1); }
 
-.ui-image-cover-center .tit {
+.img-cover-center .tit {
   margin-top: -20px; }
 
-.ui-image-cover-center .tit,
-.ui-image-cover-center .desc {
+.img-cover-center .tit,
+.img-cover-center .desc {
   top: 50%;
   margin-top: -15px;
   text-align: center;
@@ -663,28 +663,28 @@ table {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0); }
 
-.ui-image-cover-center:hover .tit {
+.img-cover-center:hover .tit {
   -webkit-transform: translate3d(0, -10px, 0);
           transform: translate3d(0, -10px, 0); }
 
-.ui-image-cover-center:hover .desc {
+.img-cover-center:hover .desc {
   -webkit-transform: translate3d(0, 25px, 0);
           transform: translate3d(0, 25px, 0); }
 
-.ui-image-tag .tag {
+.img-tag .tag {
   position: absolute;
   left: 20px;
   bottom: 20px; }
 
-.ui-image-frame {
+.img-frame {
   text-align: center; }
-  .ui-image-frame .frame {
+  .img-frame .frame {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0; }
-    .ui-image-frame .frame:before {
+    .img-frame .frame:before {
       content: '';
       height: 100%;
       width: 100%;
@@ -698,7 +698,7 @@ table {
       transition: -webkit-transform .2s;
       transition: transform .2s;
       transition: transform .2s, -webkit-transform .2s; }
-  .ui-image-frame .tit {
+  .img-frame .tit {
     display: inline-block;
     position: relative;
     top: 50%;
@@ -707,7 +707,7 @@ table {
     font-size: 16px;
     line-height: 1;
     background: #fff; }
-  .ui-image-frame:hover .frame:before {
+  .img-frame:hover .frame:before {
     -webkit-transform: scale(1);
             transform: scale(1); }
 
@@ -729,7 +729,7 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
     outline: none;
     border-color: #42a5f5; }
 
-.ui-input-big {
+.ipt-large {
   height: 40px; }
 
 .ui-menu li {
@@ -748,7 +748,7 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
 .ui-menu span {
   color: #eee; }
 
-.ui-menu-line .active {
+.menu-line .active {
   border-bottom: 2px solid #42a5f5; }
 
 .ui-search .ui-input {
@@ -764,22 +764,6 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
   border-color: #42a5f5; }
   .ui-title .fa {
     margin-right: .5em; }
-
-.ui-title-lit-line {
-  position: relative;
-  line-height: 2; }
-  .ui-title-lit-line:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    bottom: 0;
-    background: #333; }
-
-.ui-title-line {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee; }
 
 h1 {
   font-size: 30px; }

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -231,420 +231,6 @@ function getOffset(node, offset, noInit) {
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(2);
-
-__webpack_require__(3);
-
-__webpack_require__(9);
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _common = __webpack_require__(0);
-
-var common = _interopRequireWildcard(_common);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-/*
-* 基于 https://github.com/benceg/vanilla-modal
-* */
-
-__webpack_require__(10);
-
-'use strict';
-
-var modalHtml = '<div class="modal-inner">\n            <span class="modal-close" data-modal-close>&times;</span>\n            <div class="modal-title"></div>\n            <div class="modal-content"></div>\n        </div>';
-
-var defaultSetting = {
-    modal: null,
-
-    modalInner: '.modal-inner',
-    modalContent: '.modal-content',
-    modalTitle: '.modal-title',
-
-    title: null,
-
-    open: '[data-modal-open]',
-    close: '[data-modal-close]',
-
-    className: 'modal-visible',
-
-    entryType: 'drop',
-
-    onBeforeOpen: null,
-    onBeforeClose: null,
-    onOpen: null,
-    onClose: null
-};
-
-var doc = document;
-
-var Modal = function () {
-    function Modal(setting) {
-        _classCallCheck(this, Modal);
-
-        var _ = this;
-
-        _.isOpen = false;
-
-        _.isListening = false;
-
-        _.settings = common._extends({}, defaultSetting, setting);
-
-        _.dom = _.getDomNodes();
-
-        _.delegateClose = _.delegateClose.bind(_);
-        _.delegateOpen = _.delegateOpen.bind(_);
-
-        _.listen();
-    }
-
-    _createClass(Modal, [{
-        key: 'getDomNodes',
-        value: function getDomNodes() {
-
-            var _ = this;
-
-            var _$settings = _.settings,
-                modal = _$settings.modal,
-                modalInner = _$settings.modalInner,
-                modalContent = _$settings.modalContent,
-                modalTitle = _$settings.modalTitle;
-
-
-            var modalNode = void 0;
-
-            if (modal) {
-
-                modalNode = document.querySelector(modal);
-            } else {
-
-                var _div = _.createModal();
-
-                modalNode = document.body.appendChild(_div);
-            }
-
-            return {
-                modal: modalNode,
-                modalInner: modalNode.querySelector(modalInner),
-                modalContent: modalNode.querySelector(modalContent),
-                modalTitle: modalNode.querySelector(modalTitle)
-            };
-        }
-    }, {
-        key: 'createModal',
-        value: function createModal() {
-            var _ = this,
-                entryType = _.settings.entryType;
-
-
-            var _div = doc.createElement('div');
-
-            _div.className = entryType ? 'ui-modal ui-modal-' + entryType : 'ui-modal';
-            _div.innerHTML = modalHtml;
-
-            return _div;
-        }
-    }, {
-        key: 'delegateOpen',
-        value: function delegateOpen(e) {
-            var open = this.settings.open;
-
-            var match = common.matches(e, open);
-
-            if (match) {
-                e.preventDefault();
-                this.open(match, e);
-            }
-        }
-    }, {
-        key: 'open',
-        value: function open(element, e) {
-            var _ = this,
-                modal = _.dom.modal,
-                _$settings2 = _.settings,
-                onBeforeOpen = _$settings2.onBeforeOpen,
-                onOpen = _$settings2.onOpen,
-                className = _$settings2.className;
-
-
-            _.releaseNode();
-
-            _.current = common.getElementContext(element);
-
-            if (typeof onBeforeOpen === 'function') {
-                onBeforeOpen.call(_, e);
-            }
-
-            _.captureNode(_.current, element);
-
-            common.addClass(modal, className);
-
-            _.isOpen = true;
-
-            if (typeof onOpen === 'function') {
-                onOpen.call(_, e);
-            }
-        }
-    }, {
-        key: 'releaseNode',
-        value: function releaseNode() {
-            this.dom.modalContent.innerHTML = '';
-        }
-    }, {
-        key: 'captureNode',
-        value: function captureNode(element, triggerElement) {
-            var _ = this,
-                _dom = this.dom,
-                modalContent = _dom.modalContent,
-                modalTitle = _dom.modalTitle,
-                title = this.settings.title || triggerElement.getAttribute('data-modal-title');
-
-
-            modalContent.innerHTML = element.innerHTML;
-
-            modalTitle.innerHTML = title ? '<div>' + title + '</div>' : '';
-        }
-    }, {
-        key: 'delegateClose',
-        value: function delegateClose(e) {
-            var close = this.settings.close;
-
-            if (common.matches(e, close)) {
-                e.preventDefault();
-                this.close(e);
-            }
-        }
-    }, {
-        key: 'close',
-        value: function close(e) {
-            var _ = this,
-                _$settings3 = _.settings,
-                onBeforeClose = _$settings3.onBeforeClose,
-                className = _$settings3.className;
-
-
-            if (_.isOpen) {
-                _.isOpen = false;
-
-                if (typeof onBeforeClose === 'function') {
-                    onBeforeClose.call(_, e);
-                }
-
-                common.removeClass(_.dom.modal, className);
-
-                _.closeModal(e);
-            }
-        }
-    }, {
-        key: 'closeModal',
-        value: function closeModal(e) {
-            var _ = this,
-                onClose = _.settings.onClose;
-
-
-            if (typeof onClose === 'function') {
-                onClose.call(_, e);
-            }
-        }
-    }, {
-        key: 'listen',
-        value: function listen() {
-            var _ = this,
-                modal = _.dom.modal,
-                _$settings4 = _.settings,
-                open = _$settings4.open,
-                close = _$settings4.close;
-
-
-            if (!_.isListening) {
-
-                if (open) {
-                    doc.addEventListener('click', this.delegateOpen, false);
-                }
-
-                if (close) {
-                    doc.addEventListener('click', this.delegateClose, false);
-                }
-            }
-        }
-    }]);
-
-    return Modal;
-}();
-
-window.Modal = Modal;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _common = __webpack_require__(0);
-
-var common = _interopRequireWildcard(_common);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-__webpack_require__(4);
-
-"use strict";
-
-var doc = document,
-    defaultSetting = {
-    trigger: '[data-tooltip-trigger]',
-    data: 'data-tip',
-    duration: 0.2
-};
-
-var Tooltip = function () {
-    function Tooltip(option) {
-        _classCallCheck(this, Tooltip);
-
-        var _ = this;
-
-        _.settings = common._extends(defaultSetting, option);
-
-        _.trigger = doc.querySelectorAll(_.settings.trigger);
-
-        _.show = _.show.bind(_);
-        _.hide = _.hide.bind(_);
-
-        _.listen();
-    }
-
-    _createClass(Tooltip, [{
-        key: 'createTip',
-        value: function createTip(node, e) {
-
-            if (!this.isOpening) {
-
-                var div = doc.createElement('div'),
-                    position = common.getOffset(node, {
-                    left: 0,
-                    top: -20
-                });
-
-                div.className = 'ui-tooltip animated fadeIn';
-                div.style.left = position.left + 'px';
-                div.style.top = position.top + 'px';
-                div.innerHTML = 'hello';
-
-                doc.body.appendChild(div);
-
-                this.toolDom = div;
-
-                this.isOpening = true;
-            }
-        }
-    }, {
-        key: 'show',
-        value: function show(e) {
-            console.log('enter', e.target.className);
-
-            this.createTip(e.target, e);
-        }
-    }, {
-        key: 'hide',
-        value: function hide(e) {
-
-            var node = this.toolDom;
-
-            common.removeClass(node, 'fadeIn');
-            common.addClass(node, 'fadeOut');
-
-            setTimeout(function () {
-                node.remove();
-            }, this.settings.duration * 1000);
-
-            this.isOpening = false;
-        }
-    }, {
-        key: 'listen',
-        value: function listen() {
-
-            var _ = this,
-                trigger = _.trigger;
-
-            trigger.forEach(function (item) {
-                item.addEventListener('mouseenter', _.show, false);
-                item.addEventListener('mouseleave', _.hide, false);
-            });
-        }
-    }]);
-
-    return Tooltip;
-}();
-
-window.Tooltip = Tooltip;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(5);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(7)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!./tooltip.css", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!./tooltip.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(6)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, ".ui-tooltip { position: absolute; z-index: 100; animation-duration: .2s;  }", ""]);
-
-// exports
-
-
-/***/ }),
-/* 6 */
 /***/ (function(module, exports) {
 
 /*
@@ -726,7 +312,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 7 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -772,7 +358,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(8);
+var	fixUrls = __webpack_require__(7);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -1085,7 +671,312 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 8 */
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(4);
+
+__webpack_require__(8);
+
+__webpack_require__(11);
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _common = __webpack_require__(0);
+
+var common = _interopRequireWildcard(_common);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/*
+* 基于 https://github.com/benceg/vanilla-modal
+* */
+
+__webpack_require__(5);
+
+'use strict';
+
+var modalHtml = '<div class="modal-inner">\n            <span class="modal-close" data-modal-close>&times;</span>\n            <div class="modal-title"></div>\n            <div class="modal-content"></div>\n        </div>';
+
+var defaultSetting = {
+    modal: null,
+
+    modalInner: '.modal-inner',
+    modalContent: '.modal-content',
+    modalTitle: '.modal-title',
+
+    title: null,
+
+    open: '[data-modal-open]',
+    close: '[data-modal-close]',
+
+    className: 'modal-visible',
+
+    entryType: 'drop',
+
+    onBeforeOpen: null,
+    onBeforeClose: null,
+    onOpen: null,
+    onClose: null
+};
+
+var doc = document;
+
+var Modal = function () {
+    function Modal(setting) {
+        _classCallCheck(this, Modal);
+
+        var _ = this;
+
+        _.isOpen = false;
+
+        _.isListening = false;
+
+        _.settings = common._extends({}, defaultSetting, setting);
+
+        _.dom = _.getDomNodes();
+
+        _.delegateClose = _.delegateClose.bind(_);
+        _.delegateOpen = _.delegateOpen.bind(_);
+
+        _.listen();
+    }
+
+    _createClass(Modal, [{
+        key: 'getDomNodes',
+        value: function getDomNodes() {
+
+            var _ = this;
+
+            var _$settings = _.settings,
+                modal = _$settings.modal,
+                modalInner = _$settings.modalInner,
+                modalContent = _$settings.modalContent,
+                modalTitle = _$settings.modalTitle;
+
+
+            var modalNode = void 0;
+
+            if (modal) {
+
+                modalNode = document.querySelector(modal);
+            } else {
+
+                var _div = _.createModal();
+
+                modalNode = document.body.appendChild(_div);
+            }
+
+            return {
+                modal: modalNode,
+                modalInner: modalNode.querySelector(modalInner),
+                modalContent: modalNode.querySelector(modalContent),
+                modalTitle: modalNode.querySelector(modalTitle)
+            };
+        }
+    }, {
+        key: 'createModal',
+        value: function createModal() {
+            var _ = this,
+                entryType = _.settings.entryType;
+
+
+            var _div = doc.createElement('div');
+
+            _div.className = entryType ? 'ui-modal modal-' + entryType : 'ui-modal';
+            _div.innerHTML = modalHtml;
+
+            return _div;
+        }
+    }, {
+        key: 'delegateOpen',
+        value: function delegateOpen(e) {
+            var open = this.settings.open;
+
+            var match = common.matches(e, open);
+
+            if (match) {
+                e.preventDefault();
+                this.open(match, e);
+            }
+        }
+    }, {
+        key: 'open',
+        value: function open(element, e) {
+            var _ = this,
+                modal = _.dom.modal,
+                _$settings2 = _.settings,
+                onBeforeOpen = _$settings2.onBeforeOpen,
+                onOpen = _$settings2.onOpen,
+                className = _$settings2.className;
+
+
+            _.releaseNode();
+
+            _.current = common.getElementContext(element);
+
+            if (typeof onBeforeOpen === 'function') {
+                onBeforeOpen.call(_, e);
+            }
+
+            _.captureNode(_.current, element);
+
+            common.addClass(modal, className);
+
+            _.isOpen = true;
+
+            if (typeof onOpen === 'function') {
+                onOpen.call(_, e);
+            }
+        }
+    }, {
+        key: 'releaseNode',
+        value: function releaseNode() {
+            this.dom.modalContent.innerHTML = '';
+        }
+    }, {
+        key: 'captureNode',
+        value: function captureNode(element, triggerElement) {
+            var _ = this,
+                _dom = this.dom,
+                modalContent = _dom.modalContent,
+                modalTitle = _dom.modalTitle,
+                title = this.settings.title || triggerElement.getAttribute('data-modal-title');
+
+
+            modalContent.innerHTML = element.innerHTML;
+
+            modalTitle.innerHTML = title ? '<div>' + title + '</div>' : '';
+        }
+    }, {
+        key: 'delegateClose',
+        value: function delegateClose(e) {
+            var close = this.settings.close;
+
+            if (common.matches(e, close)) {
+                e.preventDefault();
+                this.close(e);
+            }
+        }
+    }, {
+        key: 'close',
+        value: function close(e) {
+            var _ = this,
+                _$settings3 = _.settings,
+                onBeforeClose = _$settings3.onBeforeClose,
+                className = _$settings3.className;
+
+
+            if (_.isOpen) {
+                _.isOpen = false;
+
+                if (typeof onBeforeClose === 'function') {
+                    onBeforeClose.call(_, e);
+                }
+
+                common.removeClass(_.dom.modal, className);
+
+                _.closeModal(e);
+            }
+        }
+    }, {
+        key: 'closeModal',
+        value: function closeModal(e) {
+            var _ = this,
+                onClose = _.settings.onClose;
+
+
+            if (typeof onClose === 'function') {
+                onClose.call(_, e);
+            }
+        }
+    }, {
+        key: 'listen',
+        value: function listen() {
+            var _ = this,
+                modal = _.dom.modal,
+                _$settings4 = _.settings,
+                open = _$settings4.open,
+                close = _$settings4.close;
+
+
+            if (!_.isListening) {
+
+                if (open) {
+                    doc.addEventListener('click', this.delegateOpen, false);
+                }
+
+                if (close) {
+                    doc.addEventListener('click', this.delegateClose, false);
+                }
+            }
+        }
+    }]);
+
+    return Modal;
+}();
+
+window.Modal = Modal;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(6);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(2)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./modal.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./modal.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".ui-modal {\n    visibility: hidden;\n    position: fixed;\n    content: \"\";\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background: rgba(0, 0, 0, 0.6);\n    z-index: -1;\n    opacity: 0;\n    -webkit-transition: opacity 0.2s, z-index 0s 0.2s;\n    transition: opacity 0.2s, z-index 0s 0.2s;\n    text-align: center;\n    overflow: hidden;\n    overflow-y: auto;\n    white-space: nowrap;\n    -webkit-overflow-scrolling: touch;\n}\n\n.ui-modal > * {\n    display: inline-block;\n    white-space: normal;\n    vertical-align: middle;\n    text-align: left;\n}\n\n.ui-modal:before {\n    display: inline-block;\n    overflow: hidden;\n    width: 0;\n    height: 100%;\n    vertical-align: middle;\n    content: \"\";\n}\n\n.ui-modal.modal-visible {\n    z-index: 9999;\n    opacity: 1;\n    visibility: visible;\n    -webkit-transition: opacity 0.2s;\n    transition: opacity 0.2s;\n}\n\n.ui-modal .modal-inner {\n    position: relative;\n    overflow: hidden;\n    max-width: 90%;\n    max-height: 90%;\n    overflow-x: hidden;\n    overflow-y: auto;\n    background: #fff;\n    z-index: -1;\n    opacity: 0;\n    -webkit-transform: scale(0);\n    transform: scale(0);\n    -webkit-transition: opacity 0.2s, z-index 0s 0.2s, -webkit-transform 0.3s;\n    transition: opacity 0.2s, z-index 0s 0.2s, -webkit-transform 0.3s;\n    transition: opacity 0.2s, transform 0.3s, z-index 0s 0.2s;\n    transition: opacity 0.2s, transform 0.3s, z-index 0s 0.2s, -webkit-transform 0.3s;\n}\n\n.modal-title div {\n    padding: 20px 30px;\n    font-size: 20px;\n}\n\n.modal-visible .modal-inner {\n    z-index: 100;\n    opacity: 1;\n    -webkit-transform: scale(1);\n    transform: scale(1);\n    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;\n    transition: opacity 0.2s, -webkit-transform 0.2s;\n    transition: opacity 0.2s, transform 0.2s;\n    transition: opacity 0.2s, transform 0.2s, -webkit-transform 0.2s;\n}\n\n[data-modal-close] {\n    position: absolute;\n    z-index: 2;\n    right: 0;\n    top: 0;\n    width: 45px;\n    height: 45px;\n    line-height: 45px;\n    font-size: 28px;\n    cursor: pointer;\n    text-align: center;\n    background: #fff;\n}\n\n/* animate */\n.ui-modal.modal-drop .modal-inner {\n    -webkit-transform: scale(1) translate3d(0, -50%, 0);\n    transform: scale(1) translate3d(0, -50%, 0);\n    -webkit-transition: opacity 0.4s, z-index 0s 0.3s, -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);\n    transition: opacity 0.4s, z-index 0s 0.3s, -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);\n    transition: opacity 0.4s, transform 0.4s cubic-bezier(0.7, 0, 0.3, 1), z-index 0s 0.3s;\n    transition: opacity 0.4s, transform 0.4s cubic-bezier(0.7, 0, 0.3, 1), z-index 0s 0.3s, -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);\n}\n\n.ui-modal.modal-drop.modal-visible .modal-inner {\n    -webkit-transform: translate3d(0, 0, 0);\n    transform: translate3d(0, 0, 0);\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports) {
 
 
@@ -1180,19 +1071,122 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports) {
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _common = __webpack_require__(0);
+
+var common = _interopRequireWildcard(_common);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+__webpack_require__(9);
+
+"use strict";
+
+var doc = document,
+    defaultSetting = {
+    trigger: '[data-tooltip-trigger]',
+    data: 'data-tip',
+    duration: 0.2
+};
+
+var Tooltip = function () {
+    function Tooltip(option) {
+        _classCallCheck(this, Tooltip);
+
+        var _ = this;
+
+        _.settings = common._extends(defaultSetting, option);
+
+        _.trigger = doc.querySelectorAll(_.settings.trigger);
+
+        _.show = _.show.bind(_);
+        _.hide = _.hide.bind(_);
+
+        _.listen();
+    }
+
+    _createClass(Tooltip, [{
+        key: 'createTip',
+        value: function createTip(node, e) {
+
+            if (!this.isOpening) {
+
+                var div = doc.createElement('div'),
+                    position = common.getOffset(node, {
+                    left: 0,
+                    top: -20
+                });
+
+                div.className = 'ui-tooltip animated fadeIn';
+                div.style.left = position.left + 'px';
+                div.style.top = position.top + 'px';
+                div.innerHTML = 'hello';
+
+                doc.body.appendChild(div);
+
+                this.toolDom = div;
+
+                this.isOpening = true;
+            }
+        }
+    }, {
+        key: 'show',
+        value: function show(e) {
+            console.log('enter', e.target.className);
+
+            this.createTip(e.target, e);
+        }
+    }, {
+        key: 'hide',
+        value: function hide(e) {
+
+            var node = this.toolDom;
+
+            common.removeClass(node, 'fadeIn');
+            common.addClass(node, 'fadeOut');
+
+            setTimeout(function () {
+                node.remove();
+            }, this.settings.duration * 1000);
+
+            this.isOpening = false;
+        }
+    }, {
+        key: 'listen',
+        value: function listen() {
+
+            var _ = this,
+                trigger = _.trigger;
+
+            trigger.forEach(function (item) {
+                item.addEventListener('mouseenter', _.show, false);
+                item.addEventListener('mouseleave', _.hide, false);
+            });
+        }
+    }]);
+
+    return Tooltip;
+}();
+
+window.Tooltip = Tooltip;
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(11);
+var content = __webpack_require__(10);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -1200,14 +1194,14 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(7)(content, options);
+var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!./modal.css", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!./modal.css");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./tooltip.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./tooltip.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1217,18 +1211,24 @@ if(false) {
 }
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)(undefined);
+exports = module.exports = __webpack_require__(1)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, ".ui-modal {\n    visibility: hidden;\n    position: fixed;\n    content: \"\";\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background: rgba(0, 0, 0, 0.6);\n    z-index: -1;\n    opacity: 0;\n    -webkit-transition: opacity 0.2s, z-index 0s 0.2s;\n    transition: opacity 0.2s, z-index 0s 0.2s;\n    text-align: center;\n    overflow: hidden;\n    overflow-y: auto;\n    white-space: nowrap;\n    -webkit-overflow-scrolling: touch;\n}\n\n.ui-modal > * {\n    display: inline-block;\n    white-space: normal;\n    vertical-align: middle;\n    text-align: left;\n}\n\n.ui-modal:before {\n    display: inline-block;\n    overflow: hidden;\n    width: 0;\n    height: 100%;\n    vertical-align: middle;\n    content: \"\";\n}\n\n.ui-modal.modal-visible {\n    z-index: 9999;\n    opacity: 1;\n    visibility: visible;\n    -webkit-transition: opacity 0.2s;\n    transition: opacity 0.2s;\n}\n\n.ui-modal .modal-inner {\n    position: relative;\n    overflow: hidden;\n    max-width: 90%;\n    max-height: 90%;\n    overflow-x: hidden;\n    overflow-y: auto;\n    background: #fff;\n    z-index: -1;\n    opacity: 0;\n    -webkit-transform: scale(0);\n    transform: scale(0);\n    -webkit-transition: opacity 0.2s, z-index 0s 0.2s, -webkit-transform 0.3s;\n    transition: opacity 0.2s, z-index 0s 0.2s, -webkit-transform 0.3s;\n    transition: opacity 0.2s, transform 0.3s, z-index 0s 0.2s;\n    transition: opacity 0.2s, transform 0.3s, z-index 0s 0.2s, -webkit-transform 0.3s;\n}\n\n.modal-title div {\n    padding: 20px 30px;\n    font-size: 20px;\n}\n\n.modal-visible .modal-inner {\n    z-index: 100;\n    opacity: 1;\n    -webkit-transform: scale(1);\n    transform: scale(1);\n    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;\n    transition: opacity 0.2s, -webkit-transform 0.2s;\n    transition: opacity 0.2s, transform 0.2s;\n    transition: opacity 0.2s, transform 0.2s, -webkit-transform 0.2s;\n}\n\n[data-modal-close] {\n    position: absolute;\n    z-index: 2;\n    right: 0;\n    top: 0;\n    width: 45px;\n    height: 45px;\n    line-height: 45px;\n    font-size: 28px;\n    cursor: pointer;\n    text-align: center;\n    background: #fff;\n}\n\n/* animate */\n.ui-modal.ui-modal-drop .modal-inner {\n    -webkit-transform: scale(1) translate3d(0, -50%, 0);\n    transform: scale(1) translate3d(0, -50%, 0);\n    -webkit-transition: opacity 0.4s, z-index 0s 0.3s, -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);\n    transition: opacity 0.4s, z-index 0s 0.3s, -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);\n    transition: opacity 0.4s, transform 0.4s cubic-bezier(0.7, 0, 0.3, 1), z-index 0s 0.3s;\n    transition: opacity 0.4s, transform 0.4s cubic-bezier(0.7, 0, 0.3, 1), z-index 0s 0.3s, -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);\n}\n\n.ui-modal.ui-modal-drop.modal-visible .modal-inner {\n    -webkit-transform: translate3d(0, 0, 0);\n    transform: translate3d(0, 0, 0);\n}\n", ""]);
+exports.push([module.i, ".ui-tooltip { position: absolute; z-index: 100; animation-duration: .2s;  }", ""]);
 
 // exports
 
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
