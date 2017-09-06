@@ -4,12 +4,17 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  font: 14px/1.6 "Helvetica Neue", Arial, sans-serif; }
+  font: 14px/1.6 "Helvetica Neue", Helvetica, Tahoma, Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
 
 body,
 div,
 dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+pre, code,
 form, fieldset, legend,
+input, textarea,
+p, blockquote, th, td,
+hr, button,
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   margin: 0;
   padding: 0; }
@@ -62,6 +67,10 @@ table {
 
 :focus {
   outline: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: inherit; }
 
 /* ==========
     padding margin
@@ -433,7 +442,7 @@ table {
     font
    ========== */
 .pure-g [class*=pure-u] {
-  font-family: "Helvetica Neue", Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
 
 .ft-primary {
   color: #42a5f5; }
@@ -464,6 +473,50 @@ table {
 
 .bt-1 {
   border-top: 1px solid #eee; }
+
+.effect {
+  -webkit-transition: all .2s;
+  transition: all .2s; }
+
+.slide-in-top.show .effect {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 1; }
+
+.slide-in-top .effect {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  opacity: 0; }
+
+.slide-in-right.show .effect {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 1; }
+
+.slide-in-right .effect {
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+  opacity: 0; }
+
+.slide-in-bottom.show .effect {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 1; }
+
+.slide-in-bottom .effect {
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  opacity: 0; }
+
+.slide-in-left.show .effect {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 1; }
+
+.slide-in-left .effect {
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  opacity: 0; }
 
 /* ===== components ===== */
 .ui-avatar img {
@@ -765,32 +818,6 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
   .ui-title .fa {
     margin-right: .5em; }
 
-h1 {
-  font-size: 30px; }
-
-h2 {
-  font-size: 24px; }
-
-h3 {
-  font-size: 20px; }
-
-h4 {
-  font-size: 18px; }
-
-h5 {
-  font-size: 16px; }
-
-h6 {
-  font-size: 14px; }
-
-h1, h2, h3, h4, h5, h6 {
-  margin: .5em 0;
-  font-weight: inherit; }
-
-p {
-  margin: .8em 0;
-  color: #6f6f6f; }
-
 em {
   color: #42a5f5; }
 
@@ -799,14 +826,60 @@ a {
   a:hover {
     color: #42a5f5; }
 
-blockquote {
-  padding: 1px 10px;
-  margin: 0 0 10px;
-  color: #333;
-  font-size: 12px;
-  letter-spacing: .7px;
-  border-left: 3px solid #5ab1f6;
-  background: #fbfbfb; }
+.h1 {
+  font-size: 30px; }
 
-blockquote p {
-  margin: 5px 0; }
+.h2 {
+  font-size: 24px; }
+
+.h3 {
+  font-size: 20px; }
+
+.h4 {
+  font-size: 18px; }
+
+.h5 {
+  font-size: 16px; }
+
+.markdown {
+  line-height: 1.7;
+  font-size: 15px;
+  color: #6f6f6f; }
+  .markdown h1 {
+    font-size: 30px; }
+  .markdown h2 {
+    font-size: 24px; }
+  .markdown h3 {
+    font-size: 20px; }
+  .markdown h4 {
+    font-size: 18px; }
+  .markdown h5 {
+    font-size: 16px; }
+  .markdown h6 {
+    font-size: 14px; }
+  .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #333; }
+  .markdown p {
+    margin-bottom: 16px; }
+  .markdown a {
+    text-decoration: underline;
+    -webkit-transition: color .2s;
+    transition: color .2s; }
+  .markdown ul {
+    padding-left: 40px; }
+  .markdown ol {
+    padding-left: 40px; }
+  .markdown hr {
+    height: 1px;
+    margin: 32px 0;
+    border: 0;
+    background-color: #eee; }
+  .markdown blockquote {
+    margin-bottom: 16px;
+    padding-left: 20px;
+    letter-spacing: .7px;
+    border-left: 3px solid #404040;
+    font-style: italic; }

@@ -1,6 +1,10 @@
 - title: Example
   pages:
-    - title: demo
+    - title: page
       url: /docs/example/page
+    - title: post
+      url: /docs/example/post
+    - title: demo
+      url: /docs/example/demo
 
 

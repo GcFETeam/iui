@@ -1,8 +1,8 @@
 /*
-* 基于 https://github.com/benceg/vanilla-modal
+* 参考 https://github.com/benceg/vanilla-modal
 * */
 
-require('../stylesheet/components/modal.css');
+require('./modal.css');
 
 'use strict';
 

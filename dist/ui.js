@@ -1,69 +1,4 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
-/******/ })
-/************************************************************************/
-/******/ ([
+webpackJsonp([0],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -73,18 +8,36 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.throwError = throwError;
-exports.find = find;
-exports.transitionEndVendorSniff = transitionEndVendorSniff;
 exports.isPopulatedArray = isPopulatedArray;
 exports.getNode = getNode;
 exports.addClass = addClass;
 exports.removeClass = removeClass;
 exports.getElementContext = getElementContext;
+exports.throwError = throwError;
+exports.find = find;
+exports.transitionEndVendorSniff = transitionEndVendorSniff;
 exports.applyUserSettings = applyUserSettings;
 exports.matches = matches;
 exports.delegate = delegate;
 exports.getOffset = getOffset;
+/* ==========
+    Array
+   ========== */
+
+if (!Array.isArray) {
+    Array.isArray = function (arg) {
+        return Object.prototype.toString.call(arg) === '[object Array]';
+    };
+}
+
+function isPopulatedArray(arr) {
+    return Object.prototype.toString.call(arr) === '[object Array]' && arr.length;
+}
+
+/* ==========
+    Object
+   ========== */
+
 var _extends = exports._extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
         var source = arguments[i];
@@ -99,34 +52,9 @@ var _extends = exports._extends = Object.assign || function (target) {
     return target;
 };
 
-function throwError(message) {
-    // eslint-disable-next-line no-console
-    console.error('VanillaModal: ' + message);
-}
-
-function find(arr, callback) {
-    return function (key) {
-        var filteredArray = arr.filter(callback);
-        return filteredArray[0] ? filteredArray[0][key] : undefined;
-    };
-}
-
-function transitionEndVendorSniff() {
-    var el = document.createElement('div');
-    var transitions = [{ key: 'transition', value: 'transitionend' }, {
-        key: 'OTransition',
-        value: 'otransitionend'
-    }, { key: 'MozTransition', value: 'transitionend' }, { key: 'WebkitTransition', value: 'webkitTransitionEnd' }];
-    return find(transitions, function (_ref) {
-        var key = _ref.key;
-        return typeof el.style[key] !== 'undefined';
-    })('value');
-}
-
-function isPopulatedArray(arr) {
-    return Object.prototype.toString.call(arr) === '[object Array]' && arr.length;
-}
-
+/* ==========
+    Dom
+   ========== */
 function getNode(selector, parent) {
     var targetNode = parent || document;
     var node = targetNode.querySelector(selector);
@@ -162,6 +90,29 @@ function getElementContext(e) {
     }
     throwError('No selector supplied to open()');
     return null;
+}
+
+function throwError(message) {
+    console.error('error: ' + message);
+}
+
+function find(arr, callback) {
+    return function (key) {
+        var filteredArray = arr.filter(callback);
+        return filteredArray[0] ? filteredArray[0][key] : undefined;
+    };
+}
+
+function transitionEndVendorSniff() {
+    var el = document.createElement('div');
+    var transitions = [{ key: 'transition', value: 'transitionend' }, {
+        key: 'OTransition',
+        value: 'otransitionend'
+    }, { key: 'MozTransition', value: 'transitionend' }, { key: 'WebkitTransition', value: 'webkitTransitionEnd' }];
+    return find(transitions, function (_ref) {
+        var key = _ref.key;
+        return typeof el.style[key] !== 'undefined';
+    })('value');
 }
 
 function applyUserSettings(settings) {
@@ -934,31 +885,36 @@ window.Modal = Modal;
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
 var content = __webpack_require__(6);
-if(typeof content === 'string') content = [[module.i, content, '']];
+if (typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
 
-var options = {}
-options.transform = transform
+var options = {};
+options.transform = transform;
 // add the styles to the DOM
 var update = __webpack_require__(2)(content, options);
-if(content.locals) module.exports = content.locals;
+if (content.locals) module.exports = content.locals;
 // Hot Module Replacement
-if(false) {
+if (false) {
 	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!./modal.css", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!./modal.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+	if (!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!./modal.css", function () {
+			var newContent = require("!!../../node_modules/css-loader/index.js!./modal.css");
+			if (typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
 	}
 	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
+	module.hot.dispose(function () {
+		update();
+	});
 }
 
 /***/ }),
@@ -1183,31 +1139,36 @@ window.Tooltip = Tooltip;
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
 var content = __webpack_require__(10);
-if(typeof content === 'string') content = [[module.i, content, '']];
+if (typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
 
-var options = {}
-options.transform = transform
+var options = {};
+options.transform = transform;
 // add the styles to the DOM
 var update = __webpack_require__(2)(content, options);
-if(content.locals) module.exports = content.locals;
+if (content.locals) module.exports = content.locals;
 // Hot Module Replacement
-if(false) {
+if (false) {
 	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!./tooltip.css", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!./tooltip.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+	if (!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!./tooltip.css", function () {
+			var newContent = require("!!../../node_modules/css-loader/index.js!./tooltip.css");
+			if (typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
 	}
 	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
+	module.hot.dispose(function () {
+		update();
+	});
 }
 
 /***/ }),
@@ -1231,4 +1192,4 @@ exports.push([module.i, ".ui-tooltip { position: absolute; z-index: 100; animati
 // removed by extract-text-webpack-plugin
 
 /***/ })
-/******/ ]);
+],[3]);

@@ -1,3 +1,22 @@
+/* ==========
+    Array
+   ========== */
+
+if (!Array.isArray) {
+    Array.isArray = function (arg) {
+        return Object.prototype.toString.call(arg) === '[object Array]';
+    }
+}
+
+export function isPopulatedArray(arr) {
+    return Object.prototype.toString.call(arr) === '[object Array]' && arr.length;
+}
+
+
+/* ==========
+    Object
+   ========== */
+
 export const _extends = Object.assign || function (target) {
     for (let i = 1; i < arguments.length; i++) {
         let source = arguments[i];
@@ -12,35 +31,9 @@ export const _extends = Object.assign || function (target) {
     return target;
 };
 
-export function throwError(message) {
-    // eslint-disable-next-line no-console
-    console.error('VanillaModal: ' + message);
-}
-
-
-export function find(arr, callback) {
-    return function (key) {
-        let filteredArray = arr.filter(callback);
-        return filteredArray[0] ? filteredArray[0][key] : undefined;
-    };
-}
-
-export function transitionEndVendorSniff() {
-    let el = document.createElement('div');
-    let transitions = [{key: 'transition', value: 'transitionend'}, {
-        key: 'OTransition',
-        value: 'otransitionend'
-    }, {key: 'MozTransition', value: 'transitionend'}, {key: 'WebkitTransition', value: 'webkitTransitionEnd'}];
-    return find(transitions, function (_ref) {
-        let key = _ref.key;
-        return typeof el.style[key] !== 'undefined';
-    })('value');
-}
-
-export function isPopulatedArray(arr) {
-    return Object.prototype.toString.call(arr) === '[object Array]' && arr.length;
-}
-
+/* ==========
+    Dom
+   ========== */
 export function getNode(selector, parent) {
     let targetNode = parent || document;
     let node = targetNode.querySelector(selector);
@@ -78,12 +71,6 @@ export function getElementContext(e) {
     return null;
 }
 
-export function applyUserSettings(settings) {
-    return _extends({}, defaults, settings, {
-        transitionEnd: transitionEndVendorSniff()
-    });
-}
-
 export function matches(e, selector) {
     let d = e.target.document || e.target.ownerDocument;
     if (d) {
@@ -102,6 +89,7 @@ export function matches(e, selector) {
     return null;
 }
 
+
 export function delegate(element, targetSelector, type, handler) {
 
     element.addEventListener(type, function(event) {
@@ -115,7 +103,6 @@ export function delegate(element, targetSelector, type, handler) {
 }
 
 export function getOffset (node, offset, noInit) {
-
 
     if (!offset) {
         offset = {
@@ -144,3 +131,12 @@ export function getOffset (node, offset, noInit) {
     return getOffset(node.parentNode, offset, true);
 
 }
+
+
+export function throwError(message) {
+    console.error('error: ' + message);
+}
+
+
+
+

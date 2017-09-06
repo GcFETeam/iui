@@ -1,4 +1,4 @@
-require('../stylesheet/components/tooltip.css');
+require('./tooltip.css');
 
 "use strict";
 

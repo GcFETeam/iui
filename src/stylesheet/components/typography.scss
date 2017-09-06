@@ -1,37 +1,4 @@
 
-h1 {
-    font-size: 30px;
-}
-
-h2 {
-    font-size: 24px;
-}
-
-h3 {
-    font-size: 20px;
-}
-
-h4 {
-    font-size: 18px;
-}
-
-h5 {
-    font-size: 16px;
-}
-
-h6 {
-    font-size: 14px;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    margin: .5em 0;
-    font-weight: inherit;
-}
-
-p {
-    margin: .8em 0;
-    color: $color-content;
-}
 
 em {
     color: $color-primary;
@@ -44,17 +11,78 @@ a {
     }
 }
 
-blockquote {
-    padding: 1px 10px;
-    margin: 0 0 10px;
-    color: $color-text;
-    font-size: 12px;
-    letter-spacing: .7px;
-    border-left: 3px solid lighten($color-primary, 5%);
-    background: lighten($color-light, 5%);
+.h1 {
+    font-size: 30px;
 }
 
-blockquote p {
-    margin: 5px 0;
+.h2 {
+    font-size: 24px;
 }
 
+.h3 {
+    font-size: 20px;
+}
+
+.h4 {
+    font-size: 18px;
+}
+
+.h5 {
+    font-size: 16px;
+}
+
+.markdown {
+    line-height: 1.7;
+    font-size: 15px;
+    color: $color-content;
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        margin-bottom: 16px;
+        line-height: 1.5;
+        font-weight: 700;
+        color: $color-text;
+    }
+    p {
+        margin-bottom: 16px;
+    }
+    a {
+        text-decoration: underline;
+        transition: color .2s;
+    }
+    ul {
+        padding-left: 40px;
+    }
+    ol {
+        padding-left: 40px;
+    }
+    hr {
+        height: 1px;
+        margin: 32px 0;
+        border: 0;
+        background-color: $color-light;
+    }
+    blockquote {
+        margin-bottom: 16px;
+        padding-left: 20px;
+        letter-spacing: .7px;
+        border-left: 3px solid lighten($color-text, 5%);
+        font-style: italic;
+    }
+}

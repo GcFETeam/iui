@@ -63,7 +63,7 @@ $padding-set: (t, top), (b, bottom), (l, left), (r, right);
     font
    ========== */
 .pure-g [class*=pure-u] {
-    font-family: "Helvetica Neue", Arial, sans-serif;;
+    font-family: $font-family;
 }
 
 
