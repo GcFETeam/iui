@@ -804,6 +804,17 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
 .menu-line .active {
   border-bottom: 2px solid #42a5f5; }
 
+.ui-vertical-menu {
+  display: inline-block;
+  background: #fff;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 8px rgba(238, 238, 238, 0.8);
+          box-shadow: 0 2px 8px rgba(238, 238, 238, 0.8); }
+  .ui-vertical-menu .item {
+    padding: 0 10px; }
+  .ui-vertical-menu .active {
+    background: #eee; }
+
 .ui-search .ui-input {
   border: 1px solid #333;
   border-radius: 0; }

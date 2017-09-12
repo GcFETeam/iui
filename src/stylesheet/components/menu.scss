@@ -25,3 +25,16 @@
         border-bottom: 2px solid $color-primary;
     }
 }
+
+.ui-vertical-menu {
+    display: inline-block;
+    background: $color-white;
+    border-radius: 2px;
+    box-shadow: $box-shadow;
+    .item {
+        padding: 0 10px;
+    }
+    .active {
+        background: $color-light;
+    }
+}
