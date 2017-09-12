@@ -13,13 +13,10 @@ exports.getNode = getNode;
 exports.addClass = addClass;
 exports.removeClass = removeClass;
 exports.getElementContext = getElementContext;
-exports.throwError = throwError;
-exports.find = find;
-exports.transitionEndVendorSniff = transitionEndVendorSniff;
-exports.applyUserSettings = applyUserSettings;
 exports.matches = matches;
 exports.delegate = delegate;
 exports.getOffset = getOffset;
+exports.throwError = throwError;
 /* ==========
     Array
    ========== */
@@ -92,35 +89,6 @@ function getElementContext(e) {
     return null;
 }
 
-function throwError(message) {
-    console.error('error: ' + message);
-}
-
-function find(arr, callback) {
-    return function (key) {
-        var filteredArray = arr.filter(callback);
-        return filteredArray[0] ? filteredArray[0][key] : undefined;
-    };
-}
-
-function transitionEndVendorSniff() {
-    var el = document.createElement('div');
-    var transitions = [{ key: 'transition', value: 'transitionend' }, {
-        key: 'OTransition',
-        value: 'otransitionend'
-    }, { key: 'MozTransition', value: 'transitionend' }, { key: 'WebkitTransition', value: 'webkitTransitionEnd' }];
-    return find(transitions, function (_ref) {
-        var key = _ref.key;
-        return typeof el.style[key] !== 'undefined';
-    })('value');
-}
-
-function applyUserSettings(settings) {
-    return _extends({}, defaults, settings, {
-        transitionEnd: transitionEndVendorSniff()
-    });
-}
-
 function matches(e, selector) {
     var d = e.target.document || e.target.ownerDocument;
     if (d) {
@@ -178,6 +146,10 @@ function getOffset(node, offset, noInit) {
     }
 
     return getOffset(node.parentNode, offset, true);
+}
+
+function throwError(message) {
+    console.error('error: ' + message);
 }
 
 /***/ }),
@@ -652,7 +624,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /*
-* 基于 https://github.com/benceg/vanilla-modal
+* 参考 https://github.com/benceg/vanilla-modal
 * */
 
 __webpack_require__(5);

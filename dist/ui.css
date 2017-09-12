@@ -841,6 +841,12 @@ a {
 .h5 {
   font-size: 16px; }
 
+hr {
+  height: 1px;
+  margin: 32px 0;
+  border: 0;
+  background-color: #eee; }
+
 .markdown {
   line-height: 1.7;
   font-size: 15px;
@@ -872,11 +878,6 @@ a {
     padding-left: 40px; }
   .markdown ol {
     padding-left: 40px; }
-  .markdown hr {
-    height: 1px;
-    margin: 32px 0;
-    border: 0;
-    background-color: #eee; }
   .markdown blockquote {
     margin-bottom: 16px;
     padding-left: 20px;
