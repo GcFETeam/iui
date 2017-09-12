@@ -32,7 +32,8 @@
     border-radius: 2px;
     box-shadow: $box-shadow;
     .item {
-        padding: 0 10px;
+        display: block;
+        padding: 6px 10px;
     }
     .active {
         background: $color-light;

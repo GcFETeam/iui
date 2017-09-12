@@ -811,7 +811,8 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
   -webkit-box-shadow: 0 2px 8px rgba(238, 238, 238, 0.8);
           box-shadow: 0 2px 8px rgba(238, 238, 238, 0.8); }
   .ui-vertical-menu .item {
-    padding: 0 10px; }
+    display: block;
+    padding: 6px 10px; }
   .ui-vertical-menu .active {
     background: #eee; }
 
