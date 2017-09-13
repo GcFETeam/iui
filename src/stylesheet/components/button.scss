@@ -85,7 +85,7 @@ $size-map: (small, $element-height-small),
 // size
 
 @each $btn, $size in $size-map {
-    .btn-#{$btn} {
+    .ui-button.#{$btn} {
         height: $size;
         line-height: $size;
         &.btn-circle {
@@ -100,7 +100,7 @@ $size-map: (small, $element-height-small),
     }
 }
 
-.btn-small {
+.ui-button.small {
     font-size: 12px;
 }
 

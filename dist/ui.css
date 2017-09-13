@@ -525,7 +525,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 80px;
   width: 80px; }
 
-.avt-small img {
+.ui-avatar.small img {
   height: 50px;
   width: 50px; }
 
@@ -595,27 +595,27 @@ h1, h2, h3, h4, h5, h6 {
   .btn-white:hover {
     background: #42a5f5; }
 
-.btn-small {
+.ui-button.small {
   height: 20px;
   line-height: 20px; }
-  .btn-small.btn-circle {
+  .ui-button.small.btn-circle {
     width: 20px; }
-  .btn-small.btn-square {
+  .ui-button.small.btn-square {
     width: 20px; }
-  .btn-small.btn-line {
+  .ui-button.small.btn-line {
     line-height: 18px; }
 
-.btn-large {
+.ui-button.large {
   height: 40px;
   line-height: 40px; }
-  .btn-large.btn-circle {
+  .ui-button.large.btn-circle {
     width: 40px; }
-  .btn-large.btn-square {
+  .ui-button.large.btn-square {
     width: 40px; }
-  .btn-large.btn-line {
+  .ui-button.large.btn-line {
     line-height: 38px; }
 
-.btn-small {
+.ui-button.small {
   font-size: 12px; }
 
 .ui-card {

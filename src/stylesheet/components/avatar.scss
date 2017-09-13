@@ -5,11 +5,11 @@
         height: 80px;
         width: 80px;
     }
-}
-
-.avt-small {
-    img {
-        height: 50px;
-        width: 50px;
+    &.small {
+        img {
+            height: 50px;
+            width: 50px;
+        }
     }
 }
+
