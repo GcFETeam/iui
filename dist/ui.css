@@ -812,9 +812,18 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
           box-shadow: 0 2px 8px rgba(238, 238, 238, 0.8); }
   .ui-vertical-menu .item {
     display: block;
-    padding: 6px 10px; }
+    padding: 4px 10px;
+    cursor: pointer; }
   .ui-vertical-menu .active {
     background: #eee; }
+
+.ui-autocomplete {
+  display: inline-block; }
+  .ui-autocomplete .ui-vertical-menu {
+    width: 100%;
+    max-height: 340px;
+    overflow-y: scroll;
+    white-space: nowrap; }
 
 .ui-search .ui-input {
   border: 1px solid #333;
