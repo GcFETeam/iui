@@ -642,6 +642,51 @@ h1, h2, h3, h4, h5, h6 {
   .ui-card .content {
     font-size: 14px; }
 
+.ui-switch {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 24px; }
+  .ui-switch .label {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    cursor: pointer; }
+  .ui-switch .circle {
+    height: 24px;
+    width: 24px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+    background: linear-gradient(to bottom, #fff, #eee);
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 8px rgba(238, 238, 238, 0.8);
+            box-shadow: 0 2px 8px rgba(238, 238, 238, 0.8);
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    -webkit-transition: left .2s;
+    transition: left .2s;
+    border: 1px solid #eee; }
+  .ui-switch .bar {
+    height: 3px;
+    width: 50px;
+    position: absolute;
+    left: 0;
+    top: 11px;
+    border-radius: 2px;
+    background: #e1e1e1;
+    -webkit-transition: background .2s;
+    transition: background .2s; }
+  .ui-switch.checked .circle {
+    left: 26px; }
+  .ui-switch.checked .bar {
+    background: #42a5f5; }
+  .ui-switch input {
+    display: none; }
+  .ui-switch.toggle .bar {
+    height: 24px;
+    top: 0;
+    border-radius: 24px; }
+
 .img-cover, .img-cover-center, .img-tag, .img-frame {
   position: relative;
   overflow: hidden; }
@@ -781,9 +826,56 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
   .ui-input:focus {
     outline: none;
     border-color: #42a5f5; }
+  .ui-input.large {
+    height: 40px; }
 
-.ipt-large {
-  height: 40px; }
+.ui-label {
+  color: #6f6f6f; }
+
+.ui-form-control-row {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 50px;
+  width: 200px; }
+  .ui-form-control-row label {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    -webkit-transition: font-size .3s, -webkit-transform .3s;
+    transition: font-size .3s, -webkit-transform .3s;
+    transition: transform .3s, font-size .3s;
+    transition: transform .3s, font-size .3s, -webkit-transform .3s; }
+  .ui-form-control-row .label-focus {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    color: #42a5f5;
+    font-size: 12px; }
+  .ui-form-control-row .label-hide {
+    display: none; }
+  .ui-form-control-row .hr-gray,
+  .ui-form-control-row .hr-primary {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; }
+  .ui-form-control-row .hr-primary {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    background: #42a5f5;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s; }
+  .ui-form-control-row .hr-show {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+
+.ui-row-input {
+  height: 50px;
+  width: 200px;
+  padding-top: 20px;
+  border: 0; }
 
 .ui-menu li {
   display: inline-block;
@@ -812,7 +904,7 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
           box-shadow: 0 2px 8px rgba(238, 238, 238, 0.8); }
   .ui-vertical-menu .item {
     display: block;
-    padding: 4px 10px;
+    padding: 6px 10px;
     cursor: pointer; }
   .ui-vertical-menu .active {
     background: #eee; }
@@ -820,7 +912,7 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
 .ui-autocomplete {
   display: inline-block; }
   .ui-autocomplete .ui-vertical-menu {
-    width: 170px;
+    min-width: 170px;
     max-height: 340px;
     overflow-y: auto;
     white-space: nowrap; }
@@ -864,7 +956,6 @@ a {
 
 hr {
   height: 1px;
-  margin: 32px 0;
   border: 0;
   background-color: #eee; }
 
@@ -884,6 +975,8 @@ hr {
     font-size: 16px; }
   .markdown h6 {
     font-size: 14px; }
+  .markdown hr {
+    margin: 32px 0; }
   .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
     margin-bottom: 16px;
     line-height: 1.5;

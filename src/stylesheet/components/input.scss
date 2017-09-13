@@ -34,9 +34,57 @@
         outline: none;
         border-color: $color-primary;
     }
+    &.large {
+        height: $element-height-large;
+    }
 }
 
-.ipt-large {
-    height: $element-height-large;
+.ui-label {
+    color: $color-content;
+}
+
+.ui-form-control-row {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: $element-height-big;
+    width: 200px;
+
+    label {
+        position: absolute;
+        left: 0;
+        top: 20px;
+        transition: transform .3s, font-size .3s;
+    }
+    .label-focus {
+        transform: translate3d(0, -100%, 0);
+        color: $color-primary;
+        font-size: 12px;
+    }
+    .label-hide {
+        display: none;
+    }
+    .hr-gray,
+    .hr-primary {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .hr-primary {
+        transform: scaleX(0);
+        background: $color-primary;
+        transition: transform .3s;
+    }
+    .hr-show {
+        transform: scaleX(1);
+    }
+}
+
+.ui-row-input {
+    height: $element-height-big;
+    width: 200px;
+    padding-top: 20px;
+    border: 0;
 }
 

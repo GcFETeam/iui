@@ -34,7 +34,7 @@
 
     .item {
         display: block;
-        padding: 4px 10px;
+        padding: 6px 10px;
         cursor: pointer;
     }
     .active {
@@ -45,7 +45,7 @@
 .ui-autocomplete {
     display: inline-block;
     .ui-vertical-menu {
-        width: 170px;
+        min-width: 170px;
         max-height: 340px;
         overflow-y: auto;
         white-space: nowrap;

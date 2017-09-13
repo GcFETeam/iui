@@ -1,0 +1,57 @@
+$h: 24px;
+$w: 50px;
+
+.ui-switch {
+    display: inline-block;
+    vertical-align: middle;
+    width: $w;
+    height: $h;
+    .label {
+        position: relative;
+        width: $w;
+        height: $h;
+        cursor: pointer;
+    }
+    .circle {
+        height: $h;
+        width: $h;
+        background: linear-gradient(to bottom, $color-white, $color-light);
+        border-radius: 50%;
+        box-shadow: $box-shadow;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        transition: left .2s;
+        border: 1px solid $color-light;
+        
+    }
+    .bar {
+        height: 3px;
+        width: $w;
+        position: absolute;
+        left: 0;
+        top: $h / 2 - 1px;
+        border-radius: 2px;
+        background: darken($color-light, 5%);
+        transition: background .2s;
+    }
+    &.checked {
+        .circle {
+            left: $w - $h;
+        }
+        .bar {
+            background: $color-primary;
+        }
+    }
+    input {
+        display: none;
+    }
+
+    &.toggle {
+        .bar {
+            height: $h;
+            top: 0;
+            border-radius: $h;
+        }
+    }
+}
