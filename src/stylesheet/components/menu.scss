@@ -45,9 +45,9 @@
 .ui-autocomplete {
     display: inline-block;
     .ui-vertical-menu {
-        width: 100%;
+        width: 170px;
         max-height: 340px;
-        overflow-y: scroll;
+        overflow-y: auto;
         white-space: nowrap;
     }
 }

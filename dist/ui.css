@@ -820,9 +820,9 @@ input[type="radio"], input[type="checkbox"], input[type="button"], input[type="s
 .ui-autocomplete {
   display: inline-block; }
   .ui-autocomplete .ui-vertical-menu {
-    width: 100%;
+    width: 170px;
     max-height: 340px;
-    overflow-y: scroll;
+    overflow-y: auto;
     white-space: nowrap; }
 
 .ui-search .ui-input {
