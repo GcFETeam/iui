@@ -35,6 +35,13 @@ $size-map: (small, $element-height-small),
             color: $color-content;
         }
     }
+    &.disabled {
+        cursor: not-allowed;
+        &:hover {
+            background: $color-light;
+            color: $color-text;
+        }
+    }
 }
 
 // type
