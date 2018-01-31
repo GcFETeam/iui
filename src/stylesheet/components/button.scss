@@ -1,116 +1,158 @@
-/* ==========
+/* =====
     button
-   ========== */
-$type-map: (primary, $color-primary),
-        (dark, $color-text),
-        (warn, $color-warn),
-        (success, $color-success),
-        (error, $color-error);
+   ===== */
 
-$size-map: (small, $element-height-small),
-        (large, $element-height-large);
+$h: 40px;
+
+$h-mini: 26px;
+
+$h-small: 32px;
+
+$padding-mini: 4px 9px;
+
+$padding-small: 7px 15px;
+
+$padding: 9px 19px;
+
 
 .ui-button {
     display: inline-block;
-    padding: 0 10px;
-    height: $element-height;
-    border: 0;
-    border-radius: 2px;
-    text-align: center;
-    line-height: $element-height;
+    padding: $padding;
+    font-size: $font-size-normal;
+    vertical-align: middle;
+    line-height: 1.5;
+    border: 1px solid $color-border;
+    border-radius: $radius-normal;
     cursor: pointer;
-    background: $color-light;
-    transition: background .2s, color, .2s;
+    background-color: $color-white;
     &:hover {
-        background: $color-primary;
-        color: $color-white;
+        color: $color-text;
+        background-color: darken($color-white, 3%);
     }
-    i + span {
-        margin-left: 5px;
-    }
-    span + i {
-        margin-left: 5px;
-    }
-    &.btn-line {
-        line-height: $element-height - 2px;
-        &:hover {
-            color: $color-content;
-        }
+    &:active {
+        background-color: darken($color-white, 5%);
     }
     &.disabled {
+        color: $color-text-disabled;
         cursor: not-allowed;
-        &:hover {
-            background: $color-light;
-            color: $color-text;
+        &:hover,
+        &:active {
+            background-color: $color-white;
         }
     }
 }
-
-// type
-
-.btn-line {
-    border: 1px solid $color-light;
-    background: transparent;
-    &:hover {
-        background: transparent;
-        border-color: darken($color-light, 10%);
-    }
-}
-
-.btn-square,
-.btn-circle {
-    width: $element-height;
-    padding: 0;
-    text-align: center;
-}
-
-.btn-circle {
-    border-radius: 50%;
-}
-
-// color
-
-%front-color {
-    color: #fff;
-}
-
-@each $btn, $color in $type-map {
-    .ui-button.#{$btn} {
-        background: $color;
-        &:hover {
-            background: darken($color, 10%);
-        }
-        @extend %front-color;
-    }
-}
-
-.btn-white {
-    background: $color-white;
-    &:hover {
-        background: $color-primary;
-    }
-}
-
-// size
-
-@each $btn, $size in $size-map {
-    .ui-button.#{$btn} {
-        height: $size;
-        line-height: $size;
-        &.btn-circle {
-            width: $size;
-        }
-        &.btn-square {
-            width: $size;
-        }
-        &.btn-line {
-            line-height: $size - 2px;
-        }
-    }
+/* -----
+    size
+   -----
+   mini small
+   ----- */
+.ui-button.mini {
+    padding: $padding-mini;
+    font-size: $font-size-small;
+    border-radius: $radius-mini;
 }
 
 .ui-button.small {
-    font-size: 12px;
+    padding: $padding-small;
+    border-radius: $radius-small;
+    font-size: $font-size-small;
+    &.btn-circle {
+        width: $h-small;
+    }
 }
 
+/* -----
+    color
+   -----
+   btn-warn  btn-primary
+   ----- */
+%front-color {
+    color: $color-white;
+}
 
+$type-map: (primary, $color-primary),(warn, $color-text-warn);
+
+@mixin colorBorderBack ($color) {
+    border-color: $color;
+    background-color: $color;
+}
+
+@each $btn, $color in $type-map {
+    .btn-#{$btn} {
+        @extend %front-color;
+        @include colorBorderBack($color);
+
+        &:hover {
+            color: $color-white;
+            @include colorBorderBack(darken($color, 3%));
+        }
+
+        &:active {
+            @include colorBorderBack(darken($color, 5%));
+        }
+
+        // disabled
+        &.disabled {
+            color: $color-white;
+            @include colorBorderBack(lighten($color, 15%));
+
+            &:hover,
+            &:active {
+                @include colorBorderBack(lighten($color, 15%));
+            }
+        }
+    }
+}
+
+/* -----
+    group
+   -----
+   ui-buttons
+   ----- */
+
+$type-map: (ui-button, $radius-normal),(btn-lg, $radius-mini), (btn-sm, $radius-small);
+
+.ui-buttons {
+    display: inline-flex;
+    .ui-button {
+        flex: 1 0 auto;
+        border-left-width: 0;
+        border-radius: 0;
+
+        &:first-child {
+            border-left-width: 1px;
+        }
+    }
+
+    @each $btn, $radius in $type-map {
+        .#{$btn} {
+            &:first-child {
+                border-top-left-radius: $radius;
+                border-bottom-left-radius: $radius;
+            }
+            &:last-child {
+                border-top-right-radius: $radius;
+                border-bottom-right-radius: $radius;
+            }
+        }
+
+    }
+}
+
+/* -----
+    icon
+   -----
+   btn-icon
+   ----- */
+.ui-icon-button {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 24px;
+    border: 0;
+    &:hover {
+        color: $color-primary;
+    }
+}

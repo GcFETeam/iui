@@ -1,6 +1,3 @@
-// b: bottom l: left r: right t: top
-// p: padding m: margin
-
 /* ==========
     padding margin
    ========== */
@@ -8,111 +5,47 @@
 $padding-set: (t, top), (b, bottom), (l, left), (r, right);
 
 @each $name, $type in $padding-set {
-  @for $i from 1 through 6 {
+    @for $i from 1 through 4 {
+
+        $t: $i * 5;
+        $total: #{$t}px;
+
+        .p#{$name}-#{$t} {
+            padding-#{$type}: $total;
+        }
+
+        .m#{$name}-#{$t} {
+            margin-#{$type}: $total;
+        }
+    }
+}
+
+@for $i from 1 through 4 {
 
     $t: $i * 5;
     $total: #{$t}px;
 
-    .p#{$name}-#{$t} {
-      padding-#{$type}: $total;
+    .ptb-#{$t} {
+        padding-top: $total;
+        padding-bottom: $total;
     }
 
-    .m#{$name}-#{$t} {
-      margin-#{$type}: $total;
+    .plr-#{$t} {
+        padding-left: $total;
+        padding-right: $total;
     }
-  }
+
+    .mtb-#{$t} {
+        margin-top: $total;
+        margin-bottom: $total;
+    }
+
+    .mlr-#{$t} {
+        margin-left: $total;
+        margin-right: $total;
+    }
 }
 
-@for $i from 1 through 6 {
 
-  $t: $i * 5;
-  $total: #{$t}px;
 
-  .ptb-#{$t} {
-    padding-top: $total;
-    padding-bottom: $total;
-  }
 
-  .plr-#{$t} {
-    padding-left: $total;
-    padding-right: $total;
-  }
-
-  .mtb-#{$t} {
-    margin-top: $total;
-    margin-bottom: $total;
-  }
-
-  .mlr-#{$t} {
-    margin-left: $total;
-    margin-right: $total;
-  }
-}
-
-@for $i from 10 through 50 {
-  $t: $i * 10;
-  $total: $i * 10px;
-  .w#{$t} {
-    width: $total;
-  }
-}
-
-/* ==========
-    font
-   ========== */
-.pure-g [class*=pure-u] {
-  font-family: $font-family;
-}
-
-.ft-primary {
-  color: $color-primary;
-}
-
-.ft-warn {
-  color: $color-warn;
-}
-
-.ft-content {
-  color: $color-content;
-}
-
-.ft-center {
-  text-align: center;
-}
-
-.ft-gray {
-  color: $color-gray;
-}
-
-.ft-12 {
-  font-size: 12px;
-}
-
-.ft-14 {
-  font-size: 14px;
-}
-
-.ft-right {
-  text-align: right;
-}
-
-.ft-uppercase {
-  text-transform: uppercase;
-}
-
-/* ==========
-    border
-   ========== */
-$border: 1px solid $color-light;
-
-.bl-2 {
-  border-left: 2px solid $color-light;
-}
-
-.bb-1 {
-  border-bottom: $border;
-}
-
-.bt-1 {
-  border-top: $border;
-}

@@ -12,7 +12,7 @@ module.exports = {
         filename: "[name].js"
     },
     plugins: [
-        new CommonsChunkPlugin('commons'),
+        // new CommonsChunkPlugin('commons'),
         new ExtractTextPlugin("[name].css")
     ],
     module: {

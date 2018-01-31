@@ -2,63 +2,47 @@
   pages:
     - title: 排版
       name: Typography
-      url: /source/typography/
+      url: /docs/typography/
 
 - title: Components
   pages:
     - title: 按钮
       name: Button
-      url: /source/button/
+      url: /docs/button/
     - title: 输入
       name: Input
-      url: /source/input/
+      url: /docs/input/
     - title: 单选
       name: Radio
-      url: /source/radio/
+      url: /docs/radio/
     - title: 多选
       name: Checkbox
-      url: /source/checkbox/
+      url: /docs/checkbox/
     - title: 标签
       name: Tag
-      url: /source/tag/
+      url: /docs/tag/
     - title: 菜单
       name: Menu
-      url: /source/menu/
+      url: /docs/menu/
     - title: 面包屑
       name: Crumbs
-      url: /source/crumbs/
+      url: /docs/crumbs/
     - title: 选项卡
       name: Tab
-      url: /source/tab/
+      url: /docs/tab/
     - title: 分页
       name: Pagination
-      url: /source/pagination/
+      url: /docs/pagination/
+    - title: 表格
+      name: Table
+      url: /docs/table/
 
 - title: Collections
   pages:
     - title: 表单
       name: Form
-      url: /source/form/
+      url: /docs/form/
 
-- title: Js plugin
-  pages:
-    - title: 插件
-      name: Plugin
-      url: /source/plugin/
-
-- title: Other
-  pages:
-    - title: 推荐
-      url: /source/recommend/
-    - title: 日期选择
-      name: Flatpickr
-      url: /source/flatpickr/
-    - title: 表单验证
-      name: Parsley
-      url: /source/parsley/
-    - title:
-      name: Tether
-      url: /source/tether/
 
 
 

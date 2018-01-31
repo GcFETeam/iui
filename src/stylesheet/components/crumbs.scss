@@ -1,0 +1,21 @@
+/* =====
+    crumbs
+   ===== */
+.ui-crumbs {
+    font-size: $font-size-small;
+    color: $color-text-disabled;
+    .link,
+    .current,
+    .cut {
+        margin-right: 10px;
+    }
+    .current {
+        color: $color-text-dark;
+    }
+    .link {
+        color: $color-text-dark;
+        &:hover {
+            color: $color-text-link;
+        }
+    }
+}

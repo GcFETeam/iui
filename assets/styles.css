@@ -1,6 +1,5 @@
 body {
-    font: 14px/1.8 "Helvetica Neue", Arial, sans-serif;
-    background: #f3f6f9;
+    background: #f3f5f6;
 }
 
 ul, li {
@@ -14,12 +13,22 @@ ul, li {
 
 .page-title {
     margin: 0;
+    padding: 10px 0;
+    line-height: 1;
 }
 
 .page-layout {
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
-    max-width: 1400px;
+}
+
+.page-wrap {
+    display: flex;
+}
+
+.page-main {
+    flex: 1;
 }
 
 .page-nav,
@@ -28,12 +37,13 @@ ul, li {
 }
 
 .page-nav li {
-    line-height: 2.2;
+    padding-left: 10px;
+    line-height: 2.4;
     font-size: 14px;
 }
 
 .page-nav li.active {
-    border-right: 3px solid #0d47a1;
+    border-right: 3px solid #eb7e17;
 }
 
 .page-nav a {
@@ -42,13 +52,43 @@ ul, li {
 }
 
 .page-nav {
+    width: 200px;
     padding: 20px 0 20px 20px;
+    font-family: Raleway, sans-serif;
+    font-weight: 300;
+}
+
+.page-nav h4 {
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .page-main {
     padding: 20px 100px 100px;
-    margin-left: 20px;
+    margin-left: 10px;
     min-height: 50vh;
+}
+
+main {
+    position: relative;
+}
+
+.page-main .main > h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #f0f2f4;
+}
+
+.page-main .main > h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-family: Raleway, sans-serif;
+}
+
+.page-main .main > h3:first-of-type {
+    margin-top: 0;
 }
 
 .page-footer {
@@ -57,139 +97,136 @@ ul, li {
     font-size: 12px;
 }
 
-.ft-title {
-    font-family: Muli, sans-serif;
-}
-
-.ft-content {
-    font-family: Lato, sans-serif;
-}
-
 /* code */
 
 .item-title {
     text-transform: capitalize;
 }
 
-.code-box {
-    position: relative;
-    padding-top: 30px;
+.bd-example {
+    margin-bottom: 20px;
 }
 
-.code-box .fa {
-    position: absolute;
-    right: 10px;
-    top: 0;
-    font-size: 18px;
-    font-weight: 700;
-    color: #aaa;
-}
-
-pre {
-    padding: 8px;
+.highlight {
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 4px;
-    border: 1px solid #f2f4f6;
-    background: #fafcfd;
+    border: 1px solid #e6e6e6;
+    color: #565656;
 }
 
-
-
-code {
-    background: #fafcfd;
+.fa-clone {
+    float: right;
+    padding: 0 10px;
+    line-height: 2;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    cursor: pointer;
+    color: #666;
+    background: #fafbfc;
+    border-top-right-radius: 4px;
 }
 
-pre,code {
+pre.highlight,
+.highlight pre {
+    /*opacity: 0;*/
+    /*visibility: hidden;*/
+    /*height: 0;*/
+    padding: 15px;
 
-    font: 13px/1.5 Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+    transition: opacity .2s;
+    border-radius: 2px;
+    font-size: 13px;
+    white-space: pre-wrap;
+    overflow-x: auto;
 }
 
-table, td {
-    border: 1px solid #f2f3f4;
+.page-main blockquote {
+    margin: 10px 0;
+    padding: 8px 10px;
+    background: #fafbfc;
+    color: #555;
+    font-size: 13px;
+    border-left: 2px solid #0d47a1;
 }
 
-td {
-    padding: 5px 10px;
+.page-main blockquote a {
+    color: #0d47a1;
 }
+
 
 /* highlight*/
 
+
+.highlight .hll {
+    background-color: #EFEFEF
+}
+
 .highlight .c {
-    color: #998;
-    font-style: italic
+    color: #929292
 }
 
 .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2
+    background: #C82829;
+    color: #FFFFFF
 }
 
 .highlight .k {
-    font-weight: bold
+    color: #8959A8
+}
+
+.highlight .l {
+    color: #F5871F
+}
+
+.highlight .n {
+    color: #929292
 }
 
 .highlight .o {
-    font-weight: bold
+    color: #545454
+}
+
+.highlight .p {
+    color: #929292
 }
 
 .highlight .cm {
-    color: #998;
-    font-style: italic
+    color: #929292
 }
 
 .highlight .cp {
-    color: #999;
-    font-weight: bold
+    color: #929292
 }
 
 .highlight .c1 {
-    color: #998;
-    font-style: italic
+    color: #929292
 }
 
 .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic
+    color: #929292
 }
 
 .highlight .gd {
-    color: #000;
-    background-color: #fdd
-}
-
-.highlight .gd .x {
-    color: #000;
-    background-color: #faa
+    color: #C82829
 }
 
 .highlight .ge {
     font-style: italic
 }
 
-.highlight .gr {
-    color: #a00
-}
-
 .highlight .gh {
-    color: #999
+    color: #545454;
+    font-weight: bold
 }
 
 .highlight .gi {
-    color: #000;
-    background-color: #dfd
-}
-
-.highlight .gi .x {
-    color: #000;
-    background-color: #afa
-}
-
-.highlight .go {
-    color: #888
+    color: #718C00
 }
 
 .highlight .gp {
-    color: #555
+    color: #718C00;
+    font-weight: bold
 }
 
 .highlight .gs {
@@ -197,169 +234,186 @@ td {
 }
 
 .highlight .gu {
-    color: #aaa
-}
-
-.highlight .gt {
-    color: #a00
+    color: #3E999F;
+    font-weight: bold
 }
 
 .highlight .kc {
-    font-weight: bold
+    color: #8959A8
 }
 
 .highlight .kd {
-    font-weight: bold
+    color: #8959A8
+}
+
+.highlight .kn {
+    color: #3E999F
 }
 
 .highlight .kp {
-    font-weight: bold
+    color: #4271AE
 }
 
 .highlight .kr {
-    font-weight: bold
+    color: #8959A8
 }
 
 .highlight .kt {
-    color: #458;
-    font-weight: bold
+    color: #EAB700
+}
+
+.highlight .ld {
+    color: #718C00
 }
 
 .highlight .m {
-    color: #099
+    color: #F5871F
 }
 
 .highlight .s {
-    color: #d14
+    color: #718C00
 }
 
 .highlight .na {
-    color: #008080
+    color: #4271AE
 }
 
 .highlight .nb {
-    color: #0086B3
+    color: #4271AE
 }
 
 .highlight .nc {
-    color: #458;
-    font-weight: bold
+    color: #EAB700
 }
 
 .highlight .no {
-    color: #008080
+    color: #EAB700
+}
+
+.highlight .nd {
+    color: #3E999F
 }
 
 .highlight .ni {
-    color: #800080
+    color: #545454
 }
 
 .highlight .ne {
-    color: #900;
-    font-weight: bold
+    color: #C82829
 }
 
 .highlight .nf {
-    color: #900;
-    font-weight: bold
+    color: #4271AE
+}
+
+.highlight .nl {
+    color: #545454
 }
 
 .highlight .nn {
-    color: #555
+    color: #EAB700
+}
+
+.highlight .nx {
+    color: #4271AE
+}
+
+.highlight .py {
+    color: #545454
 }
 
 .highlight .nt {
-    color: #000080
+    color: #3E999F
 }
 
 .highlight .nv {
-    color: #008080
+    color: #C82829
 }
 
 .highlight .ow {
-    font-weight: bold
+    color: #3E999F
 }
 
 .highlight .w {
-    color: #bbb
+    color: #545454
 }
 
 .highlight .mf {
-    color: #099
+    color: #F5871F
 }
 
 .highlight .mh {
-    color: #099
+    color: #F5871F
 }
 
 .highlight .mi {
-    color: #099
+    color: #F5871F
 }
 
 .highlight .mo {
-    color: #099
+    color: #F5871F
 }
 
 .highlight .sb {
-    color: #d14
+    color: #718C00
 }
 
 .highlight .sc {
-    color: #d14
+    color: #545454
 }
 
 .highlight .sd {
-    color: #d14
+    color: #929292
 }
 
 .highlight .s2 {
-    color: #d14
+    color: #718C00
 }
 
 .highlight .se {
-    color: #d14
+    color: #F5871F
 }
 
 .highlight .sh {
-    color: #d14
+    color: #718C00
 }
 
 .highlight .si {
-    color: #d14
+    color: #F5871F
 }
 
 .highlight .sx {
-    color: #d14
+    color: #718C00
 }
 
 .highlight .sr {
-    color: #009926
+    color: #718C00
 }
 
 .highlight .s1 {
-    color: #d14
+    color: #718C00
 }
 
 .highlight .ss {
-    color: #990073
+    color: #718C00
 }
 
 .highlight .bp {
-    color: #999
+    color: #545454
 }
 
 .highlight .vc {
-    color: #008080
+    color: #C82829
 }
 
 .highlight .vg {
-    color: #008080
+    color: #C82829
 }
 
 .highlight .vi {
-    color: #008080
+    color: #C82829
 }
 
 .highlight .il {
-    color: #099
+    color: #F5871F
 }

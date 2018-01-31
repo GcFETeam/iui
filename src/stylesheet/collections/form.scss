@@ -1,0 +1,202 @@
+/* =====
+    form
+   ===== */
+$padding-normal: 10px 16px;
+$padding-small: 8px 12px;
+
+$h: 41px;
+$h-small: 34px;
+
+
+.ui-form {
+    font-size: $font-size-normal;
+    .form-group {
+        position: relative;
+        margin-bottom: 16px;
+    }
+    .label {
+        display: inline-block;
+        width: 165px;
+        padding-right: 10px;
+        text-align: right;
+        vertical-align: top;
+        line-height: 41px;
+    }
+    &.small {
+        font-size: $font-size-small;
+        .form-group {
+            margin-bottom: 12px;
+        }
+        .label {
+            line-height: 34px;
+        }
+        .tips {
+            top: 8px;
+            margin-left: 12px;
+        }
+    }
+    .tips {
+        position: absolute;
+        left: 500px;
+        top: 10px;
+        margin-left: 13px;
+        color: $color-text-gray;
+    }
+}
+
+
+/* -----
+    form control
+   ----- */
+
+.ui-form-control {
+    padding: $padding-normal;
+    width: 320px;
+    border: 1px solid $color-border;
+    border-radius: $radius-normal;
+    font-size: $font-size-normal;
+    &:focus {
+        border-color: $color-border-focus;
+    }
+    &.disabled {
+        background-color: map_get($gray, 100);
+    }
+    &.error {
+        border-color: $color-text-warn;
+        &:focus {
+            border-color: $color-text-warn;
+        }
+    }
+    &.small {
+        padding: $padding-small;
+        font-size: $font-size-small;
+        border-radius: $radius-small;
+        & + .count {
+            bottom: 8px;
+            font-size: $font-size-small;
+        }
+    }
+}
+
+/* -----
+    input
+   ----- */
+.ui-labeled-input {
+    .input-label {
+        display: inline-flex;
+        width: 320px;
+        border: 1px solid $color-border;
+        border-radius: $radius-normal;
+    }
+    .text {
+        padding: $padding-normal;
+        background: map_get($gray, 100);
+        & + .input {
+            border-left: 1px solid $color-border;
+        }
+    }
+    .input {
+        padding: $padding-normal;
+        min-width: 10px;
+        border: 0;
+        flex: 1;
+        & + .text {
+            border-left: 1px solid $color-border;
+        }
+    }
+}
+
+
+/* -----
+   enter count
+   ----- */
+.ui-enter-count {
+    display: inline-block;
+    position: relative;
+    .ui-form-control {
+        padding-right: 50px;
+    }
+    .count {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        color: $color-text-disabled;
+    }
+}
+
+/* -----
+    checkbox radio
+   ----- */
+
+@each $type in checkbox, radio {
+    .ui-#{$type}-like {
+        padding-right: 20px;
+        cursor: pointer;
+        .#{$type}-item {
+            display: none;
+        }
+        .fa {
+            color: $color-primary;
+        }
+        &.small {
+            padding-right: 16px;
+            font-size: $font-size-small;
+        }
+    }
+}
+
+.ui-checkbox-like {
+    .checkbox-item:checked + i:before {
+        content: "\f14a";
+    }
+}
+
+.ui-radio-like {
+    .radio-item:checked + i:before {
+        content: "\f192";
+    }
+}
+
+/* -----
+    select
+   ----- */
+
+.ui-select {
+    position: relative;
+    display: inline-block;
+    i {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        line-height: $h;
+    }
+}
+
+/* -----
+    validate
+   ----- */
+.ui-form {
+
+    .parsley-errors-list {
+        padding-left: 170px;
+        font-size: 12px;
+        color: $color-text-warn;
+        li {
+            padding: 8px 0 8px 16px;
+        }
+    }
+    &.small .parsley-errors-list {
+        li {
+            padding: 6px 0 6px 12px;
+        }
+
+    }
+    .ui-form-control.parsley-error {
+        border-color: $color-text-warn;
+    }
+}
+
+
+
+
+

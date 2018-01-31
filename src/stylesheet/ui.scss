@@ -5,36 +5,25 @@
 
 @import "base/global";
 
-@import "base/transition";
+@import "components/typography";
 
 /* ===== components ===== */
 
-@import "components/avatar";
-
 @import "components/button";
 
-@import "components/card";
-
-@import "components/checkbox";
-
-@import "components/image";
-
-@import "components/input";
-
-@import "components/list";
+@import "components/crumbs";
 
 @import "components/menu";
 
-@import "components/nav";
+@import "components/pagination";
 
-@import "components/process";
+@import "components/tab";
 
-@import "components/search";
+@import "components/table";
 
-@import "components/title";
-
-@import "components/typography";
+@import "components/tag";
 
 
+/* ===== collections ===== */
 
-
+@import "collections/form";
