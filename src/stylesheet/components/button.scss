@@ -3,7 +3,9 @@
    ========== */
 $type-map: (primary, $color-primary),
         (dark, $color-text),
-        (warn, $color-warn);
+        (warn, $color-warn),
+        (success, $color-success),
+        (error, $color-error);
 
 $size-map: (small, $element-height-small),
         (large, $element-height-large);
@@ -73,7 +75,7 @@ $size-map: (small, $element-height-small),
 }
 
 @each $btn, $color in $type-map {
-    .btn-#{$btn} {
+    .ui-button.#{$btn} {
         background: $color;
         &:hover {
             background: darken($color, 10%);

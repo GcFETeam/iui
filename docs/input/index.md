@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+# Input
+
+### 默认
+{%example html%}
+<input type="text" class="ui-form-control" placeholder="请输入">
+{%endexample%}
+
+### 较小
+{%example html%}
+<input type="text" class="ui-form-control small" placeholder="请输入">
+{%endexample%}
+
+### 禁用
+{%example html%}
+<input type="text" class="ui-form-control disabled" disabled value="输入完成">
+{%endexample%}
+
+### 错误
+{%example html%}
+<input type="text" class="ui-form-control error" value="输入完成">
+{%endexample%}
+
+### 字数限制
+
+> 需要有`maxlenth`属性
+
+{%example html%}
+<div class="ui-enter-count">
+    <input type="text" class="ui-form-control" maxlength="20">
+    <span class="count">0/20</span>
+</div>
+{%endexample%}
+
+
+
+### 半开放输入
+
+> IE10+  flex
+
+<div class="ui-labeled-input mb-10">
+    <label class="input-label">
+        <input class="input" type="text" placeholder="请输入">
+        <span class="text">.xizhi.design</span>
+    </label>
+</div>
+
+{% example html%}
+<div class="ui-labeled-input">
+    <label class="input-label">
+        <span class="text">https://xizhi.design/</span>
+        <input class="input" type="text" placeholder="请输入">
+    </label>
+</div>
+{% endexample %}
+
+> 兼容IE9的写法
+
+{% example html%}
+<div class="ui-labeled-input ">
+    <label class="input-label clf">
+        <input class="input fl" type="text" placeholder="请输入">
+        <span class="text fl">.xizhi.design</span>
+    </label>
+</div>
+{% endexample %}
+
+
+
+
