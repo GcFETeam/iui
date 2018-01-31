@@ -27,6 +27,8 @@ $color-white: #fff;
 
 $color-primary: map_get($blues, 100);
 
+$color-error: map_get($reds, 100);
+
 
 // border
 $color-border: map_get($gray, 400);

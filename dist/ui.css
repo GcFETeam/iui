@@ -344,6 +344,63 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   margin-left: 20px;
   margin-right: 20px; }
 
+/* =====
+    animate
+   ===== */
+.animate {
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown; }
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp; }
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
 /* ==========
     font
    ========== */
@@ -879,15 +936,23 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
 /* -----
     validate
    ----- */
-.ui-form .parsley-errors-list {
-  padding-left: 170px;
-  font-size: 12px;
-  color: #f34848; }
-  .ui-form .parsley-errors-list li {
-    padding: 8px 0 8px 16px; }
-
-.ui-form.small .parsley-errors-list li {
-  padding: 6px 0 6px 12px; }
-
-.ui-form .ui-form-control.parsley-error {
-  border-color: #f34848; }
+.ui-form-error {
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 6px;
+  height: 24px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: #f34848;
+  color: #fff;
+  line-height: 20px;
+  font-size: 12px; }
+  .ui-form-error:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: -10px;
+    height: 0;
+    width: 0;
+    border: 5px solid transparent;
+    border-right-color: #f34848; }

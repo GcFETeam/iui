@@ -175,26 +175,30 @@ $h-small: 34px;
 /* -----
     validate
    ----- */
-.ui-form {
-
-    .parsley-errors-list {
-        padding-left: 170px;
-        font-size: 12px;
-        color: $color-text-warn;
-        li {
-            padding: 8px 0 8px 16px;
-        }
-    }
-    &.small .parsley-errors-list {
-        li {
-            padding: 6px 0 6px 12px;
-        }
-
-    }
-    .ui-form-control.parsley-error {
-        border-color: $color-text-warn;
+.ui-form-error {
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 6px;
+    height: 24px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: $color-error;
+    color: $color-white;
+    line-height: 20px;
+    font-size: 12px;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: -10px;
+        height: 0;
+        width: 0;
+        border: 5px solid transparent;
+        border-right-color: $color-error;
     }
 }
+
+
 
 
 
