@@ -28,7 +28,7 @@ plugins:
   - jekyll-feed
   - jekyll-pug
 
-baseurl: /my-project
+baseurl: /iui
 
 
 # Exclude from processing.

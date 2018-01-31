@@ -78,7 +78,7 @@ eos
         code = remove_holderjs(code)
         code = remove_example_classes(code)
         code = formatter.format(lexer.lex(code))
-        "<div class=\"highlight\"><pre>#{code}</pre></div>"
+        "<div class=\"highlight\"><i class=\"fa fa-clone\" title=\"复制代码\"></i><pre>#{code}</pre></div>"
       end
 
       def add_code_tag(code)
