@@ -1,2 +1,64 @@
+- title: Base
+  pages:
+    - title: 排版
+      name: Typography
+      url: /source/typography/
+
+- title: Components
+  pages:
+    - title: 按钮
+      name: Button
+      url: /source/button/
+    - title: 输入
+      name: Input
+      url: /source/input/
+    - title: 单选
+      name: Radio
+      url: /source/radio/
+    - title: 多选
+      name: Checkbox
+      url: /source/checkbox/
+    - title: 标签
+      name: Tag
+      url: /source/tag/
+    - title: 菜单
+      name: Menu
+      url: /source/menu/
+    - title: 面包屑
+      name: Crumbs
+      url: /source/crumbs/
+    - title: 选项卡
+      name: Tab
+      url: /source/tab/
+    - title: 分页
+      name: Pagination
+      url: /source/pagination/
+
+- title: Collections
+  pages:
+    - title: 表单
+      name: Form
+      url: /source/form/
+
+- title: Js plugin
+  pages:
+    - title: 插件
+      name: Plugin
+      url: /source/plugin/
+
+- title: Other
+  pages:
+    - title: 推荐
+      url: /source/recommend/
+    - title: 日期选择
+      name: Flatpickr
+      url: /source/flatpickr/
+    - title: 表单验证
+      name: Parsley
+      url: /source/parsley/
+    - title:
+      name: Tether
+      url: /source/tether/
+
 
 
