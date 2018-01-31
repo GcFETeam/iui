@@ -11,14 +11,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/sollrei/my-project.git"
+        "url": "git+https://github.com/sollrei/iui.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/sollrei/my-project/issues"
+        "url": "https://github.com/sollrei/iui/issues"
     },
-    "homepage": "https://github.com/sollrei/my-project#readme",
+    "homepage": "https://github.com/sollrei/iui#readme",
     "devDependencies": {
         "autoprefixer": "^7.1.2",
         "babel-loader": "^7.1.1",
