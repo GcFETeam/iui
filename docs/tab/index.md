@@ -4,7 +4,7 @@ layout: default
 
 # Tab
 
-{% example html %}
+
 
 <div class="ui-tab tab-warn" mod-id="tab" mod-rule="normal">
     // ...
@@ -22,4 +22,3 @@ mod-rule 交互事件的规则，用于区分调用特定的事件
 
 
 
-{% endexample %}

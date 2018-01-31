@@ -14,7 +14,7 @@ layout: default
     <span class="current">发布产品</span>
 </div>
 
-```
+```html
 <div class="ui-crumbs">
     <a href="#" class="link">首页</a>
     <span class="cut">/</span>
@@ -35,7 +35,7 @@ layout: default
     <span class="current">发布产品</span>
 </div>
 
-```
+```html
 <div class="ui-crumbs">
     <a href="#" class="link">首页</a>
     <span class="cut"><i class="iconfont icon-ceshi"></i></span>

@@ -8,7 +8,7 @@ layout: default
 
 ### 一般
 
-{% example html %}
+
 <div class="ui-pagination">
     <a href="#" class="page"><i class="fa fa-angle-left"></i></a>
     <span class="page active">1</span>
@@ -25,12 +25,12 @@ layout: default
     <span class="text">页</span>
     <span class="total">共有2255条</span>
 </div>
-{% endexample %}
+
 
 
 ### 较小
 
-{% example html %}
+
 <div class="ui-pagination small">
     <a href="#" class="page"><i class="fa fa-angle-left"></i></a>
     <a href="#" class="page active">1</a>
@@ -44,11 +44,11 @@ layout: default
     <span class="text">页</span>
     <span class="total">共有2255条</span>
 </div>
-{% endexample %}
+
 
 ### 最小
 
-{% example html %}
+
 <div class="ui-pagination mini">
     <a href="#" class="page"><i class="fa fa-angle-left"></i></a>
     <a href="#" class="page active">1</a>
@@ -56,8 +56,8 @@ layout: default
     <a href="#" class="page">3</a>
     <a href="#" class="page"><i class="fa fa-angle-right"></i></a>
 </div>
-{% endexample %}
-{% example html %}
+
+
 <div class="ui-pagination mini">
     <a href="#" class="page"><i class="fa fa-angle-left"></i></a>
     <form action="#">
@@ -67,5 +67,5 @@ layout: default
     <span class="text">4</span>
     <a href="#" class="page"><i class="fa fa-angle-right"></i></a>
 </div>
-{% endexample %}
+
 

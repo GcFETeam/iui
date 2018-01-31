@@ -6,7 +6,6 @@ layout: default
 
 ### 表单
 
-{% example html %}
 <div class="ui-form">
     <div class="form-group">
         <label class="label">默认状态：</label>
@@ -39,13 +38,11 @@ layout: default
         </div>
     </div>
 </div>
-{% endexample %}
 
 ### 小表单
 
 > 表单是表单控件的集合，控件上也需要加`small`
 
-{% example html %}
 <div class="ui-form small">
     <div class="form-group">
         <label class="label">默认状态：</label>
@@ -63,4 +60,3 @@ layout: default
         </div>
     </div>
 </div>
-{% endexample %}

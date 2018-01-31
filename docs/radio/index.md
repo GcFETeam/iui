@@ -6,7 +6,7 @@ layout: default
 
 > 缺少icon
 
-{% example html %}
+
 <label class="ui-radio-like">
     <input type="radio" value="2" name="demo1" class="radio-item" checked>
     <i class="fa fa-circle-o"></i>
@@ -17,9 +17,9 @@ layout: default
     <i class="fa fa-circle-o"></i>
     选项2
 </label>
-{% endexample %}
 
-{% example html %}
+
+
 <label class="ui-radio-like small">
     <input type="radio" value="2" name="demo2" class="radio-item">
     <i class="fa fa-circle-o"></i>
@@ -30,4 +30,4 @@ layout: default
     <i class="fa fa-circle-o"></i>
     选项2
 </label>
-{% endexample %}
+
