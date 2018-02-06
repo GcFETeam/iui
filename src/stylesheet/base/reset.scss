@@ -215,7 +215,7 @@ strong {
     -moz-appearance: none;
 }
 
-@each $type in text, email, search, password, radio, checkbox {
+@each $type in text, email, search, password, radio {
     input {
         &[type="#{$type}"] {
             @extend %app;
