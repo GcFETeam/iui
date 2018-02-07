@@ -875,12 +875,15 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
 /* -----
     form control
    ----- */
-.ui-form-control {
-  padding: 10px 16px;
-  width: 320px;
+.ui-form-control, .ui-select {
   border: 1px solid #e6e6e6;
   border-radius: 4px;
-  font-size: 14px; }
+  font-size: 14px;
+  vertical-align: middle; }
+
+.ui-form-control {
+  padding: 10px 16px;
+  width: 320px; }
   .ui-form-control:focus {
     border-color: #108ee9; }
   .ui-form-control.disabled {
@@ -973,13 +976,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     select
    ----- */
 .ui-select {
-  position: relative;
-  display: inline-block; }
-  .ui-select i {
-    position: absolute;
-    right: 10px;
-    top: 0;
-    line-height: 41px; }
+  height: 43px; }
 
 /* -----
     validate

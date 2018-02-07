@@ -48,13 +48,17 @@ $h-small: 34px;
 /* -----
     form control
    ----- */
+%control {
+    border: 1px solid $color-border;
+    border-radius: $radius-normal;
+    font-size: $font-size-normal;
+    vertical-align: middle;
+}
 
 .ui-form-control {
     padding: $padding-normal;
     width: 320px;
-    border: 1px solid $color-border;
-    border-radius: $radius-normal;
-    font-size: $font-size-normal;
+    @extend %control;
     &:focus {
         border-color: $color-border-focus;
     }
@@ -77,6 +81,8 @@ $h-small: 34px;
         }
     }
 }
+
+
 
 /* -----
     input
@@ -160,16 +166,10 @@ $h-small: 34px;
 /* -----
     select
    ----- */
-
 .ui-select {
-    position: relative;
-    display: inline-block;
-    i {
-        position: absolute;
-        right: 10px;
-        top: 0;
-        line-height: $h;
-    }
+    $h: 43px;
+    height: $h;
+    @extend %control;
 }
 
 /* -----
