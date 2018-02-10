@@ -1,7 +1,7 @@
 @function ui-theme ($primary, $accent, $warn) {
-    @return (
-            primary: $primary,
-            accent: $accent,
-            warn: $warn
-    )
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn
+  )
 }

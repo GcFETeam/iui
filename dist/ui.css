@@ -61,7 +61,7 @@ button,
 input,
 select,
 textarea {
-  font: 12px/1.5 tahoma,arial,"Hiragino Sans GB",\5b8b\4f53; }
+  font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", \5b8b\4f53; }
 
 input,
 select,
@@ -875,7 +875,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
 /* -----
     form control
    ----- */
-.ui-form-control, .ui-select {
+.ui-form-control {
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   font-size: 14px;
@@ -899,6 +899,18 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     .ui-form-control.small + .count {
       bottom: 8px;
       font-size: 12px; }
+
+.ui-input-wrap {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle; }
+  .ui-input-wrap .fa-angle-down {
+    position: absolute;
+    right: 14px;
+    top: 17px;
+    color: #e6e6e6; }
+  .ui-input-wrap input:focus + .fa {
+    color: #0f8ee9; }
 
 /* -----
     input
@@ -976,7 +988,31 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     select
    ----- */
 .ui-select {
-  height: 43px; }
+  height: 43px;
+  display: inline-block;
+  position: relative; }
+  .ui-select .ui-vertical-menu {
+    position: absolute;
+    left: 0;
+    top: 43px; }
+  .ui-select .ui-form-control {
+    cursor: default; }
+
+.transition-drop {
+  -webkit-transition: opacity .3s, -webkit-transform .3s;
+  transition: opacity .3s, -webkit-transform .3s;
+  transition: transform .3s, opacity .3s;
+  transition: transform .3s, opacity .3s, -webkit-transform .3s;
+  -webkit-transform: translate3d(0, 0, 0) scaleY(1);
+          transform: translate3d(0, 0, 0) scaleY(1);
+  -webkit-transform-origin: center top;
+          transform-origin: center top; }
+
+.menu-enter,
+.menu-leave-active {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -6px, 0) scaleY(0);
+          transform: translate3d(0, -6px, 0) scaleY(0); }
 
 /* -----
     validate

@@ -5,45 +5,45 @@
 $padding-set: (t, top), (b, bottom), (l, left), (r, right);
 
 @each $name, $type in $padding-set {
-    @for $i from 1 through 4 {
-
-        $t: $i * 5;
-        $total: #{$t}px;
-
-        .p#{$name}-#{$t} {
-            padding-#{$type}: $total;
-        }
-
-        .m#{$name}-#{$t} {
-            margin-#{$type}: $total;
-        }
-    }
-}
-
-@for $i from 1 through 4 {
+  @for $i from 1 through 4 {
 
     $t: $i * 5;
     $total: #{$t}px;
 
-    .ptb-#{$t} {
-        padding-top: $total;
-        padding-bottom: $total;
+    .p#{$name}-#{$t} {
+      padding-#{$type}: $total;
     }
 
-    .plr-#{$t} {
-        padding-left: $total;
-        padding-right: $total;
+    .m#{$name}-#{$t} {
+      margin-#{$type}: $total;
     }
+  }
+}
 
-    .mtb-#{$t} {
-        margin-top: $total;
-        margin-bottom: $total;
-    }
+@for $i from 1 through 4 {
 
-    .mlr-#{$t} {
-        margin-left: $total;
-        margin-right: $total;
-    }
+  $t: $i * 5;
+  $total: #{$t}px;
+
+  .ptb-#{$t} {
+    padding-top: $total;
+    padding-bottom: $total;
+  }
+
+  .plr-#{$t} {
+    padding-left: $total;
+    padding-right: $total;
+  }
+
+  .mtb-#{$t} {
+    margin-top: $total;
+    margin-bottom: $total;
+  }
+
+  .mlr-#{$t} {
+    margin-left: $total;
+    margin-right: $total;
+  }
 }
 
 

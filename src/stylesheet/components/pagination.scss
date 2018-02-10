@@ -6,67 +6,67 @@ $h: 34px;
 $h-small: 28px;
 
 .ui-pagination {
-    line-height: $h - 2px;
-    letter-spacing: -3px;
+  line-height: $h - 2px;
+  letter-spacing: -3px;
+  font-size: $font-size-small;
+  .page,
+  .ellipsis,
+  .text,
+  .total,
+  form {
+    display: inline-block;
+    letter-spacing: 0;
+    vertical-align: middle;
+  }
+  .page,
+  .ellipsis {
+    display: inline-block;
+    height: $h;
+    width: $h;
+    margin-right: 8px;
+    text-align: center;
+  }
+  .text {
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: $h;
+  }
+  span {
+    cursor: default;
+  }
+  .page {
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 3px;
+    &:hover {
+      color: $color-text;
+      background-color: darken($color-white, 3%);
+    }
+  }
+  .active {
+    color: $color-white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+    &:hover {
+      color: $color-white;
+      background-color: $color-primary;
+    }
+  }
+  .total {
+    color: $color-text-gray;
+  }
+  form {
+    display: inline-block;
+  }
+  input {
+    width: 54px;
+    height: $h;
+    vertical-align: middle;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
     font-size: $font-size-small;
-    .page,
-    .ellipsis,
-    .text,
-    .total,
-    form {
-        display: inline-block;
-        letter-spacing: 0;
-        vertical-align: middle;
-    }
-    .page,
-    .ellipsis {
-        display: inline-block;
-        height: $h;
-        width: $h;
-        margin-right: 8px;
-        text-align: center;
-    }
-    .text {
-        padding-left: 8px;
-        padding-right: 8px;
-        line-height: $h;
-    }
-    span {
-        cursor: default;
-    }
-    .page {
-        background-color: $color-white;
-        border: 1px solid $color-border;
-        border-radius: 3px;
-        &:hover {
-            color: $color-text;
-            background-color: darken($color-white, 3%);
-        }
-    }
-    .active {
-        color: $color-white;
-        background-color: $color-primary;
-        border-color: $color-primary;
-        &:hover {
-            color: $color-white;
-            background-color: $color-primary;
-        }
-    }
-    .total {
-        color: $color-text-gray;
-    }
-    form {
-        display: inline-block;
-    }
-    input {
-        width: 54px;
-        height: $h;
-        vertical-align: middle;
-        padding-left: 0;
-        padding-right: 0;
-        text-align: center;
-        font-size: $font-size-small;
-    }
+  }
 }
 
 /* ----
@@ -75,36 +75,36 @@ $h-small: 28px;
    mini small
    ----- */
 .ui-pagination.small {
-    .page,
-    .ellipsis {
-        height: $h-small;
-        width: $h-small;
-        line-height: $h-small - 2px;
-    }
-    input {
-        width: 42px;
-        height: $h-small;
-    }
+  .page,
+  .ellipsis {
+    height: $h-small;
+    width: $h-small;
+    line-height: $h-small - 2px;
+  }
+  input {
+    width: 42px;
+    height: $h-small;
+  }
 }
 
 .ui-pagination.mini {
-    line-height: $h-small;
-    .page,
-    .ellipsis {
-        height: $h-small;
-        border: 0;
-        margin-right: 0;
-    }
-    .page:hover {
-        color: $color-primary;
-        background-color: $color-white;
-    }
-    .active:hover {
-        color: $color-white;
-        background-color: $color-primary;
-    }
-    input {
-        width: 49px;
-        height: $h-small;
-    }
+  line-height: $h-small;
+  .page,
+  .ellipsis {
+    height: $h-small;
+    border: 0;
+    margin-right: 0;
+  }
+  .page:hover {
+    color: $color-primary;
+    background-color: $color-white;
+  }
+  .active:hover {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+  input {
+    width: 49px;
+    height: $h-small;
+  }
 }

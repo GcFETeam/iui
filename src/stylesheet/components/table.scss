@@ -3,24 +3,23 @@
    ===== */
 $h: 40px;
 
-
 .ui-table {
-    width: 100%;
-    border: 0;
+  width: 100%;
+  border: 0;
 
-    thead {
-        background-color: $background-thead;
-    }
+  thead {
+    background-color: $background-thead;
+  }
 
-    th {
-        height: $h;
-        padding: 0 10px;
-        color: $color-text-gray;
-        background-color: $background-thead;
-    }
+  th {
+    height: $h;
+    padding: 0 10px;
+    color: $color-text-gray;
+    background-color: $background-thead;
+  }
 
-    td {
-        padding: 17px 10px;
-        border-bottom: 1px solid $color-border;
-    }
+  td {
+    padding: 17px 10px;
+    border-bottom: 1px solid $color-border;
+  }
 }

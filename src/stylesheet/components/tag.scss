@@ -2,13 +2,13 @@
     tag
    ===== */
 .ui-tag {
-    display: inline-block;
-    padding: 2px 6px;
-    font-size: $font-size-small;
-    border-radius: 2px;
-    border: 1px solid $color-border;
-    background-color: $background-gray;
-    .iconfont {
-        color: $color-text-gray;
-    }
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: $font-size-small;
+  border-radius: 2px;
+  border: 1px solid $color-border;
+  background-color: $background-gray;
+  .iconfont {
+    color: $color-text-gray;
+  }
 }

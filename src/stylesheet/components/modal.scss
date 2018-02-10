@@ -1,55 +1,55 @@
 $w: 448px;
 
 .ui-modal {
-    display: inline-block;
-    width: $w;
-    text-align: left;
-    background: #fff;
-    border-radius: 4px;
-    transition: all .2s ease;
-    .modal-head {
-        height: 56px;
-        line-height: 56px;
-        padding-left: 32px;
-        border-bottom: 1px solid $color-border;
-    }
-    .modal-body {
-        padding: 24px 32px;
-    }
-    .modal-footer {
-        padding: 9px 32px 13px;
-    }
+  display: inline-block;
+  width: $w;
+  text-align: left;
+  background: #fff;
+  border-radius: 4px;
+  transition: all .2s ease;
+  .modal-head {
+    height: 56px;
+    line-height: 56px;
+    padding-left: 32px;
+    border-bottom: 1px solid $color-border;
+  }
+  .modal-body {
+    padding: 24px 32px;
+  }
+  .modal-footer {
+    padding: 9px 32px 13px;
+  }
 }
 
 .ui-mask {
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    display: table;
-    text-align: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: table;
+  text-align: center;
+  vertical-align: middle;
+  background: rgba(#000, .1);
+  transition: opacity .3s ease;
+  .mask-wrapper {
+    display: table-cell;
     vertical-align: middle;
-    background: rgba(#000, .1);
-    transition: opacity .3s ease;
-    .mask-wrapper {
-        display: table-cell;
-        vertical-align: middle;
-    }
+  }
 }
 
 .modal-enter {
-    opacity: 0;
+  opacity: 0;
 }
 
 .modal-leave-active {
-    opacity: 0;
+  opacity: 0;
 }
 
 .modal-enter .ui-modal,
 .modal-leave-active .ui-modal {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
