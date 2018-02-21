@@ -665,6 +665,26 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
 .drp-button .ui-vertical-menu {
   top: 46px; }
 
+.ui-message {
+  padding: 24px 30px;
+  margin-bottom: 20px;
+  background: #fafafa;
+  border: 1px solid #f2f2f2; }
+  .ui-message .avatar {
+    height: 40px;
+    width: 40px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%; }
+    .ui-message .avatar img {
+      height: 100%;
+      width: 100%; }
+  .ui-message.new {
+    background: #fffff5; }
+  .ui-message .title {
+    margin-bottom: 6px;
+    font-size: 12px; }
+
 .ui-modal {
   display: inline-block;
   width: 448px;
@@ -804,11 +824,23 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     tab
    ===== */
 .ui-tab {
-  height: 46px;
-  line-height: 46px;
-  font-size: 12px;
-  border-radius: 4px;
-  background-color: #f2f2f2; }
+  height: 41px;
+  margin-bottom: 30px;
+  line-height: 40px;
+  font-size: 14px;
+  border-bottom: 1px solid #f2f2f2; }
+  .ui-tab .tab-item {
+    float: left;
+    display: inline;
+    margin-right: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #f2f2f2;
+      border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    background: #f2f2f2; }
+  .ui-tab .current {
+    background: #fff; }
 
 /* =====
     table
@@ -823,6 +855,11 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     padding: 0 10px;
     color: #999;
     background-color: #f2f2f2; }
+  .ui-table tr {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s; }
+    .ui-table tr:hover {
+      background-color: #fafafa; }
   .ui-table td {
     padding: 17px 10px;
     border-bottom: 1px solid #e6e6e6; }
@@ -887,7 +924,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   .ui-form-control:focus {
     border-color: #108ee9; }
   .ui-form-control.disabled {
-    background-color: #f8f8f8; }
+    background-color: #fafafa; }
   .ui-form-control.error {
     border-color: #f34848; }
     .ui-form-control.error:focus {
@@ -925,7 +962,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
 
 .ui-labeled-input .text {
   padding: 10px 16px;
-  background: #f8f8f8; }
+  background: #fafafa; }
   .ui-labeled-input .text + .input {
     border-left: 1px solid #e6e6e6; }
 
@@ -1008,8 +1045,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   -webkit-transform-origin: center top;
           transform-origin: center top; }
 
-.menu-enter,
-.menu-leave-active {
+.transition-drop-enter,
+.transition-drop-leave-active {
   opacity: 0;
   -webkit-transform: translate3d(0, -6px, 0) scaleY(0);
           transform: translate3d(0, -6px, 0) scaleY(0); }

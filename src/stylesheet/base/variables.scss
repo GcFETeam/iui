@@ -12,7 +12,7 @@ $blues: (
 );
 
 $gray: (
-  100: #f8f8f8,
+  100: #fafafa,
   200: #f5f5f5,
   300: #f2f2f2,
   400: #e6e6e6,
@@ -62,7 +62,7 @@ $font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, "PingFang SC", "Micros
 
 $background-gray: map_get($gray, 300);
 
-$background-list-hover: map_get($gray, 300);
+$background-gray-hover: map_get($gray, 100);
 
 $background-thead: map_get($gray, 300);
 

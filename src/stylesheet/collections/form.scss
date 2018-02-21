@@ -203,8 +203,8 @@ $h-small: 34px;
   transform: translate3d(0, -6px, 0) scaleY(0);
 }
 
-.menu-enter,
-.menu-leave-active {
+.transition-drop-enter,
+.transition-drop-leave-active {
   @extend %fadeSlideDown;
 }
 

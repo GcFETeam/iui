@@ -76,7 +76,7 @@ __webpack_require__(1);
 /* 1 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n            background-color: $background-list-hover;\n                             ^\n      Undefined variable: \"$background-list-hover\".\n      in /Users/nine/github/my-project/src/stylesheet/components/menu.scss (line 19, column 31)\n    at runLoaders (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:194:19)\n    at /usr/local/lib/node_modules/webpack/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /usr/local/lib/node_modules/webpack/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/usr/local/lib/node_modules/webpack/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/nine/github/my-project/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/Users/nine/github/my-project/node_modules/async/dist/async.js:2244:31)\n    at Object.callback (/Users/nine/github/my-project/node_modules/async/dist/async.js:906:16)\n    at options.error (/Users/nine/github/my-project/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ })
 /******/ ]);

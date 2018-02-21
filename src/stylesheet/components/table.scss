@@ -18,6 +18,13 @@ $h: 40px;
     background-color: $background-thead;
   }
 
+  tr {
+    transition: background-color .3s;
+    &:hover {
+      background-color: $background-gray-hover;
+    }
+  }
+
   td {
     padding: 17px 10px;
     border-bottom: 1px solid $color-border;

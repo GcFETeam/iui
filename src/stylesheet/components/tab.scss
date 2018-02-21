@@ -1,15 +1,29 @@
 /* =====
     tab
    ===== */
-$h: 46px;
+$h: 41px;
 
 .ui-tab {
   height: $h;
-  line-height: $h;
-  font-size: $font-size-small;
-  border-radius: $radius-normal;
-  background-color: $background-gray;
-  // .....
+  margin-bottom: 30px;
+  line-height: $h - 1px;
+  font-size: $font-size-normal;
+  border-bottom: 1px solid $background-gray;
+  .tab-item {
+    float: left;
+    display: inline;
+    margin-right: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid $background-gray {
+      bottom: 0;
+    };
+    border-radius: 4px 4px 0 0;
+    background: $background-gray;
+  }
+  .current {
+    background: $color-white;
+  }
 }
 
 
