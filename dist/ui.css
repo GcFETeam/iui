@@ -425,6 +425,9 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
 .ft-gray {
   color: #999; }
 
+.ft-18 {
+  font-size: 18px; }
+
 .ft-16 {
   font-size: 16px; }
 
@@ -606,7 +609,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     white-space: nowrap; }
     .ui-vertical-menu .menu-item.hover, .ui-vertical-menu .menu-item:hover {
       color: #262626;
-      background-color: #f2f2f2; }
+      background-color: #fafafa; }
   .ui-vertical-menu .menu-icon .menu-item {
     position: relative;
     padding-right: 50px; }
@@ -679,7 +682,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     .ui-message .avatar img {
       height: 100%;
       width: 100%; }
-  .ui-message.new {
+  .ui-message.active {
     background: #fffff5; }
   .ui-message .title {
     margin-bottom: 6px;

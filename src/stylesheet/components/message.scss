@@ -16,12 +16,11 @@
       width: 100%;
     }
   }
-  &.new {
+  &.active {
     background: #fffff5;
   }
   .title {
     margin-bottom: 6px;
     font-size: $font-size-small;
   }
-
 }
