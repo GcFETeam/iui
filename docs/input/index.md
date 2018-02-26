@@ -8,11 +8,18 @@ layout: default
 
 <input type="text" class="ui-form-control" placeholder="请输入">
 
+```html
+<input type="text" class="ui-form-control" placeholder="请输入">
+```
+
 
 ### 较小
 
 <input type="text" class="ui-form-control small" placeholder="请输入">
 
+```html
+<input type="text" class="ui-form-control small" placeholder="请输入">
+```
 
 ### 禁用
 
@@ -47,6 +54,7 @@ layout: default
         <span class="text">.xizhi.design</span>
     </label>
 </div>
+
 
 
 <div class="ui-labeled-input">
