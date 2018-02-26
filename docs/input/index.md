@@ -23,14 +23,17 @@ layout: default
 
 ### 禁用
 
-{% example html %}
+```html
 <input type="text" class="ui-form-control disabled" disabled value="输入完成">
-{% endexample %}
+```
 
 ### 错误
 
 <input type="text" class="ui-form-control error" value="输入完成">
 
+```html
+<input type="text" class="ui-form-control error" value="输入完成">
+```
 
 ### 字数限制
 
@@ -42,8 +45,12 @@ layout: default
     <span class="count">0/20</span>
 </div>
 
-
-
+```html
+<div class="ui-enter-count">
+    <input type="text" class="ui-form-control" maxlength="20">
+    <span class="count">0/20</span>
+</div>
+```
 
 ### 半开放输入
 

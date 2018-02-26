@@ -29,7 +29,7 @@ layout: default
 
 <div class="ui-crumbs">
     <a href="#" class="link">首页</a>
-    <span class="cut"><i class="iconfont icon-ceshi"></i></span>
+    <span class="cut"><i class="fa fa-angle-right"></i></span>
     <a href="#" class="link">产品管理</a>
     <span class="cut"><i class="fa fa-angle-right"></i></span>
     <span class="current">发布产品</span>
@@ -38,7 +38,7 @@ layout: default
 ```html
 <div class="ui-crumbs">
     <a href="#" class="link">首页</a>
-    <span class="cut"><i class="iconfont icon-ceshi"></i></span>
+    <span class="cut"><i class="fa fa-angle-right"></i></span>
     <a href="#" class="link">产品管理</a>
     <span class="cut"><i class="fa fa-angle-right"></i></span>
     <span class="current">发布产品</span>
