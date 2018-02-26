@@ -23,8 +23,9 @@ layout: default
 
 ### 禁用
 
+{% example html %}
 <input type="text" class="ui-form-control disabled" disabled value="输入完成">
-
+{% endexample %}
 
 ### 错误
 
