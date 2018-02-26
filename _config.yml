@@ -23,7 +23,7 @@ description: tiny ui
 markdown: kramdown
 highlighter: rouge
 
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
   - jekyll-pug
