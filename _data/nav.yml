@@ -36,6 +36,9 @@
     - title: 表格
       name: Table
       url: /docs/table/
+    - title: 模态框
+      name: Modal
+      url: /docs/modal/
 
 - title: Collections
   pages:

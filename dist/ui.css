@@ -709,7 +709,9 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   background: #fff;
   border-radius: 4px;
   -webkit-transition: all .2s ease;
-  transition: all .2s ease; }
+  transition: all .2s ease;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
   .ui-modal .modal-head {
     height: 56px;
     line-height: 56px;
