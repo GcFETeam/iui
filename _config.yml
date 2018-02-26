@@ -31,6 +31,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-toc
 
+plugins_dir: ./_plugins
+
 baseurl: /iui
 
 
