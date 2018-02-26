@@ -27,6 +27,9 @@ highlighter: rouge
 plugins:
   - jekyll-feed
   - jekyll-pug
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-toc
 
 baseurl: /iui
 
