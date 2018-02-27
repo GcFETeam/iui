@@ -30,6 +30,9 @@
     - title: 提示
       name: Alert
       url: /docs/alert/
+    - title: 气泡提示
+      name: Popup
+      url: /docs/popup/
     - title: 选项卡
       name: Tab
       url: /docs/tab/

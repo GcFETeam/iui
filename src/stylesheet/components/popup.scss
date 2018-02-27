@@ -1,0 +1,43 @@
+/* -----
+   popup
+   -----
+   ----- */
+
+.ui-popup {
+  display: inline-block;
+  min-width: 300px;
+  position: relative;
+  padding: 11px 10px;
+  font-size: $font-size-small;
+  line-height: 1.5;
+  box-shadow: $shadow;
+  border-radius: $radius-mini;
+  &:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -12px;
+    margin-top: -6px;
+    border: 6px solid transparent {
+      right-color: $color-white;
+    };
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -14px;
+    margin-top: -7px;
+    border: 7px solid transparent {
+      right-color: lighten($color-text-disabled, 15%);
+    };
+  }
+  &.small {
+    padding: 4px;
+    min-width: 0;
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+}

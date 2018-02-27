@@ -933,6 +933,42 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     width: 49px;
     height: 28px; }
 
+/* -----
+   popup
+   -----
+   ----- */
+.ui-popup {
+  display: inline-block;
+  min-width: 300px;
+  position: relative;
+  padding: 11px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  -webkit-box-shadow: 0 1px 4px 0 #aeb4bd;
+          box-shadow: 0 1px 4px 0 #aeb4bd;
+  border-radius: 2px; }
+  .ui-popup:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -12px;
+    margin-top: -6px;
+    border: 6px solid transparent;
+      border-right-color: #fff; }
+  .ui-popup:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -14px;
+    margin-top: -7px;
+    border: 7px solid transparent;
+      border-right-color: #d8dbdf; }
+  .ui-popup.small {
+    padding: 4px;
+    min-width: 0; }
+    .ui-popup.small:after, .ui-popup.small:before {
+      display: none; }
+
 /* =====
     tab
    ===== */
