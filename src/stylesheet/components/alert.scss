@@ -1,0 +1,51 @@
+
+.ui-alert-pop {
+  padding: 8px 20px;
+  display: inline-block;
+  color: $color-white;
+  font-size: $font-size-small;
+  border-radius: $radius-mini;
+  box-shadow: $shadow;
+  &.alert-success {
+    background: $color-green;
+  }
+  &.alert-warn {
+    background: $color-yellow;
+  }
+}
+
+.ui-alert-system {
+  padding: 6px 20px;
+  border-width: 1px;
+  border-style: solid;
+  color: $color-text;
+  font-size: $font-size-normal;
+  line-height: 1.5;
+  border-radius: $radius-mini;
+  &.alert-warn {
+    border-color: $color-yellow;
+    background: #fffaeb;
+    i {
+      color: $color-yellow;
+    }
+  }
+  &.alert-focus {
+    border-color: $color-blue;
+    background: #eaf5fe;
+    i {
+      color: $color-blue;
+    }
+  }
+  i {
+    margin-right: 10px;
+  }
+  .text {
+    overflow: hidden;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .option {
+    float: right;
+    display: inline;
+  }
+}

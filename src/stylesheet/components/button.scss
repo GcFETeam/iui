@@ -75,7 +75,7 @@ $padding-mini-border: 4px 9px;
   color: $color-white;
 }
 
-$type-map: (primary, $color-primary), (warn, $color-text-warn);
+$type-map: (primary, $color-primary), (error, $color-text-warn), (warn, $color-yellow), (focus, $color-blue);
 
 @mixin colorBorderBack($color) {
   border-color: $color;

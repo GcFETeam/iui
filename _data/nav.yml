@@ -27,6 +27,9 @@
     - title: 面包屑
       name: Crumbs
       url: /docs/crumbs/
+    - title: 提示
+      name: Alert
+      url: /docs/alert/
     - title: 选项卡
       name: Tab
       url: /docs/tab/
