@@ -36,6 +36,9 @@
     - title: 选项卡
       name: Tab
       url: /docs/tab/
+    - title: 进度条
+      name: Progress
+      url: /docs/progress/
     - title: 分页
       name: Pagination
       url: /docs/pagination/

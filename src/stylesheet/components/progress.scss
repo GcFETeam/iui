@@ -1,0 +1,26 @@
+/* -----
+   progress
+   ----- */
+
+.ui-progress {
+  color: $color-text-gray;
+  .bar {
+    display: inline-block;
+    position: relative;
+    height: 6px;
+    width: 300px;
+    margin-right: 5px;
+    vertical-align: middle;
+    border-radius: 3px;
+    background: $color-border;
+  }
+  .progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 6px;
+    border-radius: 3px;
+    background: $color-primary;
+    transition: width .3s;
+  }
+}

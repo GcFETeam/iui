@@ -413,14 +413,14 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
 .ft-text {
   color: #262626; }
 
+.ft-focus {
+  color: #2ea2f8; }
+
 .ft-link {
   color: #246bb3; }
 
 .ft-warn {
   color: #f05455; }
-
-.ft-dark {
-  color: #262626; }
 
 .ft-gray {
   color: #858c99; }
@@ -969,27 +969,64 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     .ui-popup.small:after, .ui-popup.small:before {
       display: none; }
 
+/* -----
+   progress
+   ----- */
+.ui-progress {
+  color: #858c99; }
+  .ui-progress .bar {
+    display: inline-block;
+    position: relative;
+    height: 6px;
+    width: 300px;
+    margin-right: 5px;
+    vertical-align: middle;
+    border-radius: 3px;
+    background: #e0e6ed; }
+  .ui-progress .progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 6px;
+    border-radius: 3px;
+    background: #2e7ef2;
+    -webkit-transition: width .3s;
+    transition: width .3s; }
+
 /* =====
     tab
    ===== */
 .ui-tab {
   height: 41px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   line-height: 40px;
-  font-size: 14px;
-  border-bottom: 1px solid #f1f4f7; }
+  font-size: 14px; }
   .ui-tab .tab-item {
     float: left;
-    display: inline;
-    margin-right: 4px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: 1px solid #f1f4f7;
-      border-bottom: 0;
-    border-radius: 4px 4px 0 0;
-    background: #f1f4f7; }
-  .ui-tab .current {
-    background: #fff; }
+    display: inline; }
+  .ui-tab.tab-card {
+    border-bottom: 1px solid #f1f4f7; }
+    .ui-tab.tab-card .tab-item {
+      margin-right: 4px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border: 1px solid #f1f4f7;
+        border-bottom: 0;
+      border-radius: 4px 4px 0 0;
+      background: #f1f4f7; }
+    .ui-tab.tab-card .current {
+      background: #fff; }
+  .ui-tab.tab-line {
+    border-bottom: 1px solid #e0e6ed; }
+    .ui-tab.tab-line .tab-item {
+      margin-right: 37px; }
+    .ui-tab.tab-line .current {
+      color: #2e7ef2;
+      border-bottom: 1px solid #2e7ef2; }
+  .ui-tab.small {
+    height: 38px;
+    line-height: 37px;
+    font-size: 12px; }
 
 /* =====
     table
