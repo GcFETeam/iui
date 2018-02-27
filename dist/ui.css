@@ -700,7 +700,9 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
           box-shadow: 0 1px 4px 0 #aeb4bd;
   border-radius: 4px;
   font-size: 14px;
-  background: #fff; }
+  background: #fff;
+  max-height: 330px;
+  overflow-y: auto; }
   .ui-vertical-menu .menu-item {
     display: block;
     padding: 4px 16px;

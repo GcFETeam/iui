@@ -25,6 +25,8 @@ layout: default
 </div>
 ```
 
+### 图标
+
 <div class="ui-vertical-menu menu-icon">
     <ul>
         <li><a href="#" class="menu-item">加工中心 <i class="fa fa-angle-right"></i></a></li>
@@ -40,6 +42,72 @@ layout: default
     </ul>
 </div>
 ```
+
+### 选框 
+
+<div class="ui-vertical-menu">
+    <ul>
+        <li>
+            <label class="menu-item ui-checkbox-like">
+                <input type="checkbox" value="1" name="demo3" class="checkbox-item">
+                <i class="fa fa-square-o"></i>
+                全部
+            </label>
+        </li>
+        <li>
+            <label class="menu-item ui-checkbox-like">
+                <input type="checkbox" value="2" name="demo3" class="checkbox-item">
+                <i class="fa fa-square-o"></i>
+                卧式加工中心
+            </label>
+        </li>
+    </ul>
+</div>
+
+```html
+<div class="ui-vertical-menu">
+    <ul>
+        <li>
+            <label class="menu-item ui-checkbox-like">
+                <input type="checkbox" value="1" name="demo3" class="checkbox-item">
+                <i class="fa fa-square-o"></i>
+                全部
+            </label>
+        </li>
+        <li>
+            <label class="menu-item ui-checkbox-like">
+                <input type="checkbox" value="2" name="demo3" class="checkbox-item">
+                <i class="fa fa-square-o"></i>
+                卧式加工中心
+            </label>
+        </li>
+    </ul>
+</div>
+```
+
+### 高度
+
+<div class="ui-vertical-menu">
+    <ul>
+        <li><a href="#" class="menu-item">加工中心</a></li>
+        <li><a href="#" class="menu-item">卧式中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+    </ul>
+</div>
+
+
+### 尺寸
 
 <div class="ui-vertical-menu small">
     <ul>
@@ -119,8 +187,6 @@ layout: default
 </div>
 ```
 
-<a href="#" class="ui-icon-button"><i class="fa fa-eye"></i></a>
-<a href="#" class="ui-icon-button"><i class="fa fa-edit"></i></a>
 <div class="ui-dropdown drp-icon">
     <a href="javascript:;" class="ui-icon-button"><i class="fa fa-ellipsis-h"></i></a>
     <div class="menu-wrap">
@@ -135,8 +201,6 @@ layout: default
 </div>
 
 ```html
-<a href="#" class="ui-icon-button"><i class="fa fa-eye"></i></a>
-<a href="#" class="ui-icon-button"><i class="fa fa-edit"></i></a>
 <div class="ui-dropdown drp-icon">
     <a href="javascript:;" class="ui-icon-button"><i class="fa fa-ellipsis-h"></i></a>
     <div class="menu-wrap">

@@ -24,7 +24,7 @@ layout: default
 </div>
 
 ```html
-<div class="ui-tab">
+<div class="ui-tab tab-card">
     <a href="#" class="tab-item current">项目1</a>
     <a href="#" class="tab-item">项目2</a>
 </div>
@@ -38,7 +38,7 @@ layout: default
 </div>
 
 ```html
-<div class="ui-tab tab-line">
+<div class="ui-tab tab-line small">
     <a href="#" class="tab-item current">项目1</a>
     <a href="#" class="tab-item">项目2</a>
 </div>
@@ -50,7 +50,7 @@ layout: default
 </div>
 
 ```html
-<div class="ui-tab">
+<div class="ui-tab tab-card small">
     <a href="#" class="tab-item current">项目1</a>
     <a href="#" class="tab-item">项目2</a>
 </div>
