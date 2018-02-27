@@ -1,24 +1,36 @@
 $w: 448px;
-
+$padding: 30px;
 .ui-modal {
   display: inline-block;
   width: $w;
   text-align: left;
-  background: #fff;
-  border-radius: 4px;
+  background: $color-white;
+  border-radius: $radius-normal;
   transition: all .2s ease;
   box-shadow: 0 0 3px rgba(#000, .2);
+
   .modal-head {
     height: 56px;
     line-height: 56px;
-    padding-left: 32px;
+    padding-left: $padding;
+    padding-right: $padding;
     border-bottom: 1px solid $color-border;
   }
+  .modal-close {
+    float: right;
+    cursor: pointer;
+  }
   .modal-body {
-    padding: 24px 32px;
+    padding: $padding;
   }
   .modal-footer {
-    padding: 9px 32px 13px;
+    border-top: 1px solid $color-border;
+    padding: 12px $padding;
+    height: 58px;
+    .ui-button {
+      float: right;
+      margin-left: 16px;
+    }
   }
 }
 

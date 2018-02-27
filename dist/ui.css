@@ -718,12 +718,21 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   .ui-modal .modal-head {
     height: 56px;
     line-height: 56px;
-    padding-left: 32px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-bottom: 1px solid #e0e6ed; }
+  .ui-modal .modal-close {
+    float: right;
+    cursor: pointer; }
   .ui-modal .modal-body {
-    padding: 24px 32px; }
+    padding: 30px; }
   .ui-modal .modal-footer {
-    padding: 9px 32px 13px; }
+    border-top: 1px solid #e0e6ed;
+    padding: 12px 30px;
+    height: 58px; }
+    .ui-modal .modal-footer .ui-button {
+      float: right;
+      margin-left: 16px; }
 
 .ui-mask {
   position: fixed;
