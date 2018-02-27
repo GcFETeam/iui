@@ -438,6 +438,11 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   font-size: 12px; }
 
 /* ===== components ===== */
+/* -----
+   alert
+   -----
+   pop | line
+   ----- */
 .ui-alert-pop {
   padding: 8px 20px;
   display: inline-block;
@@ -451,7 +456,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   .ui-alert-pop.alert-warn {
     background: #ffbf00; }
 
-.ui-alert-system {
+.ui-alert-line {
   padding: 6px 20px;
   border-width: 1px;
   border-style: solid;
@@ -459,25 +464,25 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   font-size: 14px;
   line-height: 1.5;
   border-radius: 2px; }
-  .ui-alert-system.alert-warn {
-    border-color: #ffbf00;
-    background: #fffaeb; }
-    .ui-alert-system.alert-warn i {
-      color: #ffbf00; }
-  .ui-alert-system.alert-focus {
-    border-color: #2ea2f8;
-    background: #eaf5fe; }
-    .ui-alert-system.alert-focus i {
-      color: #2ea2f8; }
-  .ui-alert-system i {
+  .ui-alert-line i {
     margin-right: 10px; }
-  .ui-alert-system .text {
+  .ui-alert-line .text {
     overflow: hidden;
     padding-top: 3px;
     padding-bottom: 3px; }
-  .ui-alert-system .option {
+  .ui-alert-line .option {
     float: right;
     display: inline; }
+  .ui-alert-line.alert-warn {
+    border-color: #ffbf00;
+    background: #fffaeb; }
+  .ui-alert-line i {
+    color: #ffbf00; }
+  .ui-alert-line.alert-focus {
+    border-color: #2ea2f8;
+    background: #eaf5fe; }
+  .ui-alert-line i {
+    color: #2ea2f8; }
 
 /* =====
     button

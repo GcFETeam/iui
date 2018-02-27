@@ -20,7 +20,7 @@ layout: default
 
 ### 平台提醒
 
-<div class="ui-alert-system alert-warn">
+<div class="ui-alert-line alert-warn">
     <div class="option">
         <span class="ft-12 ft-gray mr-20">稍后再说</span><button class="ui-button btn-warn mini">引导操作</button>
     </div>
@@ -28,10 +28,15 @@ layout: default
 </div>
 
 ```html
-<div class="ui-alert-system alert-warn"><i></i><p class="text">这里是引导类的提醒</p></div>
+<div class="ui-alert-line alert-warn">
+    <div class="option">
+        <span class="ft-12 ft-gray mr-20">稍后再说</span><button class="ui-button btn-warn mini">引导操作</button>
+    </div>
+    <div class="text"><i class="fa fa-exclamation-circle"></i>这里是引导类的提醒</div>
+</div>
 ```
 
-<div class="ui-alert-system alert-focus">
+<div class="ui-alert-line alert-focus">
     <div class="option">
         <span class="ft-12 ft-gray mr-20">稍后再说</span><button class="ui-button btn-focus mini">查看详情</button>
     </div>
@@ -39,5 +44,10 @@ layout: default
 </div>
 
 ```html
-<div class="ui-alert-system alert-focus"><i></i><p class="text">这里是引导类的提醒</p></div>
+<div class="ui-alert-line alert-focus">
+    <div class="option">
+        <span class="ft-12 ft-gray mr-20">稍后再说</span><button class="ui-button btn-focus mini">查看详情</button>
+    </div>
+    <div class="text"><i class="fa fa-exclamation-circle"></i>这里是引导类的提醒</div>
+</div>
 ```

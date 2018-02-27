@@ -25,14 +25,12 @@ layout: default
 
 <div>正常文字颜色 默认body的字体颜色</div>
 <div class="ft-warn">提醒文字颜色</div>
-<div class="ft-dark">辅助文字颜色</div>
 <div class="ft-gray">次要文字颜色</div>
 <div class="ft-link">链接文字颜色</div>
 
 ```html
 <div>正常文字颜色 默认body的字体颜色</div>
 <div class="ft-warn">提醒文字颜色</div>
-<div class="ft-dark">辅助文字颜色</div>
 <div class="ft-gray">次要文字颜色</div>
 <div class="ft-link">链接文字颜色</div>
 ```

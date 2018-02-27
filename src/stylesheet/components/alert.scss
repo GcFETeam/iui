@@ -1,3 +1,10 @@
+/* -----
+   alert
+   -----
+   pop | line
+   ----- */
+
+$color-pop: (success, $color-green), (warn, $color-yellow);
 
 .ui-alert-pop {
   padding: 8px 20px;
@@ -6,15 +13,17 @@
   font-size: $font-size-small;
   border-radius: $radius-mini;
   box-shadow: $shadow;
-  &.alert-success {
-    background: $color-green;
-  }
-  &.alert-warn {
-    background: $color-yellow;
+
+  @each $type, $color in $color-pop {
+    &.alert-#{$type} {
+      background: $color;
+    }
   }
 }
 
-.ui-alert-system {
+$color-system: (warn, $color-yellow, #fffaeb), (focus, $color-blue, #eaf5fe);
+
+.ui-alert-line {
   padding: 6px 20px;
   border-width: 1px;
   border-style: solid;
@@ -22,20 +31,7 @@
   font-size: $font-size-normal;
   line-height: 1.5;
   border-radius: $radius-mini;
-  &.alert-warn {
-    border-color: $color-yellow;
-    background: #fffaeb;
-    i {
-      color: $color-yellow;
-    }
-  }
-  &.alert-focus {
-    border-color: $color-blue;
-    background: #eaf5fe;
-    i {
-      color: $color-blue;
-    }
-  }
+
   i {
     margin-right: 10px;
   }
@@ -47,5 +43,15 @@
   .option {
     float: right;
     display: inline;
+  }
+
+  @each $type, $color, $bg in $color-system {
+    &.alert-#{$type} {
+      border-color: $color;
+      background: $bg;
+    }
+    i {
+      color: $color;
+    }
   }
 }
