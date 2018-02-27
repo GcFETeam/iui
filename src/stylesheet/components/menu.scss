@@ -3,50 +3,55 @@
    ===== */
 
 .ui-vertical-menu {
-    display: inline-block;
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
-    border-radius: $radius-normal;
-    font-size: $font-size-normal;
-    background: $color-white;
-    .menu-item {
-        display: block;
-        padding: 4px 20px;
-        cursor: pointer;
-        white-space: nowrap;
-        &.hover,
-        &:hover {
-            color: $color-text;
-            background-color: $background-gray-hover;
-        }
-    }
-    .menu-icon {
-        .menu-item {
-            position: relative;
-            padding-right: 50px;
-        }
-        .fa {
-            position: absolute;
-            right: 13px;
-            top: 4px;
-            line-height: 14px * 1.5;
-            color: $color-text-gray;
-        }
-    }
-    &.small {
-        font-size: $font-size-small;
-        .menu-item {
-            padding: 4px 16px;
-        }
+  display: inline-block;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  box-shadow: 0 1px 4px 0 $color-text-disabled;
+  border-radius: $radius-normal;
+  font-size: $font-size-normal;
+  background: $color-white;
 
-        .menu-icon {
-            .menu-item {
-                padding-right: 13px;
-            }
-            .fa {
-                margin-left: 20px;
-            }
-        }
+  .menu-item {
+    display: block;
+    padding: 4px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    &.hover,
+    &:hover {
+      color: $color-text;
+      background-color: $background-gray-hover;
     }
+  }
+
+  &.menu-icon {
+    .menu-item {
+      position: relative;
+      padding-right: 50px;
+    }
+    .fa {
+      position: absolute;
+      right: 13px;
+      top: 4px;
+      line-height: 14px * 1.5;
+      color: $color-text-gray;
+    }
+  }
+
+  &.small {
+    font-size: $font-size-small;
+    .menu-item {
+      padding: 4px 16px;
+    }
+
+    .menu-icon {
+      .menu-item {
+        padding-right: 13px;
+      }
+      .fa {
+        margin-left: 20px;
+      }
+    }
+  }
 }
 
 /* -----
@@ -54,51 +59,51 @@
    ----- */
 
 .ui-dropdown {
-    position: relative;
-    display: inline-block;
-    .ui-button {
-        padding-left: 20px;
-        padding-right: 13px;
-        &.small {
-            padding-left: 16px;
-            padding-right: 10px;
-        }
+  position: relative;
+  display: inline-block;
+  .ui-button {
+    padding-left: 20px;
+    padding-right: 13px;
+    &.small {
+      padding-left: 16px;
+      padding-right: 10px;
     }
-    .iconfont {
-        margin-left: 20px;
-    }
-    .menu-wrap {
-        position: absolute;
-        width: 100%;
-        padding-top: 3px;
-    }
+  }
+  .iconfont {
+    margin-left: 20px;
+  }
+  .menu-wrap {
+    position: absolute;
+    width: 100%;
+    padding-top: 3px;
+  }
+  .ui-vertical-menu {
+    min-width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s .1s;
+    transform: scaleY(.1);
+    transform-origin: top;
+  }
+  &:hover {
     .ui-vertical-menu {
-        min-width: 100%;
-        visibility: hidden;
-        opacity: 0;
-        transition: all .2s .1s;
-        transform: scaleY(.1);
-        transform-origin: top;
+      transform: scaleY(1);
+      opacity: 1;
+      visibility: visible;
     }
-    &:hover {
-        .ui-vertical-menu {
-            transform: scaleY(1);
-            opacity: 1;
-            visibility: visible;
-        }
-    }
+  }
 }
 
 .drp-show {
-    .ui-vertical-menu {
-        visibility: visible;
-    }
+  .ui-vertical-menu {
+    visibility: visible;
+  }
 }
 
 .drp-button {
-    .ui-vertical-menu {
-        top: 46px;
-    }
+  .ui-vertical-menu {
+    top: 46px;
+  }
 }
 
 $trans: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);

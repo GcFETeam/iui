@@ -3,17 +3,20 @@
    ===== */
 .ui-crumbs {
   font-size: $font-size-small;
-  color: $color-text-disabled;
+  color: map_get($fc1, 200);
   .link,
   .current,
   .cut {
     margin-right: 10px;
   }
   .current {
-    color: $color-text-dark;
+    color: $color-text;
+  }
+  .cut {
+    color: $color-text-disabled;
   }
   .link {
-    color: $color-text-dark;
+    color: $color-text;
     &:hover {
       color: $color-text-link;
     }

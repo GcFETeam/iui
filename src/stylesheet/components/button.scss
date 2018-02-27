@@ -2,40 +2,48 @@
     button
    ===== */
 
-$h: 40px;
+$h: 41px;
 
-$h-mini: 26px;
+$h-small: 34px;
 
-$h-small: 32px;
+$h-mini: 28px;
 
-$padding-mini: 4px 9px;
 
-$padding-small: 7px 15px;
+$padding: 10px 20px;
+$padding-border: 9px 19px;
 
-$padding: 9px 19px;
+$padding-small: 8px 16px;
+$padding-small-border: 7px 15px;
+
+$padding-mini: 5px 10px;
+$padding-mini-border: 4px 9px;
+
+
 
 .ui-button {
   display: inline-block;
-  padding: $padding;
+  padding: $padding-border;
   font-size: $font-size-normal;
   vertical-align: middle;
   line-height: 1.5;
   border: 1px solid $color-border;
   border-radius: $radius-normal;
-  cursor: pointer;
   background-color: $color-white;
+  cursor: pointer;
+
   &:hover {
-    color: $color-text;
-    background-color: darken($color-white, 3%);
+    color: $color-primary;
+    background-color: $background-gray;
   }
   &:active {
-    background-color: darken($color-white, 5%);
+    background-color: $background-gray-hover;
   }
   &.disabled {
-    color: $color-text-disabled;
     cursor: not-allowed;
+    color: $color-text-disabled;
     &:hover,
     &:active {
+      color: $color-text-disabled;
       background-color: $color-white;
     }
   }
@@ -47,18 +55,15 @@ $padding: 9px 19px;
    mini small
    ----- */
 .ui-button.mini {
-  padding: $padding-mini;
+  padding: $padding-mini-border;
   font-size: $font-size-small;
   border-radius: $radius-mini;
 }
 
 .ui-button.small {
-  padding: $padding-small;
+  padding: $padding-small-border;
   border-radius: $radius-small;
   font-size: $font-size-small;
-  &.btn-circle {
-    width: $h-small;
-  }
 }
 
 /* -----

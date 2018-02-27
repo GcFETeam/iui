@@ -1,55 +1,88 @@
 @import "./theme";
 
-// color
-$reds: (
-  100: #f34848
+// color system
+// 2018.02.27
+
+$fc1: (
+  100: #293140,
+  200: #515b6b,
+  300: #858c99,
+  400: #aeb4bd,
 );
 
-$blues: (
-  100: #0f8ee9,
-  200: #108ee9,
-  300: #236bb3
+$fc2: (
+  100: #262626,
+  200: #595959,
+  300: #999,
+  400: #bfbfbf,
 );
 
-$gray: (
+$bc1: (
+  100: #e0e6ed,
+  200: #e8edf2,
+  300: #f1f4f7,
+  400: #f7f9fa,
+);
+
+$bc2: (
   100: #fafafa,
-  200: #f5f5f5,
-  300: #f2f2f2,
-  400: #e6e6e6,
-  500: #c0c0c0,
-  600: #999,
-  700: #595959,
-  800: #262626
+  200: #f2f2f2,
+  300: #ebebeb,
+  400: #e5e5e5,
 );
+
+$warn-color: (
+  dark: #246bb3,
+  blue: #2ea2f8,
+  green: #4cb540,
+  yellow: #ffbf00,
+  orange: #f49400,
+  red: #f05455
+);
+
 
 // theme
 $color-white: #fff;
 
-$color-primary: map_get($blues, 100);
+$color-primary: #2e7ef2;
 
-$color-error: map_get($reds, 100);
+$color-error: map_get($warn-color, red);
+
+
+$color-blue: map_get($warn-color, blue);
+$color-green: map_get($warn-color, green);
+$color-yellow: map_get($warn-color, yellow);
+$color-orange: map_get($warn-color, orange);
+$color-red: map_get($warn-color, red);
+
+
 
 // border
-$color-border: map_get($gray, 400);
+$color-border: map_get($bc1, 100);
 
-$color-border-focus: map_get($blues, 200);
+$color-border-focus: map_get($warn-color, blue);
 
 // text
-$color-text: map_get($gray, 800);
+$color-text: map_get($fc2, 100);
 
-$color-text-dark: map_get($gray, 700);
+$color-text-dark: map_get($fc2, 100);
 
-$color-text-gray: map_get($gray, 600);
+$color-text-gray: map_get($fc1, 300);
 
-$color-text-disabled: map_get($gray, 500);
+$color-text-disabled: map_get($fc1, 400);
 
 // special
-$color-text-warn: map_get($reds, 100);
+$color-text-warn: map_get($warn-color, red);
 
-$color-text-link: map_get($blues, 300);
+$color-text-link: map_get($warn-color, dark);
+
+// background
+$background-gray: map_get($bc1, 400);
+
+$background-gray-hover: map_get($bc1, 300);
+
 
 // font
-
 $font-size-small: 12px;
 
 $font-size-normal: 14px;
@@ -58,16 +91,8 @@ $font-size-large: 16px;
 
 $font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
 
-// background
-
-$background-gray: map_get($gray, 300);
-
-$background-gray-hover: map_get($gray, 100);
-
-$background-thead: map_get($gray, 300);
 
 // radius
-
 $radius-normal: 4px;
 
 $radius-small: 3px;

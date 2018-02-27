@@ -9,18 +9,34 @@ layout: default
 
 <div class="ui-vertical-menu">
     <ul>
-        <li><a href="#" class="menu-item">功能一</a></li>
-        <li><a href="#" class="menu-item">功能二</a></li>
-        <li><a href="#" class="menu-item">功能三</a></li>
+        <li><a href="#" class="menu-item">加工中心</a></li>
+        <li><a href="#" class="menu-item">卧式中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
     </ul>
 </div>
 
 ```html
 <div class="ui-vertical-menu">
     <ul>
-        <li><a href="#" class="menu-item">功能一</a></li>
-        <li><a href="#" class="menu-item">功能二</a></li>
-        <li><a href="#" class="menu-item">功能三</a></li>
+        <li><a href="#" class="menu-item">加工中心</a></li>
+        <li><a href="#" class="menu-item">卧式中心</a></li>
+        <li><a href="#" class="menu-item">精密加工中心</a></li>
+    </ul>
+</div>
+```
+
+<div class="ui-vertical-menu menu-icon">
+    <ul>
+        <li><a href="#" class="menu-item">加工中心 <i class="fa fa-angle-right"></i></a></li>
+        <li class="menu-item">卧式中心 <i class="fa fa-angle-right"></i></li>
+    </ul>
+</div>
+
+```html
+<div class="ui-vertical-menu menu-icon">
+    <ul>
+        <li><a href="#" class="menu-item">加工中心 <i class="fa fa-angle-right"></i></a></li>
+        <li class="menu-item">卧式中心 <i class="fa fa-angle-right"></i></li>
     </ul>
 </div>
 ```

@@ -5,10 +5,23 @@
   display: inline-block;
   padding: 2px 6px;
   font-size: $font-size-small;
-  border-radius: 2px;
-  border: 1px solid $color-border;
-  background-color: $background-gray;
+  color: $color-text;
+  background-color: map_get($bc1, 200);
+  .fa,
   .iconfont {
-    color: $color-text-gray;
+    color: $color-text-disabled;
+  }
+}
+
+%font-color {
+  color: $color-white;
+}
+
+$color-map: (blue, $color-blue), (green, $color-green), (yellow, $color-yellow), (orange, $color-orange), (red, $color-red);
+
+@each $c, $color in $color-map {
+  .tag-#{$c} {
+    @extend %font-color;
+    background: $color;
   }
 }
