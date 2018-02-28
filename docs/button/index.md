@@ -58,7 +58,7 @@ layout: default
 ```
 
 
-### 图标 【图标还没有
+### 图标 
 
 <a href="#" class="ui-icon-button"><i class="fa fa-eye"></i></a>
 <a href="#" class="ui-icon-button"><i class="fa fa-edit"></i></a>
