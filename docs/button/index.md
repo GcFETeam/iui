@@ -4,7 +4,7 @@ layout: default
 
 # Button
 
-> 缺icon
+> 缺少icon
 
 {% assign types = "ui-button mini, ui-button small, ui-button"  | split: ", "%}
 
