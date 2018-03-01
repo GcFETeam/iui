@@ -23,6 +23,8 @@ layout: default
 
 ### 禁用
 
+<input type="text" class="ui-form-control disabled" disabled value="输入完成">
+
 ```html
 <input type="text" class="ui-form-control disabled" disabled value="输入完成">
 ```
@@ -70,6 +72,14 @@ layout: default
     </label>
 </div>
 
+```html
+<div class="ui-labeled-input mb-10">
+    <label class="input-label">
+        <input class="input" type="text" placeholder="请输入">
+        <span class="text">.xizhi.design</span>
+    </label>
+</div>
+```
 
 
 <div class="ui-labeled-input">
@@ -79,6 +89,14 @@ layout: default
     </label>
 </div>
 
+```html
+<div class="ui-labeled-input">
+    <label class="input-label">
+        <span class="text">https://xizhi.design/</span>
+        <input class="input" type="text" placeholder="请输入">
+    </label>
+</div>
+```
 
 > 兼容IE9的写法
 
@@ -90,6 +108,14 @@ layout: default
     </label>
 </div>
 
+```html
+<div class="ui-labeled-input ">
+    <label class="input-label clf">
+        <input class="input fl" type="text" placeholder="请输入">
+        <span class="text fl">.xizhi.design</span>
+    </label>
+</div>
+```
 
 
 
