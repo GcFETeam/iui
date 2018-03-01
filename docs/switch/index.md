@@ -10,8 +10,7 @@ layout: default
     <label>
         <input type="checkbox" name="name">
         <div class="switch">
-            <div class="btn">
-            </div>
+            <div class="btn"></div>
         </div>
         <span class="ft-12 open">开</span>
         <span class="ft-12 close">关</span>
@@ -23,8 +22,7 @@ layout: default
     <label>
         <input type="checkbox" name="name">
         <div class="switch">
-            <div class="btn">
-            </div>
+            <div class="btn"></div>
         </div>
         <span class="ft-12 open">开</span>
         <span class="ft-12 close">关</span>
@@ -34,8 +32,7 @@ layout: default
 
 <div class="ui-switch">
     <div class="switch on">
-        <div class="btn">
-        </div>
+        <div class="btn"></div>
     </div>
     <span class="ft-12">开</span>
 </div>
@@ -43,8 +40,7 @@ layout: default
 ```html
 <div class="ui-switch">
     <div class="switch on">
-        <div class="btn">
-        </div>
+        <div class="btn"></div>
     </div>
     <span class="ft-12">开</span>
 </div>
