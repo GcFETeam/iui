@@ -36,7 +36,10 @@ layout: default
 
 
 ```html
-<input type="text" class="ui-form-control error" value="输入完成">
+<div class="ui-control-wrap">
+    <input type="text" class="ui-form-control error" value="输入完成">
+    <span class="error-tip animate fadeInDown">error</span>
+</div>
 ```
 
 ### 字数限制

@@ -948,7 +948,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   line-height: 1.5;
   -webkit-box-shadow: 0 1px 4px 0 #aeb4bd;
           box-shadow: 0 1px 4px 0 #aeb4bd;
-  border-radius: 2px; }
+  border-radius: 2px;
+  background: #fff; }
   .ui-popup:after {
     position: absolute;
     content: '';
@@ -994,6 +995,45 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     background: #2e7ef2;
     -webkit-transition: width .3s;
     transition: width .3s; }
+
+/* -----
+   slider
+   ----- */
+.ui-slider {
+  display: inline-block;
+  width: 100px;
+  height: 4px;
+  vertical-align: middle; }
+  .ui-slider .bar {
+    height: 4px;
+    position: relative;
+    border-radius: 2px;
+    background: #e8edf2; }
+  .ui-slider .rate {
+    height: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 2px;
+    background: #2e7ef2; }
+  .ui-slider .btn {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: -10px;
+    top: -8px;
+    border-radius: 50%;
+    background: #2e7ef2;
+    -webkit-box-shadow: 0 1px 4px 0 #aeb4bd;
+            box-shadow: 0 1px 4px 0 #aeb4bd; }
+    .ui-slider .btn:hover .ui-popup {
+      display: block; }
+  .ui-slider .ui-popup {
+    display: none;
+    position: absolute;
+    top: -30px;
+    padding: 4px 9px;
+    left: -3px; }
 
 /* =====
     tab

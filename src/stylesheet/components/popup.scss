@@ -12,6 +12,7 @@
   line-height: 1.5;
   box-shadow: $shadow;
   border-radius: $radius-mini;
+  background: $color-white;
   &:after {
     position: absolute;
     content: '';
