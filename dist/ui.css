@@ -1120,7 +1120,9 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   border: 1px solid #e0e6ed;
   border-radius: 4px;
   font-size: 14px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  -webkit-transition: border .3s;
+  transition: border .3s; }
 
 .ui-form-control {
   padding: 9px 12px;
@@ -1141,18 +1143,6 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
       bottom: 8px;
       font-size: 12px; }
 
-.ui-input-wrap {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle; }
-  .ui-input-wrap .fa-angle-down {
-    position: absolute;
-    right: 14px;
-    top: 17px;
-    color: #e0e6ed; }
-  .ui-input-wrap input:focus + .fa {
-    color: #2e7ef2; }
-
 /* -----
     input
    ----- */
@@ -1161,11 +1151,14 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 320px;
+  overflow: hidden;
   border: 1px solid #e0e6ed;
   border-radius: 4px; }
 
 .ui-labeled-input .text {
-  padding: 9px 12px; }
+  padding: 9px 12px;
+  color: #515b6b;
+  background: #f1f4f7; }
   .ui-labeled-input .text + .input {
     border-left: 1px solid #e0e6ed; }
 
@@ -1234,9 +1227,20 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   .ui-select .ui-vertical-menu {
     position: absolute;
     left: 0;
-    top: 43px; }
+    top: 51px; }
   .ui-select .ui-form-control {
     cursor: default; }
+  .ui-select .input-wrap {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle; }
+    .ui-select .input-wrap .fa-angle-down {
+      position: absolute;
+      right: 14px;
+      top: 16px;
+      color: #e0e6ed; }
+    .ui-select .input-wrap input:focus + .fa {
+      color: #2e7ef2; }
 
 .transition-drop {
   -webkit-transition: opacity .3s, -webkit-transform .3s;
@@ -1257,7 +1261,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
 /* -----
     validate
    ----- */
-.ui-form-error {
+.ui-control-wrap .error-tip {
   position: absolute;
   margin-left: 5px;
   margin-top: 6px;
@@ -1268,7 +1272,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   color: #fff;
   line-height: 20px;
   font-size: 12px; }
-  .ui-form-error:after {
+  .ui-control-wrap .error-tip:after {
     content: '';
     position: absolute;
     top: 8px;

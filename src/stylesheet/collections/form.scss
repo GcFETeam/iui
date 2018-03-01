@@ -51,6 +51,7 @@ $h-small: 34px;
   border-radius: $radius-normal;
   font-size: $font-size-normal;
   vertical-align: middle;
+  transition: border .3s;
 }
 
 .ui-form-control {
@@ -80,20 +81,7 @@ $h-small: 34px;
   }
 }
 
-.ui-input-wrap {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  .fa-angle-down {
-    position: absolute;
-    right: 14px;
-    top: 17px;
-    color: $color-border;
-  }
-  input:focus + .fa {
-    color: $color-primary;
-  }
-}
+
 
 /* -----
     input
@@ -102,11 +90,14 @@ $h-small: 34px;
   .input-label {
     display: inline-flex;
     width: 320px;
+    overflow: hidden;
     border: 1px solid $color-border;
     border-radius: $radius-normal;
   }
   .text {
     padding: $padding-normal;
+    color: map_get($fc1, 200);
+    background: $background-gray-hover;
     & + .input {
       border-left: 1px solid $color-border;
     }
@@ -183,57 +174,69 @@ $h-small: 34px;
   .ui-vertical-menu {
     position: absolute;
     left: 0;
-    top: $h;
+    top: $h + 8px;
   }
   .ui-form-control {
     cursor: default;
   }
-
+  .input-wrap {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    .fa-angle-down {
+      position: absolute;
+      right: 14px;
+      top: 16px;
+      color: $color-border;
+    }
+    input:focus + .fa {
+      color: $color-primary;
+    }
+  }
 }
 
+
+
+// vue
 .transition-drop {
   transition: transform .3s, opacity .3s;
   transform: translate3d(0, 0, 0) scaleY(1);
   transform-origin: center top;
 }
 
-%fadeSlideDown {
-  opacity: 0;
-  transform: translate3d(0, -6px, 0) scaleY(0);
-}
-
 .transition-drop-enter,
 .transition-drop-leave-active {
-  @extend %fadeSlideDown;
+  opacity: 0;
+  transform: translate3d(0, -6px, 0) scaleY(0);
 }
 
 /* -----
     validate
    ----- */
-.ui-form-error {
-  position: absolute;
-  margin-left: 5px;
-  margin-top: 6px;
-  height: 24px;
-  padding: 2px 7px;
-  border-radius: 4px;
-  background: $color-error;
-  color: $color-white;
-  line-height: 20px;
-  font-size: 12px;
-  &:after {
-    content: '';
+.ui-control-wrap {
+  .error-tip {
     position: absolute;
-    top: 8px;
-    left: -10px;
-    height: 0;
-    width: 0;
-    border: 5px solid transparent;
-    border-right-color: $color-error;
+    margin-left: 5px;
+    margin-top: 6px;
+    height: 24px;
+    padding: 2px 7px;
+    border-radius: $radius-normal;
+    background: $color-text-warn;
+    color: $color-white;
+    line-height: 20px;
+    font-size: $font-size-small;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: -10px;
+      height: 0;
+      width: 0;
+      border: 5px solid transparent;
+      border-right-color: $color-text-warn;
+    }
   }
 }
-
-
 
 
 
