@@ -18,6 +18,9 @@
     - title: 多选
       name: Checkbox
       url: /docs/checkbox/
+    - title: 开关
+      name: Switch
+      url: /docs/switch/
     - title: 滑块
       name: Slider
       url: /docs/slider/

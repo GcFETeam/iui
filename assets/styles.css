@@ -14,7 +14,11 @@ ul, li {
 .page-title {
     margin: 0;
     padding: 10px 0;
+    display: inline-block;
+    vertical-align: middle;
     line-height: 1;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .page-layout {
@@ -43,12 +47,16 @@ ul, li {
 }
 
 .page-nav li.active {
-    border-right: 3px solid #eb7e17;
+    border-right: 3px solid #415b64;
 }
 
 .page-nav a {
     display: block;
     text-decoration: none;
+}
+
+.page-nav a span {
+    color: #415b64;
 }
 
 .page-nav {
