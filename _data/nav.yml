@@ -18,6 +18,9 @@
     - title: 多选
       name: Checkbox
       url: /docs/checkbox/
+    - title: 滑块
+      name: Slider
+      url: /docs/slider/
     - title: 标签
       name: Tag
       url: /docs/tag/

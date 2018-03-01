@@ -1,0 +1,44 @@
+/* -----
+   slider
+   ----- */
+$h: 4px;
+.ui-slider {
+  display: inline-block;
+  width: 100px;
+  height: $h;
+  vertical-align: middle;
+  .bar {
+    height: $h;
+    position: relative;
+    border-radius: $h / 2;
+    background: $background-slider;
+  }
+  .rate {
+    height: $h;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: $h / 2;
+    background: $color-primary;
+  }
+  .btn {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: -10px;
+    top: -8px;
+    border-radius: 50%;
+    background: $color-primary;
+    box-shadow: $shadow;
+    &:hover .ui-popup {
+      display: block;
+    }
+  }
+  .ui-popup {
+    display: none;
+    position: absolute;
+    top: -30px;
+    padding: 4px 9px;
+    left: -3px;
+  }
+}

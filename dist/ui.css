@@ -948,7 +948,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   line-height: 1.5;
   -webkit-box-shadow: 0 1px 4px 0 #aeb4bd;
           box-shadow: 0 1px 4px 0 #aeb4bd;
-  border-radius: 2px; }
+  border-radius: 2px;
+  background: #fff; }
   .ui-popup:after {
     position: absolute;
     content: '';
@@ -994,6 +995,45 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     background: #2e7ef2;
     -webkit-transition: width .3s;
     transition: width .3s; }
+
+/* -----
+   slider
+   ----- */
+.ui-slider {
+  display: inline-block;
+  width: 100px;
+  height: 4px;
+  vertical-align: middle; }
+  .ui-slider .bar {
+    height: 4px;
+    position: relative;
+    border-radius: 2px;
+    background: #e8edf2; }
+  .ui-slider .rate {
+    height: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 2px;
+    background: #2e7ef2; }
+  .ui-slider .btn {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: -10px;
+    top: -8px;
+    border-radius: 50%;
+    background: #2e7ef2;
+    -webkit-box-shadow: 0 1px 4px 0 #aeb4bd;
+            box-shadow: 0 1px 4px 0 #aeb4bd; }
+    .ui-slider .btn:hover .ui-popup {
+      display: block; }
+  .ui-slider .ui-popup {
+    display: none;
+    position: absolute;
+    top: -30px;
+    padding: 4px 9px;
+    left: -3px; }
 
 /* =====
     tab
@@ -1120,7 +1160,9 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   border: 1px solid #e0e6ed;
   border-radius: 4px;
   font-size: 14px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  -webkit-transition: border .3s;
+  transition: border .3s; }
 
 .ui-form-control {
   padding: 9px 12px;
@@ -1141,18 +1183,6 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
       bottom: 8px;
       font-size: 12px; }
 
-.ui-input-wrap {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle; }
-  .ui-input-wrap .fa-angle-down {
-    position: absolute;
-    right: 14px;
-    top: 17px;
-    color: #e0e6ed; }
-  .ui-input-wrap input:focus + .fa {
-    color: #2e7ef2; }
-
 /* -----
     input
    ----- */
@@ -1161,11 +1191,14 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 320px;
+  overflow: hidden;
   border: 1px solid #e0e6ed;
   border-radius: 4px; }
 
 .ui-labeled-input .text {
-  padding: 9px 12px; }
+  padding: 9px 12px;
+  color: #515b6b;
+  background: #f1f4f7; }
   .ui-labeled-input .text + .input {
     border-left: 1px solid #e0e6ed; }
 
@@ -1234,9 +1267,20 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   .ui-select .ui-vertical-menu {
     position: absolute;
     left: 0;
-    top: 43px; }
+    top: 51px; }
   .ui-select .ui-form-control {
     cursor: default; }
+  .ui-select .input-wrap {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle; }
+    .ui-select .input-wrap .fa-angle-down {
+      position: absolute;
+      right: 14px;
+      top: 16px;
+      color: #e0e6ed; }
+    .ui-select .input-wrap input:focus + .fa {
+      color: #2e7ef2; }
 
 .transition-drop {
   -webkit-transition: opacity .3s, -webkit-transform .3s;
@@ -1257,7 +1301,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
 /* -----
     validate
    ----- */
-.ui-form-error {
+.ui-control-wrap .error-tip {
   position: absolute;
   margin-left: 5px;
   margin-top: 6px;
@@ -1268,7 +1312,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   color: #fff;
   line-height: 20px;
   font-size: 12px; }
-  .ui-form-error:after {
+  .ui-control-wrap .error-tip:after {
     content: '';
     position: absolute;
     top: 8px;
