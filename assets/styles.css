@@ -55,10 +55,6 @@ ul, li {
     text-decoration: none;
 }
 
-.page-nav a span {
-    color: #415b64;
-}
-
 .page-nav {
     width: 200px;
     padding: 20px 0 20px 20px;
