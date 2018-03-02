@@ -4,59 +4,77 @@
       name: Typography
       url: /docs/typography/
 
-- title: Components
+- title: Form
   pages:
     - title: 按钮
       name: Button
       url: /docs/button/
+    - title: 多选
+      name: Checkbox
+      url: /docs/checkbox/
     - title: 输入
       name: Input
       url: /docs/input/
     - title: 单选
       name: Radio
       url: /docs/radio/
-    - title: 多选
-      name: Checkbox
-      url: /docs/checkbox/
+    - title: 评分
+      name: Rate
+      url: /docs/rate/
     - title: 滑块
       name: Slider
       url: /docs/slider/
-    - title: 标签
-      name: Tag
-      url: /docs/tag/
-    - title: 菜单
-      name: Menu
-      url: /docs/menu/
-    - title: 面包屑
-      name: Crumbs
-      url: /docs/crumbs/
-    - title: 提示
-      name: Alert
-      url: /docs/alert/
-    - title: 气泡提示
-      name: Popup
-      url: /docs/popup/
-    - title: 选项卡
-      name: Tab
-      url: /docs/tab/
-    - title: 进度条
-      name: Progress
-      url: /docs/progress/
+    - title: 开关
+      name: Switch
+      url: /docs/switch/
+    - title: 表单
+      name: Form
+      url: /docs/form/
+
+- title: Data
+  pages:
     - title: 分页
       name: Pagination
       url: /docs/pagination/
     - title: 表格
       name: Table
       url: /docs/table/
+    - title: 标签
+      name: Tag
+      url: /docs/tag/
+    - title: 标记
+      name: Badge
+      url: /docs/badge/
+    - title: 进度条
+      name: Progress
+      url: /docs/progress/
+
+- title: Navigation
+  pages:
+    - title: 面包屑
+      name: Crumbs
+      url: /docs/crumbs/
+    - title: 菜单
+      name: Menu
+      url: /docs/menu/
+    - title: 选项卡
+      name: Tab
+      url: /docs/tab/
+
+- title: Notice
+  pages:
+    - title: 提示
+      name: Alert
+      url: /docs/alert/
     - title: 模态框
       name: Modal
       url: /docs/modal/
+    - title: 气泡提示
+      name: Popup
+      url: /docs/popup/
 
-- title: Collections
-  pages:
-    - title: 表单
-      name: Form
-      url: /docs/form/
+
+
 
 
 

@@ -100,7 +100,6 @@ layout: default
 
 > 兼容IE9的写法
 
-
 <div class="ui-labeled-input ">
     <label class="input-label clf">
         <input class="input fl" type="text" placeholder="请输入">
