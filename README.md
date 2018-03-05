@@ -1,7 +1,7 @@
 # iui
 
-add:
-另外需要的webpack和jekyll没列出来，也可以装全局的
+
+需要先安装jekyll
 
 ```
 npm install
