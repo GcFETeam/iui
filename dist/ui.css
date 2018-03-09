@@ -484,6 +484,37 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   .ui-alert-line i {
     color: #2ea2f8; }
 
+.ui-badge {
+  position: relative;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: inline-block;
+  vertical-align: middle; }
+  .ui-badge .count,
+  .ui-badge .point {
+    position: absolute;
+    background: #f05455; }
+  .ui-badge .count {
+    right: 0;
+    top: -8px;
+    height: 16px;
+    padding-left: 5px;
+    padding-right: 6px;
+    border-radius: 8px;
+    line-height: 16px;
+    color: #fff;
+    font-size: 12px;
+    font-family: arial, sans-serif; }
+  .ui-badge .point {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    right: 3px;
+    top: -5px; }
+  .ui-badge .fa-bell {
+    font-size: 22px;
+    color: #aeb4bd; }
+
 /* =====
     button
    ===== */
@@ -995,6 +1026,14 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     background: #2e7ef2;
     -webkit-transition: width .3s;
     transition: width .3s; }
+
+.ui-rate {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px; }
+  .ui-rate i {
+    margin-right: 3px;
+    color: #ffbf00; }
 
 /* -----
    slider
