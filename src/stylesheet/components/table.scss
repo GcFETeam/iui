@@ -2,10 +2,12 @@
     table
    ===== */
 $h: 40px;
+$h-small: 34px;
 
 .ui-table {
   width: 100%;
   border: 0;
+  font-size: $font-size-normal;
 
   th {
     height: $h;
@@ -16,13 +18,26 @@ $h: 40px;
 
   tr {
     transition: background-color .3s;
-    &:hover {
-      background-color: $background-gray-hover;
+    &:nth-child(2n + 1) {
+      td {
+        background-color: $background-gray;
+      }
     }
   }
 
   td {
-    padding: 17px 10px;
+    padding: 20px 10px;
     border-bottom: 1px solid $color-border;
+  }
+
+  &.small {
+    font-size: $font-size-small;
+    th {
+      height: $h-small;
+    }
+    td {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
   }
 }

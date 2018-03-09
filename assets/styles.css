@@ -140,7 +140,7 @@ pre.highlight,
 
     transition: opacity .2s;
     border-radius: 2px;
-    font-size: 13px;
+    font-size: 12px;
     white-space: pre-wrap;
     overflow-x: auto;
 }
