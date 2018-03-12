@@ -21,7 +21,7 @@ $color-pop: (success, $color-green), (warn, $color-yellow);
   }
 }
 
-$color-system: (warn, $color-yellow, #fffaeb), (focus, $color-blue, #eaf5fe);
+$color-system: (warn, $color-yellow, $background-yellow), (focus, $color-blue, $background-blue);
 
 .ui-alert-line {
   padding: 6px 20px;
