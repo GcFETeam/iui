@@ -27,6 +27,9 @@
     - title: 开关
       name: Switch
       url: /docs/switch/
+    - title: 上传
+      name: Upload
+      url: /docs/upload/
     - title: 表单
       name: Form
       url: /docs/form/

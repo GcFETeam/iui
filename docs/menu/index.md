@@ -87,7 +87,11 @@ layout: default
 
 ### 高度
 
-<div class="ui-vertical-menu">
+<div class="ui-vertical-menu menu-option">
+    <div class="option">
+        <a href="javascript:;">重置</a>
+        <a href="javascript:;">确定</a>
+    </div>
     <ul>
         <li><a href="#" class="menu-item">加工中心</a></li>
         <li><a href="#" class="menu-item">卧式中心</a></li>

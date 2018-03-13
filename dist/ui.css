@@ -725,15 +725,17 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
    ===== */
 .ui-vertical-menu {
   display: inline-block;
+  position: relative;
   padding-top: 4px;
   padding-bottom: 4px;
   -webkit-box-shadow: 0 1px 4px 0 #aeb4bd;
           box-shadow: 0 1px 4px 0 #aeb4bd;
   border-radius: 4px;
   font-size: 14px;
-  background: #fff;
-  max-height: 330px;
-  overflow-y: auto; }
+  background: #fff; }
+  .ui-vertical-menu ul {
+    max-height: 330px;
+    overflow-y: auto; }
   .ui-vertical-menu .menu-item {
     display: block;
     padding: 4px 16px;
@@ -759,6 +761,17 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
       padding-right: 13px; }
     .ui-vertical-menu.small .menu-icon .fa {
       margin-left: 20px; }
+  .ui-vertical-menu.menu-option {
+    padding-bottom: 37px; }
+  .ui-vertical-menu .option {
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    height: 37px;
+    width: 100%;
+    line-height: 37px;
+    background: #f1f4f7; }
 
 /* -----
     dropdown
@@ -1211,6 +1224,57 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
 
 .tag-red {
   background: #f05455; }
+
+.ui-upload-img {
+  height: 128px;
+  width: 128px;
+  position: relative;
+  padding: 10px;
+  border-radius: 4px;
+  vertical-align: middle;
+  border: 1px solid #e0e6ed; }
+  .ui-upload-img img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2px; }
+  .ui-upload-img .trigger {
+    display: block;
+    height: 100%;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 108px;
+    color: #a9afb7;
+    font-size: 15px;
+    background: #f1f4f7; }
+  .ui-upload-img .set {
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 0 0 4px 4px; }
+  .ui-upload-img .delete {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    height: 20px;
+    width: 20px;
+    border-top-right-radius: 4px;
+    text-align: center;
+    line-height: 20px; }
+  .ui-upload-img .set,
+  .ui-upload-img .delete {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s; }
+  .ui-upload-img:hover .set,
+  .ui-upload-img:hover .delete {
+    opacity: 1; }
 
 /* ===== collections ===== */
 /* =====
