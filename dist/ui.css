@@ -1226,8 +1226,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   background: #f05455; }
 
 .ui-upload-img {
-  height: 128px;
-  width: 128px;
+  height: 130px;
+  width: 130px;
   position: relative;
   padding: 10px;
   border-radius: 4px;
@@ -1235,8 +1235,15 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   border: 1px solid #e0e6ed; }
   .ui-upload-img img {
     max-width: 100%;
-    max-height: 100%;
-    border-radius: 2px; }
+    max-height: 100%; }
+  .ui-upload-img .img-box {
+    display: table-cell;
+    vertical-align: middle;
+    height: 108px;
+    width: 108px;
+    line-height: 0;
+    border-radius: 2px;
+    overflow: hidden; }
   .ui-upload-img .trigger {
     display: block;
     height: 100%;
@@ -1245,7 +1252,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     line-height: 108px;
     color: #a9afb7;
     font-size: 15px;
-    background: #f1f4f7; }
+    background: #f1f4f7;
+    cursor: pointer; }
   .ui-upload-img .set {
     position: absolute;
     left: -1px;
@@ -1271,7 +1279,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     color: #fff;
     opacity: 0;
     -webkit-transition: opacity .3s;
-    transition: opacity .3s; }
+    transition: opacity .3s;
+    cursor: pointer; }
   .ui-upload-img:hover .set,
   .ui-upload-img:hover .delete {
     opacity: 1; }
