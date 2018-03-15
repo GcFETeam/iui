@@ -43,6 +43,24 @@ layout: default
 </div>
 ```
 
+### 组合
+
+<div class="ui-vertical-menu menu-icon menu-group">
+    <ul>
+        <li><a href="#" class="menu-item">加工中心 <i class="fa fa-angle-right"></i></a></li>
+        <li class="menu-item">卧式中心 <i class="fa fa-angle-right"></i></li>
+    </ul>
+    <ul>
+        <li><a href="#" class="menu-item">加工中心 <i class="fa fa-angle-right"></i></a></li>
+        <li class="menu-item">卧式中心 <i class="fa fa-angle-right"></i></li>
+    </ul>
+    <ul>
+        <li><a href="#" class="menu-item">加工中心</a></li>
+        <li class="menu-item">卧式中心</li>
+    </ul>
+</div>
+
+
 ### 选框 
 
 <div class="ui-vertical-menu">

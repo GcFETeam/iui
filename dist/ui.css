@@ -726,14 +726,14 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
 .ui-vertical-menu {
   display: inline-block;
   position: relative;
-  padding-top: 4px;
-  padding-bottom: 4px;
   -webkit-box-shadow: 0 1px 4px 0 #aeb4bd;
           box-shadow: 0 1px 4px 0 #aeb4bd;
   border-radius: 4px;
   font-size: 14px;
   background: #fff; }
   .ui-vertical-menu ul {
+    padding-top: 4px;
+    padding-bottom: 4px;
     max-height: 330px;
     overflow-y: auto; }
   .ui-vertical-menu .menu-item {
@@ -772,6 +772,13 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     width: 100%;
     line-height: 37px;
     background: #f1f4f7; }
+  .ui-vertical-menu.menu-group ul {
+    display: inline-block;
+    float: left;
+    height: 180px;
+    border-right: 1px solid #e8edf2; }
+    .ui-vertical-menu.menu-group ul:first-child {
+      border-left: 0; }
 
 /* -----
     dropdown
