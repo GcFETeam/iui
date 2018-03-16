@@ -1,0 +1,64 @@
+
+.tagsInput {
+    border: 1px solid #e6e6e6;
+    background: #FFF;
+    padding: 10px 0 0 16px;
+    width: 300px;
+    height: 100px;
+    overflow-y: auto;
+}
+
+.small .tagsInput {
+    padding: 8px 0 0 12px;
+}
+
+.tagsInput .tag {
+    border: 1px solid #ebebeb;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    display: block;
+    float: left;
+    padding: 2px 6px;
+    text-decoration: none;
+    background: #f2f2f2;
+    color: #333;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.small .tagsInput .tag {
+    margin-bottom: 8px;
+}
+
+.tagsInput .deleteTag {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.tagsInput input {
+    width: 80px;
+    /*margin: 0 5px 5px 0;*/
+    font-size: 12px;
+    border: 1px solid transparent;
+    padding: 2px;
+    background: transparent;
+    color: #000;
+    outline: 0;
+}
+
+.small .tagsInput input {
+    margin-bottom: 8px;
+}
+
+.tagsInput .addTags {
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.repeat {
+    background: #FBD8DB !important;
+    color: #90111A !important;
+}

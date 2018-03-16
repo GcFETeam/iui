@@ -117,5 +117,23 @@ layout: default
 ```
 
 
+### linkage
+
+<div class="ui-select" id="linkagedemo">
+    <div class="input-wrap">
+        <input value="" class="ui-form-control linkage-input"/>
+        <i class="fa fa-angle-down"></i>
+        <input name="linkage" class="linkage-value" type="hidden" />
+    </div>
+</div>
 
 
+<script>
+// $element.uiLinkage(option)
+$(function () {
+    $('#linkagedemo').uiLinkage({
+        ajaxUrl: '/iui/datas',
+        initData: '1'
+    });
+});
+</script>

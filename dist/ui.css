@@ -814,6 +814,10 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     opacity: 1;
     visibility: visible; }
 
+.ui-select-dropdown {
+  position: absolute;
+  white-space: nowrap; }
+
 .drp-show .ui-vertical-menu {
   visibility: visible; }
 
@@ -882,8 +886,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   text-align: center;
   vertical-align: middle;
   background: rgba(0, 0, 0, 0.1);
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease; }
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; }
   .ui-mask .mask-wrapper {
     display: table-cell;
     vertical-align: middle; }
@@ -1044,8 +1048,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     height: 6px;
     border-radius: 3px;
     background: #2e7ef2;
-    -webkit-transition: width .3s;
-    transition: width .3s; }
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s; }
 
 .ui-rate {
   display: inline-block;
@@ -1111,8 +1115,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     border-radius: 11px;
     background: #e0e6ed;
     cursor: pointer;
-    -webkit-transition: background .3s;
-    transition: background .3s; }
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s; }
   .ui-switch .open {
     display: none; }
   .ui-switch .btn {
@@ -1123,8 +1127,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     top: 2px;
     border-radius: 10px;
     background: #fff;
-    -webkit-transition: left .3s;
-    transition: left .3s; }
+    -webkit-transition: left 0.3s;
+    transition: left 0.3s; }
   .ui-switch input:checked + .switch {
     background: #2e7ef2; }
     .ui-switch input:checked + .switch .btn {
@@ -1186,8 +1190,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     color: #858c99;
     border-bottom: 1px solid #e0e6ed; }
   .ui-table tr {
-    -webkit-transition: background-color .3s;
-    transition: background-color .3s; }
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s; }
     .ui-table tr:nth-child(2n + 1) td {
       background-color: #f7f9fa; }
   .ui-table td {
@@ -1285,8 +1289,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     opacity: 0;
-    -webkit-transition: opacity .3s;
-    transition: opacity .3s;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
     cursor: pointer; }
   .ui-upload-img:hover .set,
   .ui-upload-img:hover .delete {
@@ -1332,8 +1336,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   border-radius: 4px;
   font-size: 14px;
   vertical-align: middle;
-  -webkit-transition: border .3s;
-  transition: border .3s; }
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s; }
 
 .ui-form-control {
   padding: 9px 12px;
@@ -1449,15 +1453,17 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
       position: absolute;
       right: 14px;
       top: 16px;
-      color: #e0e6ed; }
+      color: #e0e6ed;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s; }
     .ui-select .input-wrap input:focus + .fa {
       color: #2e7ef2; }
 
 .transition-drop {
-  -webkit-transition: opacity .3s, -webkit-transform .3s;
-  transition: opacity .3s, -webkit-transform .3s;
-  transition: transform .3s, opacity .3s;
-  transition: transform .3s, opacity .3s, -webkit-transform .3s;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
   -webkit-transform: translate3d(0, 0, 0) scaleY(1);
           transform: translate3d(0, 0, 0) scaleY(1);
   -webkit-transform-origin: center top;

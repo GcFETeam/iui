@@ -21,6 +21,6 @@
     height: 6px;
     border-radius: 3px;
     background: $color-primary;
-    transition: width .3s;
+    transition: width $transition-duration;
   }
 }

@@ -1,0 +1,16 @@
+.autoSelect {
+    position: absolute;
+}
+
+.ui-vertical-menu.autoSelect .item:hover {
+    background: #fff;
+}
+
+.ui-vertical-menu.autoSelect .item.hover {
+    background: #f3f3f3;
+}
+
+.autoSelect em {
+    color: #0f8ee9;
+    font-style: normal;
+}

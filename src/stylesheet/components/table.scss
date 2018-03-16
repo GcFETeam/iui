@@ -17,7 +17,7 @@ $h-small: 34px;
   }
 
   tr {
-    transition: background-color .3s;
+    transition: background-color $transition-duration;
     &:nth-child(2n + 1) {
       td {
         background-color: $background-gray;

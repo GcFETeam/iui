@@ -130,6 +130,11 @@
   }
 }
 
+.ui-select-dropdown {
+  position: absolute;
+  white-space: nowrap;
+}
+
 .drp-show {
   .ui-vertical-menu {
     visibility: visible;

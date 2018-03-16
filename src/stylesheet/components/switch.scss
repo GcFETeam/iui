@@ -17,7 +17,7 @@
     border-radius: 11px;
     background: $color-border;
     cursor: pointer;
-    transition: background .3s;
+    transition: background $transition-duration;
   }
   .open {
     display: none;
@@ -30,7 +30,7 @@
     top: 2px;
     border-radius: 10px;
     background: $color-white;
-    transition: left .3s;
+    transition: left $transition-duration;
   }
   input:checked + .switch {
     background: $color-primary;

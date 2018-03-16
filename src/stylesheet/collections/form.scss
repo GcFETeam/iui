@@ -51,7 +51,7 @@ $h-small: 34px;
   border-radius: $radius-normal;
   font-size: $font-size-normal;
   vertical-align: middle;
-  transition: border .3s;
+  transition: border $transition-duration;
 }
 
 .ui-form-control {
@@ -188,6 +188,7 @@ $h-small: 34px;
       right: 14px;
       top: 16px;
       color: $color-border;
+      transition: color $transition-duration;
     }
     input:focus + .fa {
       color: $color-primary;
@@ -199,7 +200,7 @@ $h-small: 34px;
 
 // vue
 .transition-drop {
-  transition: transform .3s, opacity .3s;
+  transition: transform $transition-duration, opacity $transition-duration;
   transform: translate3d(0, 0, 0) scaleY(1);
   transform-origin: center top;
 }

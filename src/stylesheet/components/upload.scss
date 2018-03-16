@@ -59,7 +59,7 @@ $h-img: 130px;
     background: rgba(#000, .5);
     color: $color-white;
     opacity: 0;
-    transition: opacity .3s;
+    transition: opacity $transition-duration;
     cursor: pointer;
   }
   &:hover {
